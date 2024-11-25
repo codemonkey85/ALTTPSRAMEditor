@@ -22,7 +22,7 @@ public class SaveSlot
         // Import this save slot's data from the larger global save data
         Data = [.. data_in];
         SlotIndex = _slot;
-        this.TextCharacterData = textCharacterData;
+        TextCharacterData = textCharacterData;
         PlayerNameRaw = new ushort[6];
 
         // Determine which region this save comes from
