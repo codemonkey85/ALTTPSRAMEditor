@@ -276,7 +276,7 @@ public partial class Home
         ];
     }
 
-    private static string GetResourceUrl(string fileName) => $"/resources/{Uri.EscapeDataString(fileName)}";
+    private static string GetResourceUrl(string fileName) => $"resources/{Uri.EscapeDataString(fileName)}";
 
     private string GetFilenamePanelImage() => CurrentRegion == Enums.SaveRegion.JPN
         ? "filename_JP.png"
