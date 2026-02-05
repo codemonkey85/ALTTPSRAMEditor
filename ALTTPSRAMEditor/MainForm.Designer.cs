@@ -28,2031 +28,2095 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.opensrmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveCTRLSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.groupFileSelect = new System.Windows.Forms.GroupBox();
-            this.buttonCreate = new System.Windows.Forms.Button();
-            this.buttonErase = new System.Windows.Forms.Button();
-            this.buttonWrite = new System.Windows.Forms.Button();
-            this.buttonCopy = new System.Windows.Forms.Button();
-            this.radioFile3 = new System.Windows.Forms.RadioButton();
-            this.radioFile2 = new System.Windows.Forms.RadioButton();
-            this.radioFile1 = new System.Windows.Forms.RadioButton();
-            this.helperText = new System.Windows.Forms.Label();
-            this.labelFilename = new System.Windows.Forms.Label();
-            this.listBoxDungeonSelector = new System.Windows.Forms.ListBox();
-            this.textBoxDeathsQuest = new System.Windows.Forms.TextBox();
-            this.labelDeaths = new System.Windows.Forms.Label();
-            this.textBoxDeathsPost = new System.Windows.Forms.TextBox();
-            this.labelDeathsPostGame = new System.Windows.Forms.Label();
-            this.checkedListBoxDungeonItems = new System.Windows.Forms.CheckedListBox();
-            this.labelDungeonKeys = new System.Windows.Forms.Label();
-            this.textBoxDungeonKeys = new System.Windows.Forms.TextBox();
-            this.labelRupees = new System.Windows.Forms.Label();
-            this.numericUpDownRupeeCounter = new System.Windows.Forms.NumericUpDown();
-            this.tableLayoutPanelInventory = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureHeartPieces = new System.Windows.Forms.PictureBox();
-            this.pictureMoonPearl = new System.Windows.Forms.PictureBox();
-            this.pictureZorasFlippers = new System.Windows.Forms.PictureBox();
-            this.picturePowerGlove = new System.Windows.Forms.PictureBox();
-            this.pictureBoots = new System.Windows.Forms.PictureBox();
-            this.pictureMushPowd = new System.Windows.Forms.PictureBox();
-            this.pictureBow = new System.Windows.Forms.PictureBox();
-            this.pictureBombs = new System.Windows.Forms.PictureBox();
-            this.pictureBoomerang = new System.Windows.Forms.PictureBox();
-            this.pictureHookshot = new System.Windows.Forms.PictureBox();
-            this.pictureFireRod = new System.Windows.Forms.PictureBox();
-            this.pictureIceRod = new System.Windows.Forms.PictureBox();
-            this.pictureBombos = new System.Windows.Forms.PictureBox();
-            this.pictureEther = new System.Windows.Forms.PictureBox();
-            this.pictureQuake = new System.Windows.Forms.PictureBox();
-            this.pictureLamp = new System.Windows.Forms.PictureBox();
-            this.pictureMagicHammer = new System.Windows.Forms.PictureBox();
-            this.pictureShovelFlute = new System.Windows.Forms.PictureBox();
-            this.pictureBugCatchingNet = new System.Windows.Forms.PictureBox();
-            this.pictureBookOfMudora = new System.Windows.Forms.PictureBox();
-            this.pictureBottles = new System.Windows.Forms.PictureBox();
-            this.pictureCaneOfSomaria = new System.Windows.Forms.PictureBox();
-            this.pictureCaneOfByrna = new System.Windows.Forms.PictureBox();
-            this.pictureMagicCape = new System.Windows.Forms.PictureBox();
-            this.pictureMagicMirror = new System.Windows.Forms.PictureBox();
-            this.pictureMail = new System.Windows.Forms.PictureBox();
-            this.pictureShield = new System.Windows.Forms.PictureBox();
-            this.pictureSword = new System.Windows.Forms.PictureBox();
-            this.groupBoxBowConfig = new System.Windows.Forms.GroupBox();
-            this.labelArrowsHeld = new System.Windows.Forms.Label();
-            this.labelArrowUpgrades = new System.Windows.Forms.Label();
-            this.numericUpDownArrowUpgrades = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownArrowsHeld = new System.Windows.Forms.NumericUpDown();
-            this.bowOptionNone = new System.Windows.Forms.RadioButton();
-            this.bowOption4 = new System.Windows.Forms.RadioButton();
-            this.bowOption3 = new System.Windows.Forms.RadioButton();
-            this.bowOption2 = new System.Windows.Forms.RadioButton();
-            this.bowOption1 = new System.Windows.Forms.RadioButton();
-            this.groupBoxBoomerangConfig = new System.Windows.Forms.GroupBox();
-            this.radioButtonRedBoomerang = new System.Windows.Forms.RadioButton();
-            this.radioButtonBlueBoomerang = new System.Windows.Forms.RadioButton();
-            this.radioButtonNoBoomerang = new System.Windows.Forms.RadioButton();
-            this.buttonChangeName = new System.Windows.Forms.Button();
-            this.groupBoxBombs = new System.Windows.Forms.GroupBox();
-            this.labelBombsMax = new System.Windows.Forms.Label();
-            this.labelBombsHeld = new System.Windows.Forms.Label();
-            this.numericUpDownBombUpgrades = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownBombsHeld = new System.Windows.Forms.NumericUpDown();
-            this.groupBoxMushroomPowder = new System.Windows.Forms.GroupBox();
-            this.radioButtonPowder = new System.Windows.Forms.RadioButton();
-            this.radioButtonMushroom = new System.Windows.Forms.RadioButton();
-            this.radioButtonNoMushPowd = new System.Windows.Forms.RadioButton();
-            this.groupBoxSword = new System.Windows.Forms.GroupBox();
-            this.radioButtonGoldenSword = new System.Windows.Forms.RadioButton();
-            this.radioButtonTemperedSword = new System.Windows.Forms.RadioButton();
-            this.radioButtonMasterSword = new System.Windows.Forms.RadioButton();
-            this.radioButtonFighterSword = new System.Windows.Forms.RadioButton();
-            this.radioButtonNoSword = new System.Windows.Forms.RadioButton();
-            this.groupBoxShield = new System.Windows.Forms.GroupBox();
-            this.radioButtonMirrorShield = new System.Windows.Forms.RadioButton();
-            this.radioButtonHerosShield = new System.Windows.Forms.RadioButton();
-            this.radioButtonBlueShield = new System.Windows.Forms.RadioButton();
-            this.radioButtonNoShield = new System.Windows.Forms.RadioButton();
-            this.groupBoxMails = new System.Windows.Forms.GroupBox();
-            this.radioButtonRedMail = new System.Windows.Forms.RadioButton();
-            this.radioButtonBlueMail = new System.Windows.Forms.RadioButton();
-            this.radioButtonGreenMail = new System.Windows.Forms.RadioButton();
-            this.groupBoxBottles = new System.Windows.Forms.GroupBox();
-            this.comboBoxBottle4 = new System.Windows.Forms.ComboBox();
-            this.comboBoxBottle3 = new System.Windows.Forms.ComboBox();
-            this.comboBoxBottle2 = new System.Windows.Forms.ComboBox();
-            this.comboBoxBottle1 = new System.Windows.Forms.ComboBox();
-            this.pictureBottle4 = new System.Windows.Forms.PictureBox();
-            this.pictureBottle3 = new System.Windows.Forms.PictureBox();
-            this.pictureBottle2 = new System.Windows.Forms.PictureBox();
-            this.pictureBottle1 = new System.Windows.Forms.PictureBox();
-            this.groupBoxGloves = new System.Windows.Forms.GroupBox();
-            this.radioButtonTitansMitts = new System.Windows.Forms.RadioButton();
-            this.radioButtonPowerGloves = new System.Windows.Forms.RadioButton();
-            this.radioButtonNoGloves = new System.Windows.Forms.RadioButton();
-            this.groupBoxShovelFlute = new System.Windows.Forms.GroupBox();
-            this.radioButtonFluteAndBird = new System.Windows.Forms.RadioButton();
-            this.radioButtonFlute = new System.Windows.Forms.RadioButton();
-            this.radioButtonShovel = new System.Windows.Forms.RadioButton();
-            this.radioButtonNoShovelOrFlute = new System.Windows.Forms.RadioButton();
-            this.numericUpDownHeartContainers = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownMagic = new System.Windows.Forms.NumericUpDown();
-            this.labelHeartContainers = new System.Windows.Forms.Label();
-            this.labelMagic = new System.Windows.Forms.Label();
-            this.textQuarterMagic = new System.Windows.Forms.RichTextBox();
-            this.groupPendantsCrystals = new System.Windows.Forms.GroupBox();
-            this.pictureCrystalTR = new System.Windows.Forms.PictureBox();
-            this.pictureCrystalIP = new System.Windows.Forms.PictureBox();
-            this.pictureCrystalTT = new System.Windows.Forms.PictureBox();
-            this.pictureCrystalSW = new System.Windows.Forms.PictureBox();
-            this.pictureCrystalSP = new System.Windows.Forms.PictureBox();
-            this.pictureCrystalMM = new System.Windows.Forms.PictureBox();
-            this.pictureCrystalPoD = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureRedPendant = new System.Windows.Forms.PictureBox();
-            this.pictureBluePendant = new System.Windows.Forms.PictureBox();
-            this.pictureGreenPendant = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.groupInventory = new System.Windows.Forms.GroupBox();
-            this.groupBoxHUD = new System.Windows.Forms.GroupBox();
-            this.pictureBoxHeartContainerPreview = new System.Windows.Forms.PictureBox();
-            this.pictureBoxMagicBar = new System.Windows.Forms.PictureBox();
-            this.groupBoxAreas = new System.Windows.Forms.GroupBox();
-            this.buttonResetDeaths = new System.Windows.Forms.Button();
-            this.menuStrip1.SuspendLayout();
-            this.groupFileSelect.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRupeeCounter)).BeginInit();
-            this.tableLayoutPanelInventory.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureHeartPieces)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureMoonPearl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureZorasFlippers)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picturePowerGlove)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoots)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureMushPowd)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBow)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBombs)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoomerang)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureHookshot)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureFireRod)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureIceRod)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBombos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEther)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureQuake)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureLamp)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureMagicHammer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureShovelFlute)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBugCatchingNet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBookOfMudora)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBottles)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureCaneOfSomaria)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureCaneOfByrna)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureMagicCape)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureMagicMirror)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureMail)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureShield)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureSword)).BeginInit();
-            this.groupBoxBowConfig.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownArrowUpgrades)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownArrowsHeld)).BeginInit();
-            this.groupBoxBoomerangConfig.SuspendLayout();
-            this.groupBoxBombs.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBombUpgrades)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBombsHeld)).BeginInit();
-            this.groupBoxMushroomPowder.SuspendLayout();
-            this.groupBoxSword.SuspendLayout();
-            this.groupBoxShield.SuspendLayout();
-            this.groupBoxMails.SuspendLayout();
-            this.groupBoxBottles.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBottle4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBottle3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBottle2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBottle1)).BeginInit();
-            this.groupBoxGloves.SuspendLayout();
-            this.groupBoxShovelFlute.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHeartContainers)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMagic)).BeginInit();
-            this.groupPendantsCrystals.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureCrystalTR)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureCrystalIP)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureCrystalTT)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureCrystalSW)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureCrystalSP)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureCrystalMM)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureCrystalPoD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureRedPendant)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBluePendant)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureGreenPendant)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.groupInventory.SuspendLayout();
-            this.groupBoxHUD.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHeartContainerPreview)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMagicBar)).BeginInit();
-            this.groupBoxAreas.SuspendLayout();
-            this.SuspendLayout();
+            menuStrip1 = new MenuStrip();
+            fileToolStripMenuItem = new ToolStripMenuItem();
+            opensrmToolStripMenuItem = new ToolStripMenuItem();
+            saveCTRLSToolStripMenuItem = new ToolStripMenuItem();
+            exitToolStripMenuItem = new ToolStripMenuItem();
+            helpToolStripMenuItem = new ToolStripMenuItem();
+            aboutToolStripMenuItem = new ToolStripMenuItem();
+            groupFileSelect = new GroupBox();
+            buttonCreate = new Button();
+            buttonErase = new Button();
+            buttonWrite = new Button();
+            buttonCopy = new Button();
+            radioFile3 = new RadioButton();
+            radioFile2 = new RadioButton();
+            radioFile1 = new RadioButton();
+            helperText = new Label();
+            labelFilename = new Label();
+            listBoxDungeonSelector = new ListBox();
+            textBoxDeathsQuest = new TextBox();
+            labelDeaths = new Label();
+            textBoxDeathsPost = new TextBox();
+            labelDeathsPostGame = new Label();
+            checkedListBoxDungeonItems = new CheckedListBox();
+            labelDungeonKeys = new Label();
+            textBoxDungeonKeys = new TextBox();
+            labelRupees = new Label();
+            numericUpDownRupeeCounter = new NumericUpDown();
+            tableLayoutPanelInventory = new TableLayoutPanel();
+            pictureHeartPieces = new PictureBox();
+            pictureMoonPearl = new PictureBox();
+            pictureZorasFlippers = new PictureBox();
+            picturePowerGlove = new PictureBox();
+            pictureBoots = new PictureBox();
+            pictureMushPowd = new PictureBox();
+            pictureBow = new PictureBox();
+            pictureBombs = new PictureBox();
+            pictureBoomerang = new PictureBox();
+            pictureHookshot = new PictureBox();
+            pictureFireRod = new PictureBox();
+            pictureIceRod = new PictureBox();
+            pictureBombos = new PictureBox();
+            pictureEther = new PictureBox();
+            pictureQuake = new PictureBox();
+            pictureLamp = new PictureBox();
+            pictureMagicHammer = new PictureBox();
+            pictureShovelFlute = new PictureBox();
+            pictureBugCatchingNet = new PictureBox();
+            pictureBookOfMudora = new PictureBox();
+            pictureBottles = new PictureBox();
+            pictureCaneOfSomaria = new PictureBox();
+            pictureCaneOfByrna = new PictureBox();
+            pictureMagicCape = new PictureBox();
+            pictureMagicMirror = new PictureBox();
+            pictureMail = new PictureBox();
+            pictureShield = new PictureBox();
+            pictureSword = new PictureBox();
+            groupBoxBowConfig = new GroupBox();
+            labelArrowsHeld = new Label();
+            labelArrowUpgrades = new Label();
+            numericUpDownArrowUpgrades = new NumericUpDown();
+            numericUpDownArrowsHeld = new NumericUpDown();
+            bowOptionNone = new RadioButton();
+            bowOption4 = new RadioButton();
+            bowOption3 = new RadioButton();
+            bowOption2 = new RadioButton();
+            bowOption1 = new RadioButton();
+            groupBoxBoomerangConfig = new GroupBox();
+            radioButtonRedBoomerang = new RadioButton();
+            radioButtonBlueBoomerang = new RadioButton();
+            radioButtonNoBoomerang = new RadioButton();
+            buttonChangeName = new Button();
+            groupBoxBombs = new GroupBox();
+            labelBombsMax = new Label();
+            labelBombsHeld = new Label();
+            numericUpDownBombUpgrades = new NumericUpDown();
+            numericUpDownBombsHeld = new NumericUpDown();
+            groupBoxMushroomPowder = new GroupBox();
+            radioButtonPowder = new RadioButton();
+            radioButtonMushroom = new RadioButton();
+            radioButtonNoMushPowd = new RadioButton();
+            groupBoxSword = new GroupBox();
+            radioButtonGoldenSword = new RadioButton();
+            radioButtonTemperedSword = new RadioButton();
+            radioButtonMasterSword = new RadioButton();
+            radioButtonFighterSword = new RadioButton();
+            radioButtonNoSword = new RadioButton();
+            groupBoxShield = new GroupBox();
+            radioButtonMirrorShield = new RadioButton();
+            radioButtonHerosShield = new RadioButton();
+            radioButtonBlueShield = new RadioButton();
+            radioButtonNoShield = new RadioButton();
+            groupBoxMails = new GroupBox();
+            radioButtonRedMail = new RadioButton();
+            radioButtonBlueMail = new RadioButton();
+            radioButtonGreenMail = new RadioButton();
+            groupBoxBottles = new GroupBox();
+            comboBoxBottle4 = new ComboBox();
+            comboBoxBottle3 = new ComboBox();
+            comboBoxBottle2 = new ComboBox();
+            comboBoxBottle1 = new ComboBox();
+            pictureBottle4 = new PictureBox();
+            pictureBottle3 = new PictureBox();
+            pictureBottle2 = new PictureBox();
+            pictureBottle1 = new PictureBox();
+            groupBoxGloves = new GroupBox();
+            radioButtonTitansMitts = new RadioButton();
+            radioButtonPowerGloves = new RadioButton();
+            radioButtonNoGloves = new RadioButton();
+            groupBoxShovelFlute = new GroupBox();
+            radioButtonFluteAndBird = new RadioButton();
+            radioButtonFlute = new RadioButton();
+            radioButtonShovel = new RadioButton();
+            radioButtonNoShovelOrFlute = new RadioButton();
+            numericUpDownHeartContainers = new NumericUpDown();
+            numericUpDownMagic = new NumericUpDown();
+            labelHeartContainers = new Label();
+            labelMagic = new Label();
+            textQuarterMagic = new RichTextBox();
+            groupPendantsCrystals = new GroupBox();
+            pictureCrystalTR = new PictureBox();
+            pictureCrystalIP = new PictureBox();
+            pictureCrystalTT = new PictureBox();
+            pictureCrystalSW = new PictureBox();
+            pictureCrystalSP = new PictureBox();
+            pictureCrystalMM = new PictureBox();
+            pictureCrystalPoD = new PictureBox();
+            pictureBox3 = new PictureBox();
+            pictureRedPendant = new PictureBox();
+            pictureBluePendant = new PictureBox();
+            pictureGreenPendant = new PictureBox();
+            pictureBox2 = new PictureBox();
+            groupInventory = new GroupBox();
+            groupBoxHUD = new GroupBox();
+            pictureBoxHeartContainerPreview = new PictureBox();
+            pictureBoxMagicBar = new PictureBox();
+            groupBoxAreas = new GroupBox();
+            buttonResetDeaths = new Button();
+            menuStrip1.SuspendLayout();
+            groupFileSelect.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownRupeeCounter).BeginInit();
+            tableLayoutPanelInventory.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureHeartPieces).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureMoonPearl).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureZorasFlippers).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picturePowerGlove).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoots).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureMushPowd).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBow).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBombs).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoomerang).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureHookshot).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureFireRod).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureIceRod).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBombos).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureEther).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureQuake).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureLamp).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureMagicHammer).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureShovelFlute).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBugCatchingNet).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBookOfMudora).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBottles).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureCaneOfSomaria).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureCaneOfByrna).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureMagicCape).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureMagicMirror).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureMail).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureShield).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureSword).BeginInit();
+            groupBoxBowConfig.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownArrowUpgrades).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownArrowsHeld).BeginInit();
+            groupBoxBoomerangConfig.SuspendLayout();
+            groupBoxBombs.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownBombUpgrades).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownBombsHeld).BeginInit();
+            groupBoxMushroomPowder.SuspendLayout();
+            groupBoxSword.SuspendLayout();
+            groupBoxShield.SuspendLayout();
+            groupBoxMails.SuspendLayout();
+            groupBoxBottles.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBottle4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBottle3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBottle2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBottle1).BeginInit();
+            groupBoxGloves.SuspendLayout();
+            groupBoxShovelFlute.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownHeartContainers).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownMagic).BeginInit();
+            groupPendantsCrystals.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureCrystalTR).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureCrystalIP).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureCrystalTT).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureCrystalSW).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureCrystalSP).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureCrystalMM).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureCrystalPoD).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureRedPendant).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBluePendant).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureGreenPendant).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            groupInventory.SuspendLayout();
+            groupBoxHUD.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxHeartContainerPreview).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxMagicBar).BeginInit();
+            groupBoxAreas.SuspendLayout();
+            SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.helpToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(755, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            menuStrip1.ImageScalingSize = new Size(24, 24);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, helpToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Padding = new Padding(10, 4, 0, 4);
+            menuStrip1.Size = new Size(1258, 37);
+            menuStrip1.TabIndex = 0;
+            menuStrip1.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem
             // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.opensrmToolStripMenuItem,
-            this.saveCTRLSToolStripMenuItem,
-            this.exitToolStripMenuItem});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.fileToolStripMenuItem.Text = "File";
+            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { opensrmToolStripMenuItem, saveCTRLSToolStripMenuItem, exitToolStripMenuItem });
+            fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            fileToolStripMenuItem.Size = new Size(54, 29);
+            fileToolStripMenuItem.Text = "File";
             // 
             // opensrmToolStripMenuItem
             // 
-            this.opensrmToolStripMenuItem.Name = "opensrmToolStripMenuItem";
-            this.opensrmToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.opensrmToolStripMenuItem.Text = "Open (Ctrl+O)";
-            this.opensrmToolStripMenuItem.Click += new System.EventHandler(this.opensrmToolStripMenuItem_Click);
+            opensrmToolStripMenuItem.Name = "opensrmToolStripMenuItem";
+            opensrmToolStripMenuItem.Size = new Size(270, 34);
+            opensrmToolStripMenuItem.Text = "Open (Ctrl+O)";
+            opensrmToolStripMenuItem.Click += opensrmToolStripMenuItem_Click;
             // 
             // saveCTRLSToolStripMenuItem
             // 
-            this.saveCTRLSToolStripMenuItem.Name = "saveCTRLSToolStripMenuItem";
-            this.saveCTRLSToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.saveCTRLSToolStripMenuItem.Text = "Save (Ctrl+S)";
-            this.saveCTRLSToolStripMenuItem.Click += new System.EventHandler(this.saveCTRLSToolStripMenuItem_Click);
+            saveCTRLSToolStripMenuItem.Name = "saveCTRLSToolStripMenuItem";
+            saveCTRLSToolStripMenuItem.Size = new Size(270, 34);
+            saveCTRLSToolStripMenuItem.Text = "Save (Ctrl+S)";
+            saveCTRLSToolStripMenuItem.Click += saveCTRLSToolStripMenuItem_Click;
             // 
             // exitToolStripMenuItem
             // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.exitToolStripMenuItem.Text = "Exit (Ctrl+Q)";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            exitToolStripMenuItem.Size = new Size(270, 34);
+            exitToolStripMenuItem.Text = "Exit (Ctrl+Q)";
+            exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
             // helpToolStripMenuItem
             // 
-            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutToolStripMenuItem});
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.helpToolStripMenuItem.Text = "Help";
+            helpToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aboutToolStripMenuItem });
+            helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            helpToolStripMenuItem.Size = new Size(65, 29);
+            helpToolStripMenuItem.Text = "Help";
             // 
             // aboutToolStripMenuItem
             // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
-            this.aboutToolStripMenuItem.Text = "About";
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            aboutToolStripMenuItem.Size = new Size(270, 34);
+            aboutToolStripMenuItem.Text = "About";
+            aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
             // 
             // groupFileSelect
             // 
-            this.groupFileSelect.Controls.Add(this.buttonCreate);
-            this.groupFileSelect.Controls.Add(this.buttonErase);
-            this.groupFileSelect.Controls.Add(this.buttonWrite);
-            this.groupFileSelect.Controls.Add(this.buttonCopy);
-            this.groupFileSelect.Controls.Add(this.radioFile3);
-            this.groupFileSelect.Controls.Add(this.radioFile2);
-            this.groupFileSelect.Controls.Add(this.radioFile1);
-            this.groupFileSelect.Location = new System.Drawing.Point(12, 27);
-            this.groupFileSelect.Name = "groupFileSelect";
-            this.groupFileSelect.Size = new System.Drawing.Size(200, 107);
-            this.groupFileSelect.TabIndex = 4;
-            this.groupFileSelect.TabStop = false;
-            this.groupFileSelect.Text = "Current File";
+            groupFileSelect.Controls.Add(buttonCreate);
+            groupFileSelect.Controls.Add(buttonErase);
+            groupFileSelect.Controls.Add(buttonWrite);
+            groupFileSelect.Controls.Add(buttonCopy);
+            groupFileSelect.Controls.Add(radioFile3);
+            groupFileSelect.Controls.Add(radioFile2);
+            groupFileSelect.Controls.Add(radioFile1);
+            groupFileSelect.Location = new Point(20, 52);
+            groupFileSelect.Margin = new Padding(5, 6, 5, 6);
+            groupFileSelect.Name = "groupFileSelect";
+            groupFileSelect.Padding = new Padding(5, 6, 5, 6);
+            groupFileSelect.Size = new Size(333, 206);
+            groupFileSelect.TabIndex = 4;
+            groupFileSelect.TabStop = false;
+            groupFileSelect.Text = "Current File";
             // 
             // buttonCreate
             // 
-            this.buttonCreate.Enabled = false;
-            this.buttonCreate.Location = new System.Drawing.Point(95, 19);
-            this.buttonCreate.Name = "buttonCreate";
-            this.buttonCreate.Size = new System.Drawing.Size(75, 23);
-            this.buttonCreate.TabIndex = 10;
-            this.buttonCreate.Text = "Create";
-            this.buttonCreate.UseVisualStyleBackColor = true;
-            this.buttonCreate.Visible = false;
-            this.buttonCreate.Click += new System.EventHandler(this.buttonCreate_Click);
+            buttonCreate.Enabled = false;
+            buttonCreate.Location = new Point(158, 37);
+            buttonCreate.Margin = new Padding(5, 6, 5, 6);
+            buttonCreate.Name = "buttonCreate";
+            buttonCreate.Size = new Size(125, 44);
+            buttonCreate.TabIndex = 10;
+            buttonCreate.Text = "Create";
+            buttonCreate.UseVisualStyleBackColor = true;
+            buttonCreate.Visible = false;
+            buttonCreate.Click += buttonCreate_Click;
             // 
             // buttonErase
             // 
-            this.buttonErase.Enabled = false;
-            this.buttonErase.Location = new System.Drawing.Point(95, 65);
-            this.buttonErase.Name = "buttonErase";
-            this.buttonErase.Size = new System.Drawing.Size(75, 23);
-            this.buttonErase.TabIndex = 9;
-            this.buttonErase.Text = "Erase";
-            this.buttonErase.UseVisualStyleBackColor = true;
-            this.buttonErase.Click += new System.EventHandler(this.buttonErase_Click);
+            buttonErase.Enabled = false;
+            buttonErase.Location = new Point(158, 125);
+            buttonErase.Margin = new Padding(5, 6, 5, 6);
+            buttonErase.Name = "buttonErase";
+            buttonErase.Size = new Size(125, 44);
+            buttonErase.TabIndex = 9;
+            buttonErase.Text = "Erase";
+            buttonErase.UseVisualStyleBackColor = true;
+            buttonErase.Click += buttonErase_Click;
             // 
             // buttonWrite
             // 
-            this.buttonWrite.Enabled = false;
-            this.buttonWrite.Location = new System.Drawing.Point(95, 42);
-            this.buttonWrite.Name = "buttonWrite";
-            this.buttonWrite.Size = new System.Drawing.Size(75, 23);
-            this.buttonWrite.TabIndex = 8;
-            this.buttonWrite.Text = "Write";
-            this.buttonWrite.UseVisualStyleBackColor = true;
-            this.buttonWrite.Click += new System.EventHandler(this.buttonWrite_Click);
+            buttonWrite.Enabled = false;
+            buttonWrite.Location = new Point(158, 81);
+            buttonWrite.Margin = new Padding(5, 6, 5, 6);
+            buttonWrite.Name = "buttonWrite";
+            buttonWrite.Size = new Size(125, 44);
+            buttonWrite.TabIndex = 8;
+            buttonWrite.Text = "Write";
+            buttonWrite.UseVisualStyleBackColor = true;
+            buttonWrite.Click += buttonWrite_Click;
             // 
             // buttonCopy
             // 
-            this.buttonCopy.Enabled = false;
-            this.buttonCopy.Location = new System.Drawing.Point(95, 19);
-            this.buttonCopy.Name = "buttonCopy";
-            this.buttonCopy.Size = new System.Drawing.Size(75, 23);
-            this.buttonCopy.TabIndex = 7;
-            this.buttonCopy.Text = "Copy";
-            this.buttonCopy.UseVisualStyleBackColor = true;
-            this.buttonCopy.Click += new System.EventHandler(this.buttonCopy_Click);
+            buttonCopy.Enabled = false;
+            buttonCopy.Location = new Point(158, 37);
+            buttonCopy.Margin = new Padding(5, 6, 5, 6);
+            buttonCopy.Name = "buttonCopy";
+            buttonCopy.Size = new Size(125, 44);
+            buttonCopy.TabIndex = 7;
+            buttonCopy.Text = "Copy";
+            buttonCopy.UseVisualStyleBackColor = true;
+            buttonCopy.Click += buttonCopy_Click;
             // 
             // radioFile3
             // 
-            this.radioFile3.AutoSize = true;
-            this.radioFile3.Enabled = false;
-            this.radioFile3.Location = new System.Drawing.Point(6, 65);
-            this.radioFile3.Name = "radioFile3";
-            this.radioFile3.Size = new System.Drawing.Size(50, 17);
-            this.radioFile3.TabIndex = 6;
-            this.radioFile3.TabStop = true;
-            this.radioFile3.Text = "File 3";
-            this.radioFile3.UseVisualStyleBackColor = true;
-            this.radioFile3.CheckedChanged += new System.EventHandler(this.fileRadio);
+            radioFile3.AutoSize = true;
+            radioFile3.Enabled = false;
+            radioFile3.Location = new Point(10, 125);
+            radioFile3.Margin = new Padding(5, 6, 5, 6);
+            radioFile3.Name = "radioFile3";
+            radioFile3.Size = new Size(78, 29);
+            radioFile3.TabIndex = 6;
+            radioFile3.TabStop = true;
+            radioFile3.Text = "File 3";
+            radioFile3.UseVisualStyleBackColor = true;
+            radioFile3.CheckedChanged += fileRadio;
             // 
             // radioFile2
             // 
-            this.radioFile2.AutoSize = true;
-            this.radioFile2.Enabled = false;
-            this.radioFile2.Location = new System.Drawing.Point(6, 42);
-            this.radioFile2.Name = "radioFile2";
-            this.radioFile2.Size = new System.Drawing.Size(50, 17);
-            this.radioFile2.TabIndex = 5;
-            this.radioFile2.TabStop = true;
-            this.radioFile2.Text = "File 2";
-            this.radioFile2.UseVisualStyleBackColor = true;
-            this.radioFile2.CheckedChanged += new System.EventHandler(this.fileRadio);
+            radioFile2.AutoSize = true;
+            radioFile2.Enabled = false;
+            radioFile2.Location = new Point(10, 81);
+            radioFile2.Margin = new Padding(5, 6, 5, 6);
+            radioFile2.Name = "radioFile2";
+            radioFile2.Size = new Size(78, 29);
+            radioFile2.TabIndex = 5;
+            radioFile2.TabStop = true;
+            radioFile2.Text = "File 2";
+            radioFile2.UseVisualStyleBackColor = true;
+            radioFile2.CheckedChanged += fileRadio;
             // 
             // radioFile1
             // 
-            this.radioFile1.AutoSize = true;
-            this.radioFile1.Checked = true;
-            this.radioFile1.Enabled = false;
-            this.radioFile1.Location = new System.Drawing.Point(6, 19);
-            this.radioFile1.Name = "radioFile1";
-            this.radioFile1.Size = new System.Drawing.Size(50, 17);
-            this.radioFile1.TabIndex = 4;
-            this.radioFile1.TabStop = true;
-            this.radioFile1.Text = "File 1";
-            this.radioFile1.UseVisualStyleBackColor = true;
-            this.radioFile1.CheckedChanged += new System.EventHandler(this.fileRadio);
+            radioFile1.AutoSize = true;
+            radioFile1.Checked = true;
+            radioFile1.Enabled = false;
+            radioFile1.Location = new Point(10, 37);
+            radioFile1.Margin = new Padding(5, 6, 5, 6);
+            radioFile1.Name = "radioFile1";
+            radioFile1.Size = new Size(78, 29);
+            radioFile1.TabIndex = 4;
+            radioFile1.TabStop = true;
+            radioFile1.Text = "File 1";
+            radioFile1.UseVisualStyleBackColor = true;
+            radioFile1.CheckedChanged += fileRadio;
             // 
             // helperText
             // 
-            this.helperText.AutoSize = true;
-            this.helperText.Location = new System.Drawing.Point(9, 428);
-            this.helperText.Name = "helperText";
-            this.helperText.Size = new System.Drawing.Size(254, 13);
-            this.helperText.TabIndex = 5;
-            this.helperText.Text = "A Link to the Past SRAM Editor v1.0 by mysterypaint";
+            helperText.AutoSize = true;
+            helperText.Location = new Point(15, 823);
+            helperText.Margin = new Padding(5, 0, 5, 0);
+            helperText.Name = "helperText";
+            helperText.Size = new Size(426, 25);
+            helperText.TabIndex = 5;
+            helperText.Text = "A Link to the Past SRAM Editor v1.0 by mysterypaint";
             // 
             // labelFilename
             // 
-            this.labelFilename.AutoSize = true;
-            this.labelFilename.Location = new System.Drawing.Point(218, 33);
-            this.labelFilename.Name = "labelFilename";
-            this.labelFilename.Size = new System.Drawing.Size(49, 13);
-            this.labelFilename.TabIndex = 7;
-            this.labelFilename.Text = "Filename";
-            this.labelFilename.Visible = false;
+            labelFilename.AutoSize = true;
+            labelFilename.Location = new Point(363, 63);
+            labelFilename.Margin = new Padding(5, 0, 5, 0);
+            labelFilename.Name = "labelFilename";
+            labelFilename.Size = new Size(82, 25);
+            labelFilename.TabIndex = 7;
+            labelFilename.Text = "Filename";
+            labelFilename.Visible = false;
             // 
             // listBoxDungeonSelector
             // 
-            this.listBoxDungeonSelector.FormattingEnabled = true;
-            this.listBoxDungeonSelector.Items.AddRange(new object[] {
-            "Sewers",
-            "Hyrule Castle",
-            "Eastern Palace",
-            "Desert Palace",
-            "Hyrule Castle 2",
-            "Swamp Palace",
-            "Dark Palace",
-            "Misery Mire",
-            "Skull Woods",
-            "Ice Palace",
-            "Tower of Hera",
-            "Thieves Town (Gargoyle\'s Domain)",
-            "Turtle Rock",
-            "Ganon\'s Tower"});
-            this.listBoxDungeonSelector.Location = new System.Drawing.Point(15, 19);
-            this.listBoxDungeonSelector.Name = "listBoxDungeonSelector";
-            this.listBoxDungeonSelector.Size = new System.Drawing.Size(122, 134);
-            this.listBoxDungeonSelector.TabIndex = 8;
-            this.listBoxDungeonSelector.Visible = false;
+            listBoxDungeonSelector.FormattingEnabled = true;
+            listBoxDungeonSelector.Items.AddRange(new object[] { "Sewers", "Hyrule Castle", "Eastern Palace", "Desert Palace", "Hyrule Castle 2", "Swamp Palace", "Dark Palace", "Misery Mire", "Skull Woods", "Ice Palace", "Tower of Hera", "Thieves Town (Gargoyle's Domain)", "Turtle Rock", "Ganon's Tower" });
+            listBoxDungeonSelector.Location = new Point(25, 37);
+            listBoxDungeonSelector.Margin = new Padding(5, 6, 5, 6);
+            listBoxDungeonSelector.Name = "listBoxDungeonSelector";
+            listBoxDungeonSelector.Size = new Size(201, 254);
+            listBoxDungeonSelector.TabIndex = 8;
+            listBoxDungeonSelector.Visible = false;
             // 
             // textBoxDeathsQuest
             // 
-            this.textBoxDeathsQuest.Location = new System.Drawing.Point(18, 158);
-            this.textBoxDeathsQuest.Name = "textBoxDeathsQuest";
-            this.textBoxDeathsQuest.Size = new System.Drawing.Size(100, 20);
-            this.textBoxDeathsQuest.TabIndex = 9;
-            this.textBoxDeathsQuest.Visible = false;
+            textBoxDeathsQuest.Location = new Point(30, 304);
+            textBoxDeathsQuest.Margin = new Padding(5, 6, 5, 6);
+            textBoxDeathsQuest.Name = "textBoxDeathsQuest";
+            textBoxDeathsQuest.Size = new Size(164, 31);
+            textBoxDeathsQuest.TabIndex = 9;
+            textBoxDeathsQuest.Visible = false;
             // 
             // labelDeaths
             // 
-            this.labelDeaths.AutoSize = true;
-            this.labelDeaths.Location = new System.Drawing.Point(15, 144);
-            this.labelDeaths.Name = "labelDeaths";
-            this.labelDeaths.Size = new System.Drawing.Size(151, 13);
-            this.labelDeaths.TabIndex = 12;
-            this.labelDeaths.Text = "Deaths / Saves (During quest)";
-            this.labelDeaths.Visible = false;
+            labelDeaths.AutoSize = true;
+            labelDeaths.Location = new Point(25, 277);
+            labelDeaths.Margin = new Padding(5, 0, 5, 0);
+            labelDeaths.Name = "labelDeaths";
+            labelDeaths.Size = new Size(247, 25);
+            labelDeaths.TabIndex = 12;
+            labelDeaths.Text = "Deaths / Saves (During quest)";
+            labelDeaths.Visible = false;
             // 
             // textBoxDeathsPost
             // 
-            this.textBoxDeathsPost.Location = new System.Drawing.Point(18, 200);
-            this.textBoxDeathsPost.Name = "textBoxDeathsPost";
-            this.textBoxDeathsPost.Size = new System.Drawing.Size(100, 20);
-            this.textBoxDeathsPost.TabIndex = 13;
-            this.textBoxDeathsPost.Visible = false;
+            textBoxDeathsPost.Location = new Point(30, 385);
+            textBoxDeathsPost.Margin = new Padding(5, 6, 5, 6);
+            textBoxDeathsPost.Name = "textBoxDeathsPost";
+            textBoxDeathsPost.Size = new Size(164, 31);
+            textBoxDeathsPost.TabIndex = 13;
+            textBoxDeathsPost.Visible = false;
             // 
             // labelDeathsPostGame
             // 
-            this.labelDeathsPostGame.AutoSize = true;
-            this.labelDeathsPostGame.Location = new System.Drawing.Point(15, 184);
-            this.labelDeathsPostGame.Name = "labelDeathsPostGame";
-            this.labelDeathsPostGame.Size = new System.Drawing.Size(140, 13);
-            this.labelDeathsPostGame.TabIndex = 14;
-            this.labelDeathsPostGame.Text = "Deaths / Saves (PostGame)";
-            this.labelDeathsPostGame.Visible = false;
+            labelDeathsPostGame.AutoSize = true;
+            labelDeathsPostGame.Location = new Point(25, 354);
+            labelDeathsPostGame.Margin = new Padding(5, 0, 5, 0);
+            labelDeathsPostGame.Name = "labelDeathsPostGame";
+            labelDeathsPostGame.Size = new Size(224, 25);
+            labelDeathsPostGame.TabIndex = 14;
+            labelDeathsPostGame.Text = "Deaths / Saves (PostGame)";
+            labelDeathsPostGame.Visible = false;
             // 
             // checkedListBoxDungeonItems
             // 
-            this.checkedListBoxDungeonItems.FormattingEnabled = true;
-            this.checkedListBoxDungeonItems.Items.AddRange(new object[] {
-            "Compass",
-            "Big Key",
-            "Dungeon Map"});
-            this.checkedListBoxDungeonItems.Location = new System.Drawing.Point(143, 18);
-            this.checkedListBoxDungeonItems.Name = "checkedListBoxDungeonItems";
-            this.checkedListBoxDungeonItems.Size = new System.Drawing.Size(120, 49);
-            this.checkedListBoxDungeonItems.TabIndex = 15;
-            this.checkedListBoxDungeonItems.Visible = false;
+            checkedListBoxDungeonItems.FormattingEnabled = true;
+            checkedListBoxDungeonItems.Items.AddRange(new object[] { "Compass", "Big Key", "Dungeon Map" });
+            checkedListBoxDungeonItems.Location = new Point(238, 35);
+            checkedListBoxDungeonItems.Margin = new Padding(5, 6, 5, 6);
+            checkedListBoxDungeonItems.Name = "checkedListBoxDungeonItems";
+            checkedListBoxDungeonItems.Size = new Size(197, 88);
+            checkedListBoxDungeonItems.TabIndex = 15;
+            checkedListBoxDungeonItems.Visible = false;
             // 
             // labelDungeonKeys
             // 
-            this.labelDungeonKeys.AutoSize = true;
-            this.labelDungeonKeys.Location = new System.Drawing.Point(140, 82);
-            this.labelDungeonKeys.Name = "labelDungeonKeys";
-            this.labelDungeonKeys.Size = new System.Drawing.Size(30, 13);
-            this.labelDungeonKeys.TabIndex = 20;
-            this.labelDungeonKeys.Text = "Keys";
-            this.labelDungeonKeys.Visible = false;
+            labelDungeonKeys.AutoSize = true;
+            labelDungeonKeys.Location = new Point(233, 158);
+            labelDungeonKeys.Margin = new Padding(5, 0, 5, 0);
+            labelDungeonKeys.Name = "labelDungeonKeys";
+            labelDungeonKeys.Size = new Size(48, 25);
+            labelDungeonKeys.TabIndex = 20;
+            labelDungeonKeys.Text = "Keys";
+            labelDungeonKeys.Visible = false;
             // 
             // textBoxDungeonKeys
             // 
-            this.textBoxDungeonKeys.Location = new System.Drawing.Point(143, 98);
-            this.textBoxDungeonKeys.Name = "textBoxDungeonKeys";
-            this.textBoxDungeonKeys.Size = new System.Drawing.Size(44, 20);
-            this.textBoxDungeonKeys.TabIndex = 19;
-            this.textBoxDungeonKeys.Visible = false;
+            textBoxDungeonKeys.Location = new Point(238, 188);
+            textBoxDungeonKeys.Margin = new Padding(5, 6, 5, 6);
+            textBoxDungeonKeys.Name = "textBoxDungeonKeys";
+            textBoxDungeonKeys.Size = new Size(71, 31);
+            textBoxDungeonKeys.TabIndex = 19;
+            textBoxDungeonKeys.Visible = false;
             // 
             // labelRupees
             // 
-            this.labelRupees.AutoSize = true;
-            this.labelRupees.Location = new System.Drawing.Point(3, 96);
-            this.labelRupees.Name = "labelRupees";
-            this.labelRupees.Size = new System.Drawing.Size(44, 13);
-            this.labelRupees.TabIndex = 22;
-            this.labelRupees.Text = "Rupees";
-            this.labelRupees.Visible = false;
+            labelRupees.AutoSize = true;
+            labelRupees.Location = new Point(5, 185);
+            labelRupees.Margin = new Padding(5, 0, 5, 0);
+            labelRupees.Name = "labelRupees";
+            labelRupees.Size = new Size(70, 25);
+            labelRupees.TabIndex = 22;
+            labelRupees.Text = "Rupees";
+            labelRupees.Visible = false;
             // 
             // numericUpDownRupeeCounter
             // 
-            this.numericUpDownRupeeCounter.Location = new System.Drawing.Point(6, 112);
-            this.numericUpDownRupeeCounter.Maximum = 999;
-            this.numericUpDownRupeeCounter.Name = "numericUpDownRupeeCounter";
-            this.numericUpDownRupeeCounter.Size = new System.Drawing.Size(51, 20);
-            this.numericUpDownRupeeCounter.TabIndex = 23;
-            this.numericUpDownRupeeCounter.Visible = false;
-            this.numericUpDownRupeeCounter.ValueChanged += new System.EventHandler(this.numericUpDownRupeeCounter_ValueChanged);
+            numericUpDownRupeeCounter.Location = new Point(10, 215);
+            numericUpDownRupeeCounter.Margin = new Padding(5, 6, 5, 6);
+            numericUpDownRupeeCounter.Maximum = new decimal(new int[] { 999, 0, 0, 0 });
+            numericUpDownRupeeCounter.Name = "numericUpDownRupeeCounter";
+            numericUpDownRupeeCounter.Size = new Size(85, 31);
+            numericUpDownRupeeCounter.TabIndex = 23;
+            numericUpDownRupeeCounter.Visible = false;
+            numericUpDownRupeeCounter.ValueChanged += numericUpDownRupeeCounter_ValueChanged;
             // 
             // tableLayoutPanelInventory
             // 
-            this.tableLayoutPanelInventory.BackColor = System.Drawing.SystemColors.ControlText;
-            this.tableLayoutPanelInventory.ColumnCount = 5;
-            this.tableLayoutPanelInventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanelInventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanelInventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanelInventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanelInventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 63F));
-            this.tableLayoutPanelInventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanelInventory.Controls.Add(this.pictureHeartPieces, 0, 5);
-            this.tableLayoutPanelInventory.Controls.Add(this.pictureMoonPearl, 3, 4);
-            this.tableLayoutPanelInventory.Controls.Add(this.pictureZorasFlippers, 2, 4);
-            this.tableLayoutPanelInventory.Controls.Add(this.picturePowerGlove, 1, 4);
-            this.tableLayoutPanelInventory.Controls.Add(this.pictureBoots, 0, 4);
-            this.tableLayoutPanelInventory.Controls.Add(this.pictureMushPowd, 4, 0);
-            this.tableLayoutPanelInventory.Controls.Add(this.pictureBow, 0, 0);
-            this.tableLayoutPanelInventory.Controls.Add(this.pictureBombs, 3, 0);
-            this.tableLayoutPanelInventory.Controls.Add(this.pictureBoomerang, 1, 0);
-            this.tableLayoutPanelInventory.Controls.Add(this.pictureHookshot, 2, 0);
-            this.tableLayoutPanelInventory.Controls.Add(this.pictureFireRod, 0, 1);
-            this.tableLayoutPanelInventory.Controls.Add(this.pictureIceRod, 1, 1);
-            this.tableLayoutPanelInventory.Controls.Add(this.pictureBombos, 2, 1);
-            this.tableLayoutPanelInventory.Controls.Add(this.pictureEther, 3, 1);
-            this.tableLayoutPanelInventory.Controls.Add(this.pictureQuake, 4, 1);
-            this.tableLayoutPanelInventory.Controls.Add(this.pictureLamp, 0, 2);
-            this.tableLayoutPanelInventory.Controls.Add(this.pictureMagicHammer, 1, 2);
-            this.tableLayoutPanelInventory.Controls.Add(this.pictureShovelFlute, 2, 2);
-            this.tableLayoutPanelInventory.Controls.Add(this.pictureBugCatchingNet, 3, 2);
-            this.tableLayoutPanelInventory.Controls.Add(this.pictureBookOfMudora, 4, 2);
-            this.tableLayoutPanelInventory.Controls.Add(this.pictureBottles, 0, 3);
-            this.tableLayoutPanelInventory.Controls.Add(this.pictureCaneOfSomaria, 1, 3);
-            this.tableLayoutPanelInventory.Controls.Add(this.pictureCaneOfByrna, 2, 3);
-            this.tableLayoutPanelInventory.Controls.Add(this.pictureMagicCape, 3, 3);
-            this.tableLayoutPanelInventory.Controls.Add(this.pictureMagicMirror, 4, 3);
-            this.tableLayoutPanelInventory.Controls.Add(this.pictureMail, 4, 5);
-            this.tableLayoutPanelInventory.Controls.Add(this.pictureShield, 3, 5);
-            this.tableLayoutPanelInventory.Controls.Add(this.pictureSword, 2, 5);
-            this.tableLayoutPanelInventory.Location = new System.Drawing.Point(6, 15);
-            this.tableLayoutPanelInventory.Name = "tableLayoutPanelInventory";
-            this.tableLayoutPanelInventory.RowCount = 6;
-            this.tableLayoutPanelInventory.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanelInventory.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanelInventory.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanelInventory.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanelInventory.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanelInventory.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanelInventory.Size = new System.Drawing.Size(154, 152);
-            this.tableLayoutPanelInventory.TabIndex = 0;
+            tableLayoutPanelInventory.BackColor = SystemColors.ControlText;
+            tableLayoutPanelInventory.ColumnCount = 5;
+            tableLayoutPanelInventory.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 42F));
+            tableLayoutPanelInventory.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 42F));
+            tableLayoutPanelInventory.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 42F));
+            tableLayoutPanelInventory.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 42F));
+            tableLayoutPanelInventory.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 105F));
+            tableLayoutPanelInventory.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 33F));
+            tableLayoutPanelInventory.Controls.Add(pictureHeartPieces, 0, 5);
+            tableLayoutPanelInventory.Controls.Add(pictureMoonPearl, 3, 4);
+            tableLayoutPanelInventory.Controls.Add(pictureZorasFlippers, 2, 4);
+            tableLayoutPanelInventory.Controls.Add(picturePowerGlove, 1, 4);
+            tableLayoutPanelInventory.Controls.Add(pictureBoots, 0, 4);
+            tableLayoutPanelInventory.Controls.Add(pictureMushPowd, 4, 0);
+            tableLayoutPanelInventory.Controls.Add(pictureBow, 0, 0);
+            tableLayoutPanelInventory.Controls.Add(pictureBombs, 3, 0);
+            tableLayoutPanelInventory.Controls.Add(pictureBoomerang, 1, 0);
+            tableLayoutPanelInventory.Controls.Add(pictureHookshot, 2, 0);
+            tableLayoutPanelInventory.Controls.Add(pictureFireRod, 0, 1);
+            tableLayoutPanelInventory.Controls.Add(pictureIceRod, 1, 1);
+            tableLayoutPanelInventory.Controls.Add(pictureBombos, 2, 1);
+            tableLayoutPanelInventory.Controls.Add(pictureEther, 3, 1);
+            tableLayoutPanelInventory.Controls.Add(pictureQuake, 4, 1);
+            tableLayoutPanelInventory.Controls.Add(pictureLamp, 0, 2);
+            tableLayoutPanelInventory.Controls.Add(pictureMagicHammer, 1, 2);
+            tableLayoutPanelInventory.Controls.Add(pictureShovelFlute, 2, 2);
+            tableLayoutPanelInventory.Controls.Add(pictureBugCatchingNet, 3, 2);
+            tableLayoutPanelInventory.Controls.Add(pictureBookOfMudora, 4, 2);
+            tableLayoutPanelInventory.Controls.Add(pictureBottles, 0, 3);
+            tableLayoutPanelInventory.Controls.Add(pictureCaneOfSomaria, 1, 3);
+            tableLayoutPanelInventory.Controls.Add(pictureCaneOfByrna, 2, 3);
+            tableLayoutPanelInventory.Controls.Add(pictureMagicCape, 3, 3);
+            tableLayoutPanelInventory.Controls.Add(pictureMagicMirror, 4, 3);
+            tableLayoutPanelInventory.Controls.Add(pictureMail, 4, 5);
+            tableLayoutPanelInventory.Controls.Add(pictureShield, 3, 5);
+            tableLayoutPanelInventory.Controls.Add(pictureSword, 2, 5);
+            tableLayoutPanelInventory.Location = new Point(10, 29);
+            tableLayoutPanelInventory.Margin = new Padding(5, 6, 5, 6);
+            tableLayoutPanelInventory.Name = "tableLayoutPanelInventory";
+            tableLayoutPanelInventory.RowCount = 6;
+            tableLayoutPanelInventory.RowStyles.Add(new RowStyle(SizeType.Absolute, 48F));
+            tableLayoutPanelInventory.RowStyles.Add(new RowStyle(SizeType.Absolute, 48F));
+            tableLayoutPanelInventory.RowStyles.Add(new RowStyle(SizeType.Absolute, 48F));
+            tableLayoutPanelInventory.RowStyles.Add(new RowStyle(SizeType.Absolute, 48F));
+            tableLayoutPanelInventory.RowStyles.Add(new RowStyle(SizeType.Absolute, 48F));
+            tableLayoutPanelInventory.RowStyles.Add(new RowStyle(SizeType.Absolute, 48F));
+            tableLayoutPanelInventory.Size = new Size(257, 292);
+            tableLayoutPanelInventory.TabIndex = 0;
             // 
             // pictureHeartPieces
             // 
-            this.pictureHeartPieces.Image = global::ALTTPSRAMEditor.Properties.Resources.Piece_of_Heart_Empty;
-            this.pictureHeartPieces.Location = new System.Drawing.Point(3, 128);
-            this.pictureHeartPieces.Name = "pictureHeartPieces";
-            this.pictureHeartPieces.Size = new System.Drawing.Size(16, 16);
-            this.pictureHeartPieces.TabIndex = 36;
-            this.pictureHeartPieces.TabStop = false;
-            this.pictureHeartPieces.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureHeartPieces_MouseClick);
+            pictureHeartPieces.Image = Properties.Resources.Piece_of_Heart_Empty;
+            pictureHeartPieces.Location = new Point(5, 246);
+            pictureHeartPieces.Margin = new Padding(5, 6, 5, 6);
+            pictureHeartPieces.Name = "pictureHeartPieces";
+            pictureHeartPieces.Size = new Size(27, 31);
+            pictureHeartPieces.TabIndex = 36;
+            pictureHeartPieces.TabStop = false;
+            pictureHeartPieces.MouseClick += pictureHeartPieces_MouseClick;
             // 
             // pictureMoonPearl
             // 
-            this.pictureMoonPearl.Image = global::ALTTPSRAMEditor.Properties.Resources.D_Moon_Pearl;
-            this.pictureMoonPearl.ImageLocation = "";
-            this.pictureMoonPearl.InitialImage = global::ALTTPSRAMEditor.Properties.Resources.Bomb;
-            this.pictureMoonPearl.Location = new System.Drawing.Point(78, 103);
-            this.pictureMoonPearl.Name = "pictureMoonPearl";
-            this.pictureMoonPearl.Size = new System.Drawing.Size(16, 16);
-            this.pictureMoonPearl.TabIndex = 26;
-            this.pictureMoonPearl.TabStop = false;
-            this.pictureMoonPearl.Click += new System.EventHandler(this.pictureMoonPearl_Click);
+            pictureMoonPearl.Image = Properties.Resources.D_Moon_Pearl;
+            pictureMoonPearl.ImageLocation = "";
+            pictureMoonPearl.InitialImage = Properties.Resources.Bomb;
+            pictureMoonPearl.Location = new Point(131, 198);
+            pictureMoonPearl.Margin = new Padding(5, 6, 5, 6);
+            pictureMoonPearl.Name = "pictureMoonPearl";
+            pictureMoonPearl.Size = new Size(27, 31);
+            pictureMoonPearl.TabIndex = 26;
+            pictureMoonPearl.TabStop = false;
+            pictureMoonPearl.Click += pictureMoonPearl_Click;
             // 
             // pictureZorasFlippers
             // 
-            this.pictureZorasFlippers.Image = global::ALTTPSRAMEditor.Properties.Resources.D_Zora_s_Flippers;
-            this.pictureZorasFlippers.ImageLocation = "";
-            this.pictureZorasFlippers.InitialImage = global::ALTTPSRAMEditor.Properties.Resources.Bomb;
-            this.pictureZorasFlippers.Location = new System.Drawing.Point(53, 103);
-            this.pictureZorasFlippers.Name = "pictureZorasFlippers";
-            this.pictureZorasFlippers.Size = new System.Drawing.Size(16, 16);
-            this.pictureZorasFlippers.TabIndex = 25;
-            this.pictureZorasFlippers.TabStop = false;
-            this.pictureZorasFlippers.Click += new System.EventHandler(this.pictureZorasFlippers_Click);
+            pictureZorasFlippers.Image = Properties.Resources.D_Zora_s_Flippers;
+            pictureZorasFlippers.ImageLocation = "";
+            pictureZorasFlippers.InitialImage = Properties.Resources.Bomb;
+            pictureZorasFlippers.Location = new Point(89, 198);
+            pictureZorasFlippers.Margin = new Padding(5, 6, 5, 6);
+            pictureZorasFlippers.Name = "pictureZorasFlippers";
+            pictureZorasFlippers.Size = new Size(27, 31);
+            pictureZorasFlippers.TabIndex = 25;
+            pictureZorasFlippers.TabStop = false;
+            pictureZorasFlippers.Click += pictureZorasFlippers_Click;
             // 
             // picturePowerGlove
             // 
-            this.picturePowerGlove.Image = global::ALTTPSRAMEditor.Properties.Resources.D_Power_Glove;
-            this.picturePowerGlove.ImageLocation = "";
-            this.picturePowerGlove.InitialImage = global::ALTTPSRAMEditor.Properties.Resources.Bomb;
-            this.picturePowerGlove.Location = new System.Drawing.Point(28, 103);
-            this.picturePowerGlove.Name = "picturePowerGlove";
-            this.picturePowerGlove.Size = new System.Drawing.Size(16, 16);
-            this.picturePowerGlove.TabIndex = 24;
-            this.picturePowerGlove.TabStop = false;
-            this.picturePowerGlove.Click += new System.EventHandler(this.picturePowerGlove_Click);
+            picturePowerGlove.Image = Properties.Resources.D_Power_Glove;
+            picturePowerGlove.ImageLocation = "";
+            picturePowerGlove.InitialImage = Properties.Resources.Bomb;
+            picturePowerGlove.Location = new Point(47, 198);
+            picturePowerGlove.Margin = new Padding(5, 6, 5, 6);
+            picturePowerGlove.Name = "picturePowerGlove";
+            picturePowerGlove.Size = new Size(27, 31);
+            picturePowerGlove.TabIndex = 24;
+            picturePowerGlove.TabStop = false;
+            picturePowerGlove.Click += picturePowerGlove_Click;
             // 
             // pictureBoots
             // 
-            this.pictureBoots.Image = global::ALTTPSRAMEditor.Properties.Resources.D_Pegasus_Boots;
-            this.pictureBoots.ImageLocation = "";
-            this.pictureBoots.InitialImage = global::ALTTPSRAMEditor.Properties.Resources.Bomb;
-            this.pictureBoots.Location = new System.Drawing.Point(3, 103);
-            this.pictureBoots.Name = "pictureBoots";
-            this.pictureBoots.Size = new System.Drawing.Size(16, 16);
-            this.pictureBoots.TabIndex = 23;
-            this.pictureBoots.TabStop = false;
-            this.pictureBoots.Click += new System.EventHandler(this.pictureBoots_Click);
+            pictureBoots.Image = Properties.Resources.D_Pegasus_Boots;
+            pictureBoots.ImageLocation = "";
+            pictureBoots.InitialImage = Properties.Resources.Bomb;
+            pictureBoots.Location = new Point(5, 198);
+            pictureBoots.Margin = new Padding(5, 6, 5, 6);
+            pictureBoots.Name = "pictureBoots";
+            pictureBoots.Size = new Size(27, 31);
+            pictureBoots.TabIndex = 23;
+            pictureBoots.TabStop = false;
+            pictureBoots.Click += pictureBoots_Click;
             // 
             // pictureMushPowd
             // 
-            this.pictureMushPowd.Image = global::ALTTPSRAMEditor.Properties.Resources.D_Mushroom;
-            this.pictureMushPowd.ImageLocation = "";
-            this.pictureMushPowd.InitialImage = global::ALTTPSRAMEditor.Properties.Resources.Bomb;
-            this.pictureMushPowd.Location = new System.Drawing.Point(103, 3);
-            this.pictureMushPowd.Name = "pictureMushPowd";
-            this.pictureMushPowd.Size = new System.Drawing.Size(16, 16);
-            this.pictureMushPowd.TabIndex = 7;
-            this.pictureMushPowd.TabStop = false;
-            this.pictureMushPowd.Click += new System.EventHandler(this.pictureMushPowd_Click);
+            pictureMushPowd.Image = Properties.Resources.D_Mushroom;
+            pictureMushPowd.ImageLocation = "";
+            pictureMushPowd.InitialImage = Properties.Resources.Bomb;
+            pictureMushPowd.Location = new Point(173, 6);
+            pictureMushPowd.Margin = new Padding(5, 6, 5, 6);
+            pictureMushPowd.Name = "pictureMushPowd";
+            pictureMushPowd.Size = new Size(27, 31);
+            pictureMushPowd.TabIndex = 7;
+            pictureMushPowd.TabStop = false;
+            pictureMushPowd.Click += pictureMushPowd_Click;
             // 
             // pictureBow
             // 
-            this.pictureBow.BackColor = System.Drawing.SystemColors.ControlText;
-            this.pictureBow.Image = global::ALTTPSRAMEditor.Properties.Resources.D_Bow;
-            this.pictureBow.ImageLocation = "";
-            this.pictureBow.InitialImage = global::ALTTPSRAMEditor.Properties.Resources.Bow_and_Arrow;
-            this.pictureBow.Location = new System.Drawing.Point(3, 3);
-            this.pictureBow.Name = "pictureBow";
-            this.pictureBow.Size = new System.Drawing.Size(16, 16);
-            this.pictureBow.TabIndex = 0;
-            this.pictureBow.TabStop = false;
-            this.pictureBow.Click += new System.EventHandler(this.pictureBow_Click);
+            pictureBow.BackColor = SystemColors.ControlText;
+            pictureBow.Image = Properties.Resources.D_Bow;
+            pictureBow.ImageLocation = "";
+            pictureBow.InitialImage = Properties.Resources.Bow_and_Arrow;
+            pictureBow.Location = new Point(5, 6);
+            pictureBow.Margin = new Padding(5, 6, 5, 6);
+            pictureBow.Name = "pictureBow";
+            pictureBow.Size = new Size(27, 31);
+            pictureBow.TabIndex = 0;
+            pictureBow.TabStop = false;
+            pictureBow.Click += pictureBow_Click;
             // 
             // pictureBombs
             // 
-            this.pictureBombs.Image = global::ALTTPSRAMEditor.Properties.Resources.D_Bomb;
-            this.pictureBombs.ImageLocation = "";
-            this.pictureBombs.InitialImage = global::ALTTPSRAMEditor.Properties.Resources.Bomb;
-            this.pictureBombs.Location = new System.Drawing.Point(78, 3);
-            this.pictureBombs.Name = "pictureBombs";
-            this.pictureBombs.Size = new System.Drawing.Size(16, 16);
-            this.pictureBombs.TabIndex = 5;
-            this.pictureBombs.TabStop = false;
-            this.pictureBombs.Click += new System.EventHandler(this.pictureBombs_Click);
+            pictureBombs.Image = Properties.Resources.D_Bomb;
+            pictureBombs.ImageLocation = "";
+            pictureBombs.InitialImage = Properties.Resources.Bomb;
+            pictureBombs.Location = new Point(131, 6);
+            pictureBombs.Margin = new Padding(5, 6, 5, 6);
+            pictureBombs.Name = "pictureBombs";
+            pictureBombs.Size = new Size(27, 31);
+            pictureBombs.TabIndex = 5;
+            pictureBombs.TabStop = false;
+            pictureBombs.Click += pictureBombs_Click;
             // 
-            // pictureBox1
+            // pictureBoomerang
             // 
-            this.pictureBoomerang.Image = global::ALTTPSRAMEditor.Properties.Resources.D_Boomerang;
-            this.pictureBoomerang.ImageLocation = "";
-            this.pictureBoomerang.InitialImage = global::ALTTPSRAMEditor.Properties.Resources.Boomerang;
-            this.pictureBoomerang.Location = new System.Drawing.Point(28, 3);
-            this.pictureBoomerang.Name = "pictureBox1";
-            this.pictureBoomerang.Size = new System.Drawing.Size(16, 16);
-            this.pictureBoomerang.TabIndex = 0;
-            this.pictureBoomerang.TabStop = false;
-            this.pictureBoomerang.Click += new System.EventHandler(this.pictureBox1_Click);
+            pictureBoomerang.Image = Properties.Resources.D_Boomerang;
+            pictureBoomerang.ImageLocation = "";
+            pictureBoomerang.InitialImage = Properties.Resources.Boomerang;
+            pictureBoomerang.Location = new Point(47, 6);
+            pictureBoomerang.Margin = new Padding(5, 6, 5, 6);
+            pictureBoomerang.Name = "pictureBoomerang";
+            pictureBoomerang.Size = new Size(27, 31);
+            pictureBoomerang.TabIndex = 0;
+            pictureBoomerang.TabStop = false;
+            pictureBoomerang.Click += pictureBox1_Click;
             // 
             // pictureHookshot
             // 
-            this.pictureHookshot.Image = global::ALTTPSRAMEditor.Properties.Resources.D_Hookshot;
-            this.pictureHookshot.ImageLocation = "";
-            this.pictureHookshot.InitialImage = global::ALTTPSRAMEditor.Properties.Resources.Boomerang;
-            this.pictureHookshot.Location = new System.Drawing.Point(53, 3);
-            this.pictureHookshot.Name = "pictureHookshot";
-            this.pictureHookshot.Size = new System.Drawing.Size(16, 16);
-            this.pictureHookshot.TabIndex = 6;
-            this.pictureHookshot.TabStop = false;
-            this.pictureHookshot.Click += new System.EventHandler(this.pictureHookshot_Click);
+            pictureHookshot.Image = Properties.Resources.D_Hookshot;
+            pictureHookshot.ImageLocation = "";
+            pictureHookshot.InitialImage = Properties.Resources.Boomerang;
+            pictureHookshot.Location = new Point(89, 6);
+            pictureHookshot.Margin = new Padding(5, 6, 5, 6);
+            pictureHookshot.Name = "pictureHookshot";
+            pictureHookshot.Size = new Size(27, 31);
+            pictureHookshot.TabIndex = 6;
+            pictureHookshot.TabStop = false;
+            pictureHookshot.Click += pictureHookshot_Click;
             // 
             // pictureFireRod
             // 
-            this.pictureFireRod.Image = global::ALTTPSRAMEditor.Properties.Resources.D_Fire_Rod;
-            this.pictureFireRod.ImageLocation = "";
-            this.pictureFireRod.InitialImage = global::ALTTPSRAMEditor.Properties.Resources.Bomb;
-            this.pictureFireRod.Location = new System.Drawing.Point(3, 28);
-            this.pictureFireRod.Name = "pictureFireRod";
-            this.pictureFireRod.Size = new System.Drawing.Size(16, 16);
-            this.pictureFireRod.TabIndex = 8;
-            this.pictureFireRod.TabStop = false;
-            this.pictureFireRod.Click += new System.EventHandler(this.pictureFireRod_Click);
+            pictureFireRod.Image = Properties.Resources.D_Fire_Rod;
+            pictureFireRod.ImageLocation = "";
+            pictureFireRod.InitialImage = Properties.Resources.Bomb;
+            pictureFireRod.Location = new Point(5, 54);
+            pictureFireRod.Margin = new Padding(5, 6, 5, 6);
+            pictureFireRod.Name = "pictureFireRod";
+            pictureFireRod.Size = new Size(27, 31);
+            pictureFireRod.TabIndex = 8;
+            pictureFireRod.TabStop = false;
+            pictureFireRod.Click += pictureFireRod_Click;
             // 
             // pictureIceRod
             // 
-            this.pictureIceRod.Image = global::ALTTPSRAMEditor.Properties.Resources.D_Ice_Rod;
-            this.pictureIceRod.ImageLocation = "";
-            this.pictureIceRod.InitialImage = global::ALTTPSRAMEditor.Properties.Resources.Bomb;
-            this.pictureIceRod.Location = new System.Drawing.Point(28, 28);
-            this.pictureIceRod.Name = "pictureIceRod";
-            this.pictureIceRod.Size = new System.Drawing.Size(16, 16);
-            this.pictureIceRod.TabIndex = 9;
-            this.pictureIceRod.TabStop = false;
-            this.pictureIceRod.Click += new System.EventHandler(this.pictureIceRod_Click);
+            pictureIceRod.Image = Properties.Resources.D_Ice_Rod;
+            pictureIceRod.ImageLocation = "";
+            pictureIceRod.InitialImage = Properties.Resources.Bomb;
+            pictureIceRod.Location = new Point(47, 54);
+            pictureIceRod.Margin = new Padding(5, 6, 5, 6);
+            pictureIceRod.Name = "pictureIceRod";
+            pictureIceRod.Size = new Size(27, 31);
+            pictureIceRod.TabIndex = 9;
+            pictureIceRod.TabStop = false;
+            pictureIceRod.Click += pictureIceRod_Click;
             // 
             // pictureBombos
             // 
-            this.pictureBombos.Image = global::ALTTPSRAMEditor.Properties.Resources.D_Bombos;
-            this.pictureBombos.ImageLocation = "";
-            this.pictureBombos.InitialImage = global::ALTTPSRAMEditor.Properties.Resources.Bomb;
-            this.pictureBombos.Location = new System.Drawing.Point(53, 28);
-            this.pictureBombos.Name = "pictureBombos";
-            this.pictureBombos.Size = new System.Drawing.Size(16, 16);
-            this.pictureBombos.TabIndex = 10;
-            this.pictureBombos.TabStop = false;
-            this.pictureBombos.Click += new System.EventHandler(this.pictureBombos_Click);
+            pictureBombos.Image = Properties.Resources.D_Bombos;
+            pictureBombos.ImageLocation = "";
+            pictureBombos.InitialImage = Properties.Resources.Bomb;
+            pictureBombos.Location = new Point(89, 54);
+            pictureBombos.Margin = new Padding(5, 6, 5, 6);
+            pictureBombos.Name = "pictureBombos";
+            pictureBombos.Size = new Size(27, 31);
+            pictureBombos.TabIndex = 10;
+            pictureBombos.TabStop = false;
+            pictureBombos.Click += pictureBombos_Click;
             // 
             // pictureEther
             // 
-            this.pictureEther.Image = global::ALTTPSRAMEditor.Properties.Resources.D_Ether;
-            this.pictureEther.ImageLocation = "";
-            this.pictureEther.InitialImage = global::ALTTPSRAMEditor.Properties.Resources.Bomb;
-            this.pictureEther.Location = new System.Drawing.Point(78, 28);
-            this.pictureEther.Name = "pictureEther";
-            this.pictureEther.Size = new System.Drawing.Size(16, 16);
-            this.pictureEther.TabIndex = 11;
-            this.pictureEther.TabStop = false;
-            this.pictureEther.Click += new System.EventHandler(this.pictureEther_Click);
+            pictureEther.Image = Properties.Resources.D_Ether;
+            pictureEther.ImageLocation = "";
+            pictureEther.InitialImage = Properties.Resources.Bomb;
+            pictureEther.Location = new Point(131, 54);
+            pictureEther.Margin = new Padding(5, 6, 5, 6);
+            pictureEther.Name = "pictureEther";
+            pictureEther.Size = new Size(27, 31);
+            pictureEther.TabIndex = 11;
+            pictureEther.TabStop = false;
+            pictureEther.Click += pictureEther_Click;
             // 
             // pictureQuake
             // 
-            this.pictureQuake.Image = global::ALTTPSRAMEditor.Properties.Resources.D_Quake;
-            this.pictureQuake.ImageLocation = "";
-            this.pictureQuake.InitialImage = global::ALTTPSRAMEditor.Properties.Resources.Bomb;
-            this.pictureQuake.Location = new System.Drawing.Point(103, 28);
-            this.pictureQuake.Name = "pictureQuake";
-            this.pictureQuake.Size = new System.Drawing.Size(16, 16);
-            this.pictureQuake.TabIndex = 12;
-            this.pictureQuake.TabStop = false;
-            this.pictureQuake.Click += new System.EventHandler(this.pictureQuake_Click);
+            pictureQuake.Image = Properties.Resources.D_Quake;
+            pictureQuake.ImageLocation = "";
+            pictureQuake.InitialImage = Properties.Resources.Bomb;
+            pictureQuake.Location = new Point(173, 54);
+            pictureQuake.Margin = new Padding(5, 6, 5, 6);
+            pictureQuake.Name = "pictureQuake";
+            pictureQuake.Size = new Size(27, 31);
+            pictureQuake.TabIndex = 12;
+            pictureQuake.TabStop = false;
+            pictureQuake.Click += pictureQuake_Click;
             // 
             // pictureLamp
             // 
-            this.pictureLamp.Image = global::ALTTPSRAMEditor.Properties.Resources.D_Lamp;
-            this.pictureLamp.ImageLocation = "";
-            this.pictureLamp.InitialImage = global::ALTTPSRAMEditor.Properties.Resources.Bomb;
-            this.pictureLamp.Location = new System.Drawing.Point(3, 53);
-            this.pictureLamp.Name = "pictureLamp";
-            this.pictureLamp.Size = new System.Drawing.Size(16, 16);
-            this.pictureLamp.TabIndex = 13;
-            this.pictureLamp.TabStop = false;
-            this.pictureLamp.Click += new System.EventHandler(this.pictureLamp_Click);
+            pictureLamp.Image = Properties.Resources.D_Lamp;
+            pictureLamp.ImageLocation = "";
+            pictureLamp.InitialImage = Properties.Resources.Bomb;
+            pictureLamp.Location = new Point(5, 102);
+            pictureLamp.Margin = new Padding(5, 6, 5, 6);
+            pictureLamp.Name = "pictureLamp";
+            pictureLamp.Size = new Size(27, 31);
+            pictureLamp.TabIndex = 13;
+            pictureLamp.TabStop = false;
+            pictureLamp.Click += pictureLamp_Click;
             // 
             // pictureMagicHammer
             // 
-            this.pictureMagicHammer.Image = global::ALTTPSRAMEditor.Properties.Resources.D_Magic_Hammer;
-            this.pictureMagicHammer.ImageLocation = "";
-            this.pictureMagicHammer.InitialImage = global::ALTTPSRAMEditor.Properties.Resources.Bomb;
-            this.pictureMagicHammer.Location = new System.Drawing.Point(28, 53);
-            this.pictureMagicHammer.Name = "pictureMagicHammer";
-            this.pictureMagicHammer.Size = new System.Drawing.Size(16, 16);
-            this.pictureMagicHammer.TabIndex = 14;
-            this.pictureMagicHammer.TabStop = false;
-            this.pictureMagicHammer.Click += new System.EventHandler(this.pictureMagicHammer_Click);
+            pictureMagicHammer.Image = Properties.Resources.D_Magic_Hammer;
+            pictureMagicHammer.ImageLocation = "";
+            pictureMagicHammer.InitialImage = Properties.Resources.Bomb;
+            pictureMagicHammer.Location = new Point(47, 102);
+            pictureMagicHammer.Margin = new Padding(5, 6, 5, 6);
+            pictureMagicHammer.Name = "pictureMagicHammer";
+            pictureMagicHammer.Size = new Size(27, 31);
+            pictureMagicHammer.TabIndex = 14;
+            pictureMagicHammer.TabStop = false;
+            pictureMagicHammer.Click += pictureMagicHammer_Click;
             // 
             // pictureShovelFlute
             // 
-            this.pictureShovelFlute.Image = global::ALTTPSRAMEditor.Properties.Resources.D_Shovel;
-            this.pictureShovelFlute.ImageLocation = "";
-            this.pictureShovelFlute.InitialImage = global::ALTTPSRAMEditor.Properties.Resources.Bomb;
-            this.pictureShovelFlute.Location = new System.Drawing.Point(53, 53);
-            this.pictureShovelFlute.Name = "pictureShovelFlute";
-            this.pictureShovelFlute.Size = new System.Drawing.Size(16, 16);
-            this.pictureShovelFlute.TabIndex = 15;
-            this.pictureShovelFlute.TabStop = false;
-            this.pictureShovelFlute.Click += new System.EventHandler(this.pictureShovelFlute_Click);
+            pictureShovelFlute.Image = Properties.Resources.D_Shovel;
+            pictureShovelFlute.ImageLocation = "";
+            pictureShovelFlute.InitialImage = Properties.Resources.Bomb;
+            pictureShovelFlute.Location = new Point(89, 102);
+            pictureShovelFlute.Margin = new Padding(5, 6, 5, 6);
+            pictureShovelFlute.Name = "pictureShovelFlute";
+            pictureShovelFlute.Size = new Size(27, 31);
+            pictureShovelFlute.TabIndex = 15;
+            pictureShovelFlute.TabStop = false;
+            pictureShovelFlute.Click += pictureShovelFlute_Click;
             // 
             // pictureBugCatchingNet
             // 
-            this.pictureBugCatchingNet.Image = global::ALTTPSRAMEditor.Properties.Resources.D_Bug_Catching_Net;
-            this.pictureBugCatchingNet.ImageLocation = "";
-            this.pictureBugCatchingNet.InitialImage = global::ALTTPSRAMEditor.Properties.Resources.Bomb;
-            this.pictureBugCatchingNet.Location = new System.Drawing.Point(78, 53);
-            this.pictureBugCatchingNet.Name = "pictureBugCatchingNet";
-            this.pictureBugCatchingNet.Size = new System.Drawing.Size(16, 16);
-            this.pictureBugCatchingNet.TabIndex = 16;
-            this.pictureBugCatchingNet.TabStop = false;
-            this.pictureBugCatchingNet.Click += new System.EventHandler(this.pictureBugCatchingNet_Click);
+            pictureBugCatchingNet.Image = Properties.Resources.D_Bug_Catching_Net;
+            pictureBugCatchingNet.ImageLocation = "";
+            pictureBugCatchingNet.InitialImage = Properties.Resources.Bomb;
+            pictureBugCatchingNet.Location = new Point(131, 102);
+            pictureBugCatchingNet.Margin = new Padding(5, 6, 5, 6);
+            pictureBugCatchingNet.Name = "pictureBugCatchingNet";
+            pictureBugCatchingNet.Size = new Size(27, 31);
+            pictureBugCatchingNet.TabIndex = 16;
+            pictureBugCatchingNet.TabStop = false;
+            pictureBugCatchingNet.Click += pictureBugCatchingNet_Click;
             // 
             // pictureBookOfMudora
             // 
-            this.pictureBookOfMudora.Image = global::ALTTPSRAMEditor.Properties.Resources.D_Book_of_Mudora;
-            this.pictureBookOfMudora.ImageLocation = "";
-            this.pictureBookOfMudora.InitialImage = global::ALTTPSRAMEditor.Properties.Resources.Bomb;
-            this.pictureBookOfMudora.Location = new System.Drawing.Point(103, 53);
-            this.pictureBookOfMudora.Name = "pictureBookOfMudora";
-            this.pictureBookOfMudora.Size = new System.Drawing.Size(16, 16);
-            this.pictureBookOfMudora.TabIndex = 17;
-            this.pictureBookOfMudora.TabStop = false;
-            this.pictureBookOfMudora.Click += new System.EventHandler(this.pictureBookOfMudora_Click);
+            pictureBookOfMudora.Image = Properties.Resources.D_Book_of_Mudora;
+            pictureBookOfMudora.ImageLocation = "";
+            pictureBookOfMudora.InitialImage = Properties.Resources.Bomb;
+            pictureBookOfMudora.Location = new Point(173, 102);
+            pictureBookOfMudora.Margin = new Padding(5, 6, 5, 6);
+            pictureBookOfMudora.Name = "pictureBookOfMudora";
+            pictureBookOfMudora.Size = new Size(27, 31);
+            pictureBookOfMudora.TabIndex = 17;
+            pictureBookOfMudora.TabStop = false;
+            pictureBookOfMudora.Click += pictureBookOfMudora_Click;
             // 
             // pictureBottles
             // 
-            this.pictureBottles.Image = global::ALTTPSRAMEditor.Properties.Resources.D_Bottle;
-            this.pictureBottles.ImageLocation = "";
-            this.pictureBottles.InitialImage = global::ALTTPSRAMEditor.Properties.Resources.Bomb;
-            this.pictureBottles.Location = new System.Drawing.Point(3, 78);
-            this.pictureBottles.Name = "pictureBottles";
-            this.pictureBottles.Size = new System.Drawing.Size(16, 16);
-            this.pictureBottles.TabIndex = 18;
-            this.pictureBottles.TabStop = false;
-            this.pictureBottles.Click += new System.EventHandler(this.pictureBottles_Click);
+            pictureBottles.Image = Properties.Resources.D_Bottle;
+            pictureBottles.ImageLocation = "";
+            pictureBottles.InitialImage = Properties.Resources.Bomb;
+            pictureBottles.Location = new Point(5, 150);
+            pictureBottles.Margin = new Padding(5, 6, 5, 6);
+            pictureBottles.Name = "pictureBottles";
+            pictureBottles.Size = new Size(27, 31);
+            pictureBottles.TabIndex = 18;
+            pictureBottles.TabStop = false;
+            pictureBottles.Click += pictureBottles_Click;
             // 
             // pictureCaneOfSomaria
             // 
-            this.pictureCaneOfSomaria.Image = global::ALTTPSRAMEditor.Properties.Resources.D_Cane_of_Somaria;
-            this.pictureCaneOfSomaria.ImageLocation = "";
-            this.pictureCaneOfSomaria.InitialImage = global::ALTTPSRAMEditor.Properties.Resources.Bomb;
-            this.pictureCaneOfSomaria.Location = new System.Drawing.Point(28, 78);
-            this.pictureCaneOfSomaria.Name = "pictureCaneOfSomaria";
-            this.pictureCaneOfSomaria.Size = new System.Drawing.Size(16, 16);
-            this.pictureCaneOfSomaria.TabIndex = 19;
-            this.pictureCaneOfSomaria.TabStop = false;
-            this.pictureCaneOfSomaria.Click += new System.EventHandler(this.pictureCaneOfSomaria_Click);
+            pictureCaneOfSomaria.Image = Properties.Resources.D_Cane_of_Somaria;
+            pictureCaneOfSomaria.ImageLocation = "";
+            pictureCaneOfSomaria.InitialImage = Properties.Resources.Bomb;
+            pictureCaneOfSomaria.Location = new Point(47, 150);
+            pictureCaneOfSomaria.Margin = new Padding(5, 6, 5, 6);
+            pictureCaneOfSomaria.Name = "pictureCaneOfSomaria";
+            pictureCaneOfSomaria.Size = new Size(27, 31);
+            pictureCaneOfSomaria.TabIndex = 19;
+            pictureCaneOfSomaria.TabStop = false;
+            pictureCaneOfSomaria.Click += pictureCaneOfSomaria_Click;
             // 
             // pictureCaneOfByrna
             // 
-            this.pictureCaneOfByrna.Image = global::ALTTPSRAMEditor.Properties.Resources.D_Cane_of_Byrna;
-            this.pictureCaneOfByrna.ImageLocation = "";
-            this.pictureCaneOfByrna.InitialImage = global::ALTTPSRAMEditor.Properties.Resources.Bomb;
-            this.pictureCaneOfByrna.Location = new System.Drawing.Point(53, 78);
-            this.pictureCaneOfByrna.Name = "pictureCaneOfByrna";
-            this.pictureCaneOfByrna.Size = new System.Drawing.Size(16, 16);
-            this.pictureCaneOfByrna.TabIndex = 20;
-            this.pictureCaneOfByrna.TabStop = false;
-            this.pictureCaneOfByrna.Click += new System.EventHandler(this.pictureCaneOfByrna_Click);
+            pictureCaneOfByrna.Image = Properties.Resources.D_Cane_of_Byrna;
+            pictureCaneOfByrna.ImageLocation = "";
+            pictureCaneOfByrna.InitialImage = Properties.Resources.Bomb;
+            pictureCaneOfByrna.Location = new Point(89, 150);
+            pictureCaneOfByrna.Margin = new Padding(5, 6, 5, 6);
+            pictureCaneOfByrna.Name = "pictureCaneOfByrna";
+            pictureCaneOfByrna.Size = new Size(27, 31);
+            pictureCaneOfByrna.TabIndex = 20;
+            pictureCaneOfByrna.TabStop = false;
+            pictureCaneOfByrna.Click += pictureCaneOfByrna_Click;
             // 
             // pictureMagicCape
             // 
-            this.pictureMagicCape.Image = global::ALTTPSRAMEditor.Properties.Resources.D_Magic_Cape;
-            this.pictureMagicCape.ImageLocation = "";
-            this.pictureMagicCape.InitialImage = global::ALTTPSRAMEditor.Properties.Resources.Bomb;
-            this.pictureMagicCape.Location = new System.Drawing.Point(78, 78);
-            this.pictureMagicCape.Name = "pictureMagicCape";
-            this.pictureMagicCape.Size = new System.Drawing.Size(16, 16);
-            this.pictureMagicCape.TabIndex = 21;
-            this.pictureMagicCape.TabStop = false;
-            this.pictureMagicCape.Click += new System.EventHandler(this.pictureMagicCape_Click);
+            pictureMagicCape.Image = Properties.Resources.D_Magic_Cape;
+            pictureMagicCape.ImageLocation = "";
+            pictureMagicCape.InitialImage = Properties.Resources.Bomb;
+            pictureMagicCape.Location = new Point(131, 150);
+            pictureMagicCape.Margin = new Padding(5, 6, 5, 6);
+            pictureMagicCape.Name = "pictureMagicCape";
+            pictureMagicCape.Size = new Size(27, 31);
+            pictureMagicCape.TabIndex = 21;
+            pictureMagicCape.TabStop = false;
+            pictureMagicCape.Click += pictureMagicCape_Click;
             // 
             // pictureMagicMirror
             // 
-            this.pictureMagicMirror.Image = global::ALTTPSRAMEditor.Properties.Resources.D_Magic_Mirror;
-            this.pictureMagicMirror.ImageLocation = "";
-            this.pictureMagicMirror.InitialImage = global::ALTTPSRAMEditor.Properties.Resources.Bomb;
-            this.pictureMagicMirror.Location = new System.Drawing.Point(103, 78);
-            this.pictureMagicMirror.Name = "pictureMagicMirror";
-            this.pictureMagicMirror.Size = new System.Drawing.Size(16, 16);
-            this.pictureMagicMirror.TabIndex = 22;
-            this.pictureMagicMirror.TabStop = false;
-            this.pictureMagicMirror.Click += new System.EventHandler(this.pictureMagicMirror_Click);
+            pictureMagicMirror.Image = Properties.Resources.D_Magic_Mirror;
+            pictureMagicMirror.ImageLocation = "";
+            pictureMagicMirror.InitialImage = Properties.Resources.Bomb;
+            pictureMagicMirror.Location = new Point(173, 150);
+            pictureMagicMirror.Margin = new Padding(5, 6, 5, 6);
+            pictureMagicMirror.Name = "pictureMagicMirror";
+            pictureMagicMirror.Size = new Size(27, 31);
+            pictureMagicMirror.TabIndex = 22;
+            pictureMagicMirror.TabStop = false;
+            pictureMagicMirror.Click += pictureMagicMirror_Click;
             // 
             // pictureMail
             // 
-            this.pictureMail.Image = global::ALTTPSRAMEditor.Properties.Resources.Green_Tunic;
-            this.pictureMail.ImageLocation = "";
-            this.pictureMail.InitialImage = global::ALTTPSRAMEditor.Properties.Resources.Bomb;
-            this.pictureMail.Location = new System.Drawing.Point(103, 128);
-            this.pictureMail.Name = "pictureMail";
-            this.pictureMail.Size = new System.Drawing.Size(27, 21);
-            this.pictureMail.TabIndex = 30;
-            this.pictureMail.TabStop = false;
-            this.pictureMail.Click += new System.EventHandler(this.pictureMail_Click);
+            pictureMail.Image = Properties.Resources.Green_Tunic;
+            pictureMail.ImageLocation = "";
+            pictureMail.InitialImage = Properties.Resources.Bomb;
+            pictureMail.Location = new Point(173, 246);
+            pictureMail.Margin = new Padding(5, 6, 5, 6);
+            pictureMail.Name = "pictureMail";
+            pictureMail.Size = new Size(45, 40);
+            pictureMail.TabIndex = 30;
+            pictureMail.TabStop = false;
+            pictureMail.Click += pictureMail_Click;
             // 
             // pictureShield
             // 
-            this.pictureShield.Image = global::ALTTPSRAMEditor.Properties.Resources.D_Fighter_s_Shield;
-            this.pictureShield.ImageLocation = "";
-            this.pictureShield.InitialImage = global::ALTTPSRAMEditor.Properties.Resources.Bomb;
-            this.pictureShield.Location = new System.Drawing.Point(78, 128);
-            this.pictureShield.Name = "pictureShield";
-            this.pictureShield.Size = new System.Drawing.Size(16, 16);
-            this.pictureShield.TabIndex = 29;
-            this.pictureShield.TabStop = false;
-            this.pictureShield.Click += new System.EventHandler(this.pictureShield_Click);
+            pictureShield.Image = Properties.Resources.D_Fighter_s_Shield;
+            pictureShield.ImageLocation = "";
+            pictureShield.InitialImage = Properties.Resources.Bomb;
+            pictureShield.Location = new Point(131, 246);
+            pictureShield.Margin = new Padding(5, 6, 5, 6);
+            pictureShield.Name = "pictureShield";
+            pictureShield.Size = new Size(27, 31);
+            pictureShield.TabIndex = 29;
+            pictureShield.TabStop = false;
+            pictureShield.Click += pictureShield_Click;
             // 
             // pictureSword
             // 
-            this.pictureSword.Image = global::ALTTPSRAMEditor.Properties.Resources.D_Fighter_s_Sword;
-            this.pictureSword.ImageLocation = "";
-            this.pictureSword.InitialImage = global::ALTTPSRAMEditor.Properties.Resources.Bomb;
-            this.pictureSword.Location = new System.Drawing.Point(53, 128);
-            this.pictureSword.Name = "pictureSword";
-            this.pictureSword.Size = new System.Drawing.Size(16, 16);
-            this.pictureSword.TabIndex = 28;
-            this.pictureSword.TabStop = false;
-            this.pictureSword.Click += new System.EventHandler(this.pictureSword_Click);
+            pictureSword.Image = Properties.Resources.D_Fighter_s_Sword;
+            pictureSword.ImageLocation = "";
+            pictureSword.InitialImage = Properties.Resources.Bomb;
+            pictureSword.Location = new Point(89, 246);
+            pictureSword.Margin = new Padding(5, 6, 5, 6);
+            pictureSword.Name = "pictureSword";
+            pictureSword.Size = new Size(27, 31);
+            pictureSword.TabIndex = 28;
+            pictureSword.TabStop = false;
+            pictureSword.Click += pictureSword_Click;
             // 
             // groupBoxBowConfig
             // 
-            this.groupBoxBowConfig.Controls.Add(this.labelArrowsHeld);
-            this.groupBoxBowConfig.Controls.Add(this.labelArrowUpgrades);
-            this.groupBoxBowConfig.Controls.Add(this.numericUpDownArrowUpgrades);
-            this.groupBoxBowConfig.Controls.Add(this.numericUpDownArrowsHeld);
-            this.groupBoxBowConfig.Controls.Add(this.bowOptionNone);
-            this.groupBoxBowConfig.Controls.Add(this.bowOption4);
-            this.groupBoxBowConfig.Controls.Add(this.bowOption3);
-            this.groupBoxBowConfig.Controls.Add(this.bowOption2);
-            this.groupBoxBowConfig.Controls.Add(this.bowOption1);
-            this.groupBoxBowConfig.Location = new System.Drawing.Point(500, 46);
-            this.groupBoxBowConfig.Name = "groupBoxBowConfig";
-            this.groupBoxBowConfig.Size = new System.Drawing.Size(235, 144);
-            this.groupBoxBowConfig.TabIndex = 24;
-            this.groupBoxBowConfig.TabStop = false;
-            this.groupBoxBowConfig.Text = "Bow and Arrows";
-            this.groupBoxBowConfig.Visible = false;
+            groupBoxBowConfig.Controls.Add(labelArrowsHeld);
+            groupBoxBowConfig.Controls.Add(labelArrowUpgrades);
+            groupBoxBowConfig.Controls.Add(numericUpDownArrowUpgrades);
+            groupBoxBowConfig.Controls.Add(numericUpDownArrowsHeld);
+            groupBoxBowConfig.Controls.Add(bowOptionNone);
+            groupBoxBowConfig.Controls.Add(bowOption4);
+            groupBoxBowConfig.Controls.Add(bowOption3);
+            groupBoxBowConfig.Controls.Add(bowOption2);
+            groupBoxBowConfig.Controls.Add(bowOption1);
+            groupBoxBowConfig.Location = new Point(833, 88);
+            groupBoxBowConfig.Margin = new Padding(5, 6, 5, 6);
+            groupBoxBowConfig.Name = "groupBoxBowConfig";
+            groupBoxBowConfig.Padding = new Padding(5, 6, 5, 6);
+            groupBoxBowConfig.Size = new Size(392, 277);
+            groupBoxBowConfig.TabIndex = 24;
+            groupBoxBowConfig.TabStop = false;
+            groupBoxBowConfig.Text = "Bow and Arrows";
+            groupBoxBowConfig.Visible = false;
             // 
             // labelArrowsHeld
             // 
-            this.labelArrowsHeld.AutoSize = true;
-            this.labelArrowsHeld.Location = new System.Drawing.Point(165, 23);
-            this.labelArrowsHeld.Name = "labelArrowsHeld";
-            this.labelArrowsHeld.Size = new System.Drawing.Size(64, 13);
-            this.labelArrowsHeld.TabIndex = 8;
-            this.labelArrowsHeld.Text = "Arrows Held";
+            labelArrowsHeld.AutoSize = true;
+            labelArrowsHeld.Location = new Point(275, 44);
+            labelArrowsHeld.Margin = new Padding(5, 0, 5, 0);
+            labelArrowsHeld.Name = "labelArrowsHeld";
+            labelArrowsHeld.Size = new Size(110, 25);
+            labelArrowsHeld.TabIndex = 8;
+            labelArrowsHeld.Text = "Arrows Held";
             // 
             // labelArrowUpgrades
             // 
-            this.labelArrowUpgrades.AutoSize = true;
-            this.labelArrowUpgrades.Location = new System.Drawing.Point(146, 75);
-            this.labelArrowUpgrades.Name = "labelArrowUpgrades";
-            this.labelArrowUpgrades.Size = new System.Drawing.Size(83, 13);
-            this.labelArrowUpgrades.TabIndex = 7;
-            this.labelArrowUpgrades.Text = "Arrow Upgrades";
+            labelArrowUpgrades.AutoSize = true;
+            labelArrowUpgrades.Location = new Point(243, 144);
+            labelArrowUpgrades.Margin = new Padding(5, 0, 5, 0);
+            labelArrowUpgrades.Name = "labelArrowUpgrades";
+            labelArrowUpgrades.Size = new Size(142, 25);
+            labelArrowUpgrades.TabIndex = 7;
+            labelArrowUpgrades.Text = "Arrow Upgrades";
             // 
             // numericUpDownArrowUpgrades
             // 
-            this.numericUpDownArrowUpgrades.Location = new System.Drawing.Point(176, 91);
-            this.numericUpDownArrowUpgrades.Maximum = new decimal(new int[] {
-            7,
-            0,
-            0,
-            0});
-            this.numericUpDownArrowUpgrades.Name = "numericUpDownArrowUpgrades";
-            this.numericUpDownArrowUpgrades.Size = new System.Drawing.Size(53, 20);
-            this.numericUpDownArrowUpgrades.TabIndex = 6;
-            this.numericUpDownArrowUpgrades.ValueChanged += new System.EventHandler(this.numericUpDownArrowUpgrades_ValueChanged);
+            numericUpDownArrowUpgrades.Location = new Point(293, 175);
+            numericUpDownArrowUpgrades.Margin = new Padding(5, 6, 5, 6);
+            numericUpDownArrowUpgrades.Maximum = new decimal(new int[] { 7, 0, 0, 0 });
+            numericUpDownArrowUpgrades.Name = "numericUpDownArrowUpgrades";
+            numericUpDownArrowUpgrades.Size = new Size(88, 31);
+            numericUpDownArrowUpgrades.TabIndex = 6;
+            numericUpDownArrowUpgrades.ValueChanged += numericUpDownArrowUpgrades_ValueChanged;
             // 
             // numericUpDownArrowsHeld
             // 
-            this.numericUpDownArrowsHeld.Location = new System.Drawing.Point(176, 43);
-            this.numericUpDownArrowsHeld.Maximum = new decimal(new int[] {
-            30,
-            0,
-            0,
-            0});
-            this.numericUpDownArrowsHeld.Name = "numericUpDownArrowsHeld";
-            this.numericUpDownArrowsHeld.Size = new System.Drawing.Size(53, 20);
-            this.numericUpDownArrowsHeld.TabIndex = 5;
-            this.numericUpDownArrowsHeld.ValueChanged += new System.EventHandler(this.numericUpDownArrowsHeld_ValueChanged);
+            numericUpDownArrowsHeld.Location = new Point(293, 83);
+            numericUpDownArrowsHeld.Margin = new Padding(5, 6, 5, 6);
+            numericUpDownArrowsHeld.Maximum = new decimal(new int[] { 30, 0, 0, 0 });
+            numericUpDownArrowsHeld.Name = "numericUpDownArrowsHeld";
+            numericUpDownArrowsHeld.Size = new Size(88, 31);
+            numericUpDownArrowsHeld.TabIndex = 5;
+            numericUpDownArrowsHeld.ValueChanged += numericUpDownArrowsHeld_ValueChanged;
             // 
             // bowOptionNone
             // 
-            this.bowOptionNone.AutoSize = true;
-            this.bowOptionNone.Location = new System.Drawing.Point(7, 19);
-            this.bowOptionNone.Name = "bowOptionNone";
-            this.bowOptionNone.Size = new System.Drawing.Size(63, 17);
-            this.bowOptionNone.TabIndex = 4;
-            this.bowOptionNone.TabStop = true;
-            this.bowOptionNone.Text = "No Bow";
-            this.bowOptionNone.UseVisualStyleBackColor = true;
-            this.bowOptionNone.CheckedChanged += new System.EventHandler(this.bowRadio);
+            bowOptionNone.AutoSize = true;
+            bowOptionNone.Location = new Point(12, 37);
+            bowOptionNone.Margin = new Padding(5, 6, 5, 6);
+            bowOptionNone.Name = "bowOptionNone";
+            bowOptionNone.Size = new Size(100, 29);
+            bowOptionNone.TabIndex = 4;
+            bowOptionNone.TabStop = true;
+            bowOptionNone.Text = "No Bow";
+            bowOptionNone.UseVisualStyleBackColor = true;
+            bowOptionNone.CheckedChanged += bowRadio;
             // 
             // bowOption4
             // 
-            this.bowOption4.AutoSize = true;
-            this.bowOption4.Location = new System.Drawing.Point(7, 111);
-            this.bowOption4.Name = "bowOption4";
-            this.bowOption4.Size = new System.Drawing.Size(119, 17);
-            this.bowOption4.TabIndex = 3;
-            this.bowOption4.TabStop = true;
-            this.bowOption4.Text = "Bow && Silver Arrows";
-            this.bowOption4.UseVisualStyleBackColor = true;
-            this.bowOption4.CheckedChanged += new System.EventHandler(this.bowRadio);
+            bowOption4.AutoSize = true;
+            bowOption4.Location = new Point(12, 213);
+            bowOption4.Margin = new Padding(5, 6, 5, 6);
+            bowOption4.Name = "bowOption4";
+            bowOption4.Size = new Size(198, 29);
+            bowOption4.TabIndex = 3;
+            bowOption4.TabStop = true;
+            bowOption4.Text = "Bow && Silver Arrows";
+            bowOption4.UseVisualStyleBackColor = true;
+            bowOption4.CheckedChanged += bowRadio;
             // 
             // bowOption3
             // 
-            this.bowOption3.AutoSize = true;
-            this.bowOption3.Location = new System.Drawing.Point(7, 88);
-            this.bowOption3.Name = "bowOption3";
-            this.bowOption3.Size = new System.Drawing.Size(105, 17);
-            this.bowOption3.TabIndex = 2;
-            this.bowOption3.TabStop = true;
-            this.bowOption3.Text = "Silver Arrow Bow";
-            this.bowOption3.UseVisualStyleBackColor = true;
-            this.bowOption3.CheckedChanged += new System.EventHandler(this.bowRadio);
+            bowOption3.AutoSize = true;
+            bowOption3.Location = new Point(12, 169);
+            bowOption3.Margin = new Padding(5, 6, 5, 6);
+            bowOption3.Name = "bowOption3";
+            bowOption3.Size = new Size(171, 29);
+            bowOption3.TabIndex = 2;
+            bowOption3.TabStop = true;
+            bowOption3.Text = "Silver Arrow Bow";
+            bowOption3.UseVisualStyleBackColor = true;
+            bowOption3.CheckedChanged += bowRadio;
             // 
             // bowOption2
             // 
-            this.bowOption2.AutoSize = true;
-            this.bowOption2.Location = new System.Drawing.Point(7, 65);
-            this.bowOption2.Name = "bowOption2";
-            this.bowOption2.Size = new System.Drawing.Size(90, 17);
-            this.bowOption2.TabIndex = 1;
-            this.bowOption2.TabStop = true;
-            this.bowOption2.Text = "Bow && Arrows";
-            this.bowOption2.UseVisualStyleBackColor = true;
-            this.bowOption2.CheckedChanged += new System.EventHandler(this.bowRadio);
+            bowOption2.AutoSize = true;
+            bowOption2.Location = new Point(12, 125);
+            bowOption2.Margin = new Padding(5, 6, 5, 6);
+            bowOption2.Name = "bowOption2";
+            bowOption2.Size = new Size(151, 29);
+            bowOption2.TabIndex = 1;
+            bowOption2.TabStop = true;
+            bowOption2.Text = "Bow && Arrows";
+            bowOption2.UseVisualStyleBackColor = true;
+            bowOption2.CheckedChanged += bowRadio;
             // 
             // bowOption1
             // 
-            this.bowOption1.AutoSize = true;
-            this.bowOption1.Location = new System.Drawing.Point(7, 42);
-            this.bowOption1.Name = "bowOption1";
-            this.bowOption1.Size = new System.Drawing.Size(46, 17);
-            this.bowOption1.TabIndex = 0;
-            this.bowOption1.TabStop = true;
-            this.bowOption1.Text = "Bow";
-            this.bowOption1.UseVisualStyleBackColor = true;
-            this.bowOption1.CheckedChanged += new System.EventHandler(this.bowRadio);
+            bowOption1.AutoSize = true;
+            bowOption1.Location = new Point(12, 81);
+            bowOption1.Margin = new Padding(5, 6, 5, 6);
+            bowOption1.Name = "bowOption1";
+            bowOption1.Size = new Size(71, 29);
+            bowOption1.TabIndex = 0;
+            bowOption1.TabStop = true;
+            bowOption1.Text = "Bow";
+            bowOption1.UseVisualStyleBackColor = true;
+            bowOption1.CheckedChanged += bowRadio;
             // 
             // groupBoxBoomerangConfig
             // 
-            this.groupBoxBoomerangConfig.Controls.Add(this.radioButtonRedBoomerang);
-            this.groupBoxBoomerangConfig.Controls.Add(this.radioButtonBlueBoomerang);
-            this.groupBoxBoomerangConfig.Controls.Add(this.radioButtonNoBoomerang);
-            this.groupBoxBoomerangConfig.Location = new System.Drawing.Point(500, 46);
-            this.groupBoxBoomerangConfig.Name = "groupBoxBoomerangConfig";
-            this.groupBoxBoomerangConfig.Size = new System.Drawing.Size(200, 100);
-            this.groupBoxBoomerangConfig.TabIndex = 25;
-            this.groupBoxBoomerangConfig.TabStop = false;
-            this.groupBoxBoomerangConfig.Text = "Boomerang";
-            this.groupBoxBoomerangConfig.Visible = false;
+            groupBoxBoomerangConfig.Controls.Add(radioButtonRedBoomerang);
+            groupBoxBoomerangConfig.Controls.Add(radioButtonBlueBoomerang);
+            groupBoxBoomerangConfig.Controls.Add(radioButtonNoBoomerang);
+            groupBoxBoomerangConfig.Location = new Point(833, 88);
+            groupBoxBoomerangConfig.Margin = new Padding(5, 6, 5, 6);
+            groupBoxBoomerangConfig.Name = "groupBoxBoomerangConfig";
+            groupBoxBoomerangConfig.Padding = new Padding(5, 6, 5, 6);
+            groupBoxBoomerangConfig.Size = new Size(333, 192);
+            groupBoxBoomerangConfig.TabIndex = 25;
+            groupBoxBoomerangConfig.TabStop = false;
+            groupBoxBoomerangConfig.Text = "Boomerang";
+            groupBoxBoomerangConfig.Visible = false;
             // 
             // radioButtonRedBoomerang
             // 
-            this.radioButtonRedBoomerang.AutoSize = true;
-            this.radioButtonRedBoomerang.Location = new System.Drawing.Point(12, 65);
-            this.radioButtonRedBoomerang.Name = "radioButtonRedBoomerang";
-            this.radioButtonRedBoomerang.Size = new System.Drawing.Size(102, 17);
-            this.radioButtonRedBoomerang.TabIndex = 2;
-            this.radioButtonRedBoomerang.TabStop = true;
-            this.radioButtonRedBoomerang.Text = "Red Boomerang";
-            this.radioButtonRedBoomerang.UseVisualStyleBackColor = true;
-            this.radioButtonRedBoomerang.CheckedChanged += new System.EventHandler(this.boomerangRadio);
+            radioButtonRedBoomerang.AutoSize = true;
+            radioButtonRedBoomerang.Location = new Point(20, 125);
+            radioButtonRedBoomerang.Margin = new Padding(5, 6, 5, 6);
+            radioButtonRedBoomerang.Name = "radioButtonRedBoomerang";
+            radioButtonRedBoomerang.Size = new Size(165, 29);
+            radioButtonRedBoomerang.TabIndex = 2;
+            radioButtonRedBoomerang.TabStop = true;
+            radioButtonRedBoomerang.Text = "Red Boomerang";
+            radioButtonRedBoomerang.UseVisualStyleBackColor = true;
+            radioButtonRedBoomerang.CheckedChanged += boomerangRadio;
             // 
             // radioButtonBlueBoomerang
             // 
-            this.radioButtonBlueBoomerang.AutoSize = true;
-            this.radioButtonBlueBoomerang.Location = new System.Drawing.Point(12, 42);
-            this.radioButtonBlueBoomerang.Name = "radioButtonBlueBoomerang";
-            this.radioButtonBlueBoomerang.Size = new System.Drawing.Size(103, 17);
-            this.radioButtonBlueBoomerang.TabIndex = 1;
-            this.radioButtonBlueBoomerang.TabStop = true;
-            this.radioButtonBlueBoomerang.Text = "Blue Boomerang";
-            this.radioButtonBlueBoomerang.UseVisualStyleBackColor = true;
-            this.radioButtonBlueBoomerang.CheckedChanged += new System.EventHandler(this.boomerangRadio);
+            radioButtonBlueBoomerang.AutoSize = true;
+            radioButtonBlueBoomerang.Location = new Point(20, 81);
+            radioButtonBlueBoomerang.Margin = new Padding(5, 6, 5, 6);
+            radioButtonBlueBoomerang.Name = "radioButtonBlueBoomerang";
+            radioButtonBlueBoomerang.Size = new Size(168, 29);
+            radioButtonBlueBoomerang.TabIndex = 1;
+            radioButtonBlueBoomerang.TabStop = true;
+            radioButtonBlueBoomerang.Text = "Blue Boomerang";
+            radioButtonBlueBoomerang.UseVisualStyleBackColor = true;
+            radioButtonBlueBoomerang.CheckedChanged += boomerangRadio;
             // 
             // radioButtonNoBoomerang
             // 
-            this.radioButtonNoBoomerang.AutoSize = true;
-            this.radioButtonNoBoomerang.Location = new System.Drawing.Point(12, 19);
-            this.radioButtonNoBoomerang.Name = "radioButtonNoBoomerang";
-            this.radioButtonNoBoomerang.Size = new System.Drawing.Size(96, 17);
-            this.radioButtonNoBoomerang.TabIndex = 0;
-            this.radioButtonNoBoomerang.TabStop = true;
-            this.radioButtonNoBoomerang.Text = "No Boomerang";
-            this.radioButtonNoBoomerang.UseVisualStyleBackColor = true;
-            this.radioButtonNoBoomerang.CheckedChanged += new System.EventHandler(this.boomerangRadio);
+            radioButtonNoBoomerang.AutoSize = true;
+            radioButtonNoBoomerang.Location = new Point(20, 37);
+            radioButtonNoBoomerang.Margin = new Padding(5, 6, 5, 6);
+            radioButtonNoBoomerang.Name = "radioButtonNoBoomerang";
+            radioButtonNoBoomerang.Size = new Size(159, 29);
+            radioButtonNoBoomerang.TabIndex = 0;
+            radioButtonNoBoomerang.TabStop = true;
+            radioButtonNoBoomerang.Text = "No Boomerang";
+            radioButtonNoBoomerang.UseVisualStyleBackColor = true;
+            radioButtonNoBoomerang.CheckedChanged += boomerangRadio;
             // 
             // buttonChangeName
             // 
-            this.buttonChangeName.Enabled = false;
-            this.buttonChangeName.Location = new System.Drawing.Point(221, 71);
-            this.buttonChangeName.Name = "buttonChangeName";
-            this.buttonChangeName.Size = new System.Drawing.Size(101, 23);
-            this.buttonChangeName.TabIndex = 26;
-            this.buttonChangeName.Text = "Change Name";
-            this.buttonChangeName.UseVisualStyleBackColor = true;
-            this.buttonChangeName.Visible = false;
-            this.buttonChangeName.Click += new System.EventHandler(this.buttonChangeName_Click);
+            buttonChangeName.Enabled = false;
+            buttonChangeName.Location = new Point(368, 137);
+            buttonChangeName.Margin = new Padding(5, 6, 5, 6);
+            buttonChangeName.Name = "buttonChangeName";
+            buttonChangeName.Size = new Size(168, 44);
+            buttonChangeName.TabIndex = 26;
+            buttonChangeName.Text = "Change Name";
+            buttonChangeName.UseVisualStyleBackColor = true;
+            buttonChangeName.Visible = false;
+            buttonChangeName.Click += buttonChangeName_Click;
             // 
             // groupBoxBombs
             // 
-            this.groupBoxBombs.Controls.Add(this.labelBombsMax);
-            this.groupBoxBombs.Controls.Add(this.labelBombsHeld);
-            this.groupBoxBombs.Controls.Add(this.numericUpDownBombUpgrades);
-            this.groupBoxBombs.Controls.Add(this.numericUpDownBombsHeld);
-            this.groupBoxBombs.Location = new System.Drawing.Point(500, 46);
-            this.groupBoxBombs.Name = "groupBoxBombs";
-            this.groupBoxBombs.Size = new System.Drawing.Size(176, 83);
-            this.groupBoxBombs.TabIndex = 28;
-            this.groupBoxBombs.TabStop = false;
-            this.groupBoxBombs.Text = "Bombs";
-            this.groupBoxBombs.Visible = false;
+            groupBoxBombs.Controls.Add(labelBombsMax);
+            groupBoxBombs.Controls.Add(labelBombsHeld);
+            groupBoxBombs.Controls.Add(numericUpDownBombUpgrades);
+            groupBoxBombs.Controls.Add(numericUpDownBombsHeld);
+            groupBoxBombs.Location = new Point(833, 88);
+            groupBoxBombs.Margin = new Padding(5, 6, 5, 6);
+            groupBoxBombs.Name = "groupBoxBombs";
+            groupBoxBombs.Padding = new Padding(5, 6, 5, 6);
+            groupBoxBombs.Size = new Size(293, 160);
+            groupBoxBombs.TabIndex = 28;
+            groupBoxBombs.TabStop = false;
+            groupBoxBombs.Text = "Bombs";
+            groupBoxBombs.Visible = false;
             // 
             // labelBombsMax
             // 
-            this.labelBombsMax.AutoSize = true;
-            this.labelBombsMax.Location = new System.Drawing.Point(79, 56);
-            this.labelBombsMax.Name = "labelBombsMax";
-            this.labelBombsMax.Size = new System.Drawing.Size(83, 13);
-            this.labelBombsMax.TabIndex = 3;
-            this.labelBombsMax.Text = "Bomb Upgrades";
+            labelBombsMax.AutoSize = true;
+            labelBombsMax.Location = new Point(132, 108);
+            labelBombsMax.Margin = new Padding(5, 0, 5, 0);
+            labelBombsMax.Name = "labelBombsMax";
+            labelBombsMax.Size = new Size(142, 25);
+            labelBombsMax.TabIndex = 3;
+            labelBombsMax.Text = "Bomb Upgrades";
             // 
             // labelBombsHeld
             // 
-            this.labelBombsHeld.AutoSize = true;
-            this.labelBombsHeld.Location = new System.Drawing.Point(79, 21);
-            this.labelBombsHeld.Name = "labelBombsHeld";
-            this.labelBombsHeld.Size = new System.Drawing.Size(64, 13);
-            this.labelBombsHeld.TabIndex = 2;
-            this.labelBombsHeld.Text = "Bombs Held";
+            labelBombsHeld.AutoSize = true;
+            labelBombsHeld.Location = new Point(132, 40);
+            labelBombsHeld.Margin = new Padding(5, 0, 5, 0);
+            labelBombsHeld.Name = "labelBombsHeld";
+            labelBombsHeld.Size = new Size(110, 25);
+            labelBombsHeld.TabIndex = 2;
+            labelBombsHeld.Text = "Bombs Held";
             // 
             // numericUpDownBombUpgrades
             // 
-            this.numericUpDownBombUpgrades.Location = new System.Drawing.Point(12, 54);
-            this.numericUpDownBombUpgrades.Maximum = new decimal(new int[] {
-            7,
-            0,
-            0,
-            0});
-            this.numericUpDownBombUpgrades.Name = "numericUpDownBombUpgrades";
-            this.numericUpDownBombUpgrades.Size = new System.Drawing.Size(61, 20);
-            this.numericUpDownBombUpgrades.TabIndex = 1;
-            this.numericUpDownBombUpgrades.ValueChanged += new System.EventHandler(this.numericUpDownBombUpgrades_ValueChanged);
+            numericUpDownBombUpgrades.Location = new Point(20, 104);
+            numericUpDownBombUpgrades.Margin = new Padding(5, 6, 5, 6);
+            numericUpDownBombUpgrades.Maximum = new decimal(new int[] { 7, 0, 0, 0 });
+            numericUpDownBombUpgrades.Name = "numericUpDownBombUpgrades";
+            numericUpDownBombUpgrades.Size = new Size(102, 31);
+            numericUpDownBombUpgrades.TabIndex = 1;
+            numericUpDownBombUpgrades.ValueChanged += numericUpDownBombUpgrades_ValueChanged;
             // 
             // numericUpDownBombsHeld
             // 
-            this.numericUpDownBombsHeld.Location = new System.Drawing.Point(12, 19);
-            this.numericUpDownBombsHeld.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numericUpDownBombsHeld.Name = "numericUpDownBombsHeld";
-            this.numericUpDownBombsHeld.Size = new System.Drawing.Size(61, 20);
-            this.numericUpDownBombsHeld.TabIndex = 0;
-            this.numericUpDownBombsHeld.ValueChanged += new System.EventHandler(this.numericUpDownBombsHeld_ValueChanged);
+            numericUpDownBombsHeld.Location = new Point(20, 37);
+            numericUpDownBombsHeld.Margin = new Padding(5, 6, 5, 6);
+            numericUpDownBombsHeld.Maximum = new decimal(new int[] { 10, 0, 0, 0 });
+            numericUpDownBombsHeld.Name = "numericUpDownBombsHeld";
+            numericUpDownBombsHeld.Size = new Size(102, 31);
+            numericUpDownBombsHeld.TabIndex = 0;
+            numericUpDownBombsHeld.ValueChanged += numericUpDownBombsHeld_ValueChanged;
             // 
             // groupBoxMushroomPowder
             // 
-            this.groupBoxMushroomPowder.Controls.Add(this.radioButtonPowder);
-            this.groupBoxMushroomPowder.Controls.Add(this.radioButtonMushroom);
-            this.groupBoxMushroomPowder.Controls.Add(this.radioButtonNoMushPowd);
-            this.groupBoxMushroomPowder.Location = new System.Drawing.Point(500, 46);
-            this.groupBoxMushroomPowder.Name = "groupBoxMushroomPowder";
-            this.groupBoxMushroomPowder.Size = new System.Drawing.Size(200, 96);
-            this.groupBoxMushroomPowder.TabIndex = 29;
-            this.groupBoxMushroomPowder.TabStop = false;
-            this.groupBoxMushroomPowder.Text = "Mushroom && Magic Powder";
-            this.groupBoxMushroomPowder.Visible = false;
+            groupBoxMushroomPowder.Controls.Add(radioButtonPowder);
+            groupBoxMushroomPowder.Controls.Add(radioButtonMushroom);
+            groupBoxMushroomPowder.Controls.Add(radioButtonNoMushPowd);
+            groupBoxMushroomPowder.Location = new Point(833, 88);
+            groupBoxMushroomPowder.Margin = new Padding(5, 6, 5, 6);
+            groupBoxMushroomPowder.Name = "groupBoxMushroomPowder";
+            groupBoxMushroomPowder.Padding = new Padding(5, 6, 5, 6);
+            groupBoxMushroomPowder.Size = new Size(333, 185);
+            groupBoxMushroomPowder.TabIndex = 29;
+            groupBoxMushroomPowder.TabStop = false;
+            groupBoxMushroomPowder.Text = "Mushroom && Magic Powder";
+            groupBoxMushroomPowder.Visible = false;
             // 
             // radioButtonPowder
             // 
-            this.radioButtonPowder.AutoSize = true;
-            this.radioButtonPowder.Location = new System.Drawing.Point(7, 66);
-            this.radioButtonPowder.Name = "radioButtonPowder";
-            this.radioButtonPowder.Size = new System.Drawing.Size(93, 17);
-            this.radioButtonPowder.TabIndex = 2;
-            this.radioButtonPowder.TabStop = true;
-            this.radioButtonPowder.Text = "Magic Powder";
-            this.radioButtonPowder.UseVisualStyleBackColor = true;
-            this.radioButtonPowder.CheckedChanged += new System.EventHandler(this.mushPowdRadio);
+            radioButtonPowder.AutoSize = true;
+            radioButtonPowder.Location = new Point(12, 127);
+            radioButtonPowder.Margin = new Padding(5, 6, 5, 6);
+            radioButtonPowder.Name = "radioButtonPowder";
+            radioButtonPowder.Size = new Size(149, 29);
+            radioButtonPowder.TabIndex = 2;
+            radioButtonPowder.TabStop = true;
+            radioButtonPowder.Text = "Magic Powder";
+            radioButtonPowder.UseVisualStyleBackColor = true;
+            radioButtonPowder.CheckedChanged += mushPowdRadio;
             // 
             // radioButtonMushroom
             // 
-            this.radioButtonMushroom.AutoSize = true;
-            this.radioButtonMushroom.Location = new System.Drawing.Point(7, 43);
-            this.radioButtonMushroom.Name = "radioButtonMushroom";
-            this.radioButtonMushroom.Size = new System.Drawing.Size(74, 17);
-            this.radioButtonMushroom.TabIndex = 1;
-            this.radioButtonMushroom.TabStop = true;
-            this.radioButtonMushroom.Text = "Mushroom";
-            this.radioButtonMushroom.UseVisualStyleBackColor = true;
-            this.radioButtonMushroom.CheckedChanged += new System.EventHandler(this.mushPowdRadio);
+            radioButtonMushroom.AutoSize = true;
+            radioButtonMushroom.Location = new Point(12, 83);
+            radioButtonMushroom.Margin = new Padding(5, 6, 5, 6);
+            radioButtonMushroom.Name = "radioButtonMushroom";
+            radioButtonMushroom.Size = new Size(125, 29);
+            radioButtonMushroom.TabIndex = 1;
+            radioButtonMushroom.TabStop = true;
+            radioButtonMushroom.Text = "Mushroom";
+            radioButtonMushroom.UseVisualStyleBackColor = true;
+            radioButtonMushroom.CheckedChanged += mushPowdRadio;
             // 
             // radioButtonNoMushPowd
             // 
-            this.radioButtonNoMushPowd.AutoSize = true;
-            this.radioButtonNoMushPowd.Location = new System.Drawing.Point(7, 20);
-            this.radioButtonNoMushPowd.Name = "radioButtonNoMushPowd";
-            this.radioButtonNoMushPowd.Size = new System.Drawing.Size(59, 17);
-            this.radioButtonNoMushPowd.TabIndex = 0;
-            this.radioButtonNoMushPowd.TabStop = true;
-            this.radioButtonNoMushPowd.Text = "Neither";
-            this.radioButtonNoMushPowd.UseVisualStyleBackColor = true;
-            this.radioButtonNoMushPowd.CheckedChanged += new System.EventHandler(this.mushPowdRadio);
+            radioButtonNoMushPowd.AutoSize = true;
+            radioButtonNoMushPowd.Location = new Point(12, 38);
+            radioButtonNoMushPowd.Margin = new Padding(5, 6, 5, 6);
+            radioButtonNoMushPowd.Name = "radioButtonNoMushPowd";
+            radioButtonNoMushPowd.Size = new Size(94, 29);
+            radioButtonNoMushPowd.TabIndex = 0;
+            radioButtonNoMushPowd.TabStop = true;
+            radioButtonNoMushPowd.Text = "Neither";
+            radioButtonNoMushPowd.UseVisualStyleBackColor = true;
+            radioButtonNoMushPowd.CheckedChanged += mushPowdRadio;
             // 
             // groupBoxSword
             // 
-            this.groupBoxSword.Controls.Add(this.radioButtonGoldenSword);
-            this.groupBoxSword.Controls.Add(this.radioButtonTemperedSword);
-            this.groupBoxSword.Controls.Add(this.radioButtonMasterSword);
-            this.groupBoxSword.Controls.Add(this.radioButtonFighterSword);
-            this.groupBoxSword.Controls.Add(this.radioButtonNoSword);
-            this.groupBoxSword.Location = new System.Drawing.Point(500, 46);
-            this.groupBoxSword.Name = "groupBoxSword";
-            this.groupBoxSword.Size = new System.Drawing.Size(200, 138);
-            this.groupBoxSword.TabIndex = 30;
-            this.groupBoxSword.TabStop = false;
-            this.groupBoxSword.Text = "Current Sword";
-            this.groupBoxSword.Visible = false;
+            groupBoxSword.Controls.Add(radioButtonGoldenSword);
+            groupBoxSword.Controls.Add(radioButtonTemperedSword);
+            groupBoxSword.Controls.Add(radioButtonMasterSword);
+            groupBoxSword.Controls.Add(radioButtonFighterSword);
+            groupBoxSword.Controls.Add(radioButtonNoSword);
+            groupBoxSword.Location = new Point(833, 88);
+            groupBoxSword.Margin = new Padding(5, 6, 5, 6);
+            groupBoxSword.Name = "groupBoxSword";
+            groupBoxSword.Padding = new Padding(5, 6, 5, 6);
+            groupBoxSword.Size = new Size(333, 265);
+            groupBoxSword.TabIndex = 30;
+            groupBoxSword.TabStop = false;
+            groupBoxSword.Text = "Current Sword";
+            groupBoxSword.Visible = false;
             // 
             // radioButtonGoldenSword
             // 
-            this.radioButtonGoldenSword.AutoSize = true;
-            this.radioButtonGoldenSword.Location = new System.Drawing.Point(6, 111);
-            this.radioButtonGoldenSword.Name = "radioButtonGoldenSword";
-            this.radioButtonGoldenSword.Size = new System.Drawing.Size(92, 17);
-            this.radioButtonGoldenSword.TabIndex = 4;
-            this.radioButtonGoldenSword.TabStop = true;
-            this.radioButtonGoldenSword.Text = "Golden Sword";
-            this.radioButtonGoldenSword.UseVisualStyleBackColor = true;
-            this.radioButtonGoldenSword.CheckedChanged += new System.EventHandler(this.swordRadio);
+            radioButtonGoldenSword.AutoSize = true;
+            radioButtonGoldenSword.Location = new Point(10, 213);
+            radioButtonGoldenSword.Margin = new Padding(5, 6, 5, 6);
+            radioButtonGoldenSword.Name = "radioButtonGoldenSword";
+            radioButtonGoldenSword.Size = new Size(150, 29);
+            radioButtonGoldenSword.TabIndex = 4;
+            radioButtonGoldenSword.TabStop = true;
+            radioButtonGoldenSword.Text = "Golden Sword";
+            radioButtonGoldenSword.UseVisualStyleBackColor = true;
+            radioButtonGoldenSword.CheckedChanged += swordRadio;
             // 
             // radioButtonTemperedSword
             // 
-            this.radioButtonTemperedSword.AutoSize = true;
-            this.radioButtonTemperedSword.Location = new System.Drawing.Point(6, 88);
-            this.radioButtonTemperedSword.Name = "radioButtonTemperedSword";
-            this.radioButtonTemperedSword.Size = new System.Drawing.Size(106, 17);
-            this.radioButtonTemperedSword.TabIndex = 3;
-            this.radioButtonTemperedSword.TabStop = true;
-            this.radioButtonTemperedSword.Text = "Tempered Sword";
-            this.radioButtonTemperedSword.UseVisualStyleBackColor = true;
-            this.radioButtonTemperedSword.CheckedChanged += new System.EventHandler(this.swordRadio);
+            radioButtonTemperedSword.AutoSize = true;
+            radioButtonTemperedSword.Location = new Point(10, 169);
+            radioButtonTemperedSword.Margin = new Padding(5, 6, 5, 6);
+            radioButtonTemperedSword.Name = "radioButtonTemperedSword";
+            radioButtonTemperedSword.Size = new Size(171, 29);
+            radioButtonTemperedSword.TabIndex = 3;
+            radioButtonTemperedSword.TabStop = true;
+            radioButtonTemperedSword.Text = "Tempered Sword";
+            radioButtonTemperedSword.UseVisualStyleBackColor = true;
+            radioButtonTemperedSword.CheckedChanged += swordRadio;
             // 
             // radioButtonMasterSword
             // 
-            this.radioButtonMasterSword.AutoSize = true;
-            this.radioButtonMasterSword.Location = new System.Drawing.Point(6, 65);
-            this.radioButtonMasterSword.Name = "radioButtonMasterSword";
-            this.radioButtonMasterSword.Size = new System.Drawing.Size(90, 17);
-            this.radioButtonMasterSword.TabIndex = 2;
-            this.radioButtonMasterSword.TabStop = true;
-            this.radioButtonMasterSword.Text = "Master Sword";
-            this.radioButtonMasterSword.UseVisualStyleBackColor = true;
-            this.radioButtonMasterSword.CheckedChanged += new System.EventHandler(this.swordRadio);
+            radioButtonMasterSword.AutoSize = true;
+            radioButtonMasterSword.Location = new Point(10, 125);
+            radioButtonMasterSword.Margin = new Padding(5, 6, 5, 6);
+            radioButtonMasterSword.Name = "radioButtonMasterSword";
+            radioButtonMasterSword.Size = new Size(147, 29);
+            radioButtonMasterSword.TabIndex = 2;
+            radioButtonMasterSword.TabStop = true;
+            radioButtonMasterSword.Text = "Master Sword";
+            radioButtonMasterSword.UseVisualStyleBackColor = true;
+            radioButtonMasterSword.CheckedChanged += swordRadio;
             // 
             // radioButtonFighterSword
             // 
-            this.radioButtonFighterSword.AutoSize = true;
-            this.radioButtonFighterSword.Location = new System.Drawing.Point(6, 42);
-            this.radioButtonFighterSword.Name = "radioButtonFighterSword";
-            this.radioButtonFighterSword.Size = new System.Drawing.Size(97, 17);
-            this.radioButtonFighterSword.TabIndex = 1;
-            this.radioButtonFighterSword.TabStop = true;
-            this.radioButtonFighterSword.Text = "Fighter\'s Sword";
-            this.radioButtonFighterSword.UseVisualStyleBackColor = true;
-            this.radioButtonFighterSword.CheckedChanged += new System.EventHandler(this.swordRadio);
+            radioButtonFighterSword.AutoSize = true;
+            radioButtonFighterSword.Location = new Point(10, 81);
+            radioButtonFighterSword.Margin = new Padding(5, 6, 5, 6);
+            radioButtonFighterSword.Name = "radioButtonFighterSword";
+            radioButtonFighterSword.Size = new Size(160, 29);
+            radioButtonFighterSword.TabIndex = 1;
+            radioButtonFighterSword.TabStop = true;
+            radioButtonFighterSword.Text = "Fighter's Sword";
+            radioButtonFighterSword.UseVisualStyleBackColor = true;
+            radioButtonFighterSword.CheckedChanged += swordRadio;
             // 
             // radioButtonNoSword
             // 
-            this.radioButtonNoSword.AutoSize = true;
-            this.radioButtonNoSword.Location = new System.Drawing.Point(6, 19);
-            this.radioButtonNoSword.Name = "radioButtonNoSword";
-            this.radioButtonNoSword.Size = new System.Drawing.Size(72, 17);
-            this.radioButtonNoSword.TabIndex = 0;
-            this.radioButtonNoSword.TabStop = true;
-            this.radioButtonNoSword.Text = "No Sword";
-            this.radioButtonNoSword.UseVisualStyleBackColor = true;
-            this.radioButtonNoSword.CheckedChanged += new System.EventHandler(this.swordRadio);
+            radioButtonNoSword.AutoSize = true;
+            radioButtonNoSword.Location = new Point(10, 37);
+            radioButtonNoSword.Margin = new Padding(5, 6, 5, 6);
+            radioButtonNoSword.Name = "radioButtonNoSword";
+            radioButtonNoSword.Size = new Size(117, 29);
+            radioButtonNoSword.TabIndex = 0;
+            radioButtonNoSword.TabStop = true;
+            radioButtonNoSword.Text = "No Sword";
+            radioButtonNoSword.UseVisualStyleBackColor = true;
+            radioButtonNoSword.CheckedChanged += swordRadio;
             // 
             // groupBoxShield
             // 
-            this.groupBoxShield.Controls.Add(this.radioButtonMirrorShield);
-            this.groupBoxShield.Controls.Add(this.radioButtonHerosShield);
-            this.groupBoxShield.Controls.Add(this.radioButtonBlueShield);
-            this.groupBoxShield.Controls.Add(this.radioButtonNoShield);
-            this.groupBoxShield.Location = new System.Drawing.Point(500, 46);
-            this.groupBoxShield.Name = "groupBoxShield";
-            this.groupBoxShield.Size = new System.Drawing.Size(183, 120);
-            this.groupBoxShield.TabIndex = 31;
-            this.groupBoxShield.TabStop = false;
-            this.groupBoxShield.Text = "Current Shield";
-            this.groupBoxShield.Visible = false;
+            groupBoxShield.Controls.Add(radioButtonMirrorShield);
+            groupBoxShield.Controls.Add(radioButtonHerosShield);
+            groupBoxShield.Controls.Add(radioButtonBlueShield);
+            groupBoxShield.Controls.Add(radioButtonNoShield);
+            groupBoxShield.Location = new Point(833, 88);
+            groupBoxShield.Margin = new Padding(5, 6, 5, 6);
+            groupBoxShield.Name = "groupBoxShield";
+            groupBoxShield.Padding = new Padding(5, 6, 5, 6);
+            groupBoxShield.Size = new Size(305, 231);
+            groupBoxShield.TabIndex = 31;
+            groupBoxShield.TabStop = false;
+            groupBoxShield.Text = "Current Shield";
+            groupBoxShield.Visible = false;
             // 
             // radioButtonMirrorShield
             // 
-            this.radioButtonMirrorShield.AutoSize = true;
-            this.radioButtonMirrorShield.Location = new System.Drawing.Point(7, 87);
-            this.radioButtonMirrorShield.Name = "radioButtonMirrorShield";
-            this.radioButtonMirrorShield.Size = new System.Drawing.Size(83, 17);
-            this.radioButtonMirrorShield.TabIndex = 3;
-            this.radioButtonMirrorShield.TabStop = true;
-            this.radioButtonMirrorShield.Text = "Mirror Shield";
-            this.radioButtonMirrorShield.UseVisualStyleBackColor = true;
-            this.radioButtonMirrorShield.CheckedChanged += new System.EventHandler(this.radioShield);
+            radioButtonMirrorShield.AutoSize = true;
+            radioButtonMirrorShield.Location = new Point(12, 167);
+            radioButtonMirrorShield.Margin = new Padding(5, 6, 5, 6);
+            radioButtonMirrorShield.Name = "radioButtonMirrorShield";
+            radioButtonMirrorShield.Size = new Size(139, 29);
+            radioButtonMirrorShield.TabIndex = 3;
+            radioButtonMirrorShield.TabStop = true;
+            radioButtonMirrorShield.Text = "Mirror Shield";
+            radioButtonMirrorShield.UseVisualStyleBackColor = true;
+            radioButtonMirrorShield.CheckedChanged += radioShield;
             // 
             // radioButtonHerosShield
             // 
-            this.radioButtonHerosShield.AutoSize = true;
-            this.radioButtonHerosShield.Location = new System.Drawing.Point(7, 64);
-            this.radioButtonHerosShield.Name = "radioButtonHerosShield";
-            this.radioButtonHerosShield.Size = new System.Drawing.Size(87, 17);
-            this.radioButtonHerosShield.TabIndex = 2;
-            this.radioButtonHerosShield.TabStop = true;
-            this.radioButtonHerosShield.Text = "Hero\'s Shield";
-            this.radioButtonHerosShield.UseVisualStyleBackColor = true;
-            this.radioButtonHerosShield.CheckedChanged += new System.EventHandler(this.radioShield);
+            radioButtonHerosShield.AutoSize = true;
+            radioButtonHerosShield.Location = new Point(12, 123);
+            radioButtonHerosShield.Margin = new Padding(5, 6, 5, 6);
+            radioButtonHerosShield.Name = "radioButtonHerosShield";
+            radioButtonHerosShield.Size = new Size(141, 29);
+            radioButtonHerosShield.TabIndex = 2;
+            radioButtonHerosShield.TabStop = true;
+            radioButtonHerosShield.Text = "Hero's Shield";
+            radioButtonHerosShield.UseVisualStyleBackColor = true;
+            radioButtonHerosShield.CheckedChanged += radioShield;
             // 
             // radioButtonBlueShield
             // 
-            this.radioButtonBlueShield.AutoSize = true;
-            this.radioButtonBlueShield.Location = new System.Drawing.Point(7, 41);
-            this.radioButtonBlueShield.Name = "radioButtonBlueShield";
-            this.radioButtonBlueShield.Size = new System.Drawing.Size(96, 17);
-            this.radioButtonBlueShield.TabIndex = 1;
-            this.radioButtonBlueShield.TabStop = true;
-            this.radioButtonBlueShield.Text = "Fighter\'s Shield";
-            this.radioButtonBlueShield.UseVisualStyleBackColor = true;
-            this.radioButtonBlueShield.CheckedChanged += new System.EventHandler(this.radioShield);
+            radioButtonBlueShield.AutoSize = true;
+            radioButtonBlueShield.Location = new Point(12, 79);
+            radioButtonBlueShield.Margin = new Padding(5, 6, 5, 6);
+            radioButtonBlueShield.Name = "radioButtonBlueShield";
+            radioButtonBlueShield.Size = new Size(157, 29);
+            radioButtonBlueShield.TabIndex = 1;
+            radioButtonBlueShield.TabStop = true;
+            radioButtonBlueShield.Text = "Fighter's Shield";
+            radioButtonBlueShield.UseVisualStyleBackColor = true;
+            radioButtonBlueShield.CheckedChanged += radioShield;
             // 
             // radioButtonNoShield
             // 
-            this.radioButtonNoShield.AutoSize = true;
-            this.radioButtonNoShield.Location = new System.Drawing.Point(7, 18);
-            this.radioButtonNoShield.Name = "radioButtonNoShield";
-            this.radioButtonNoShield.Size = new System.Drawing.Size(71, 17);
-            this.radioButtonNoShield.TabIndex = 0;
-            this.radioButtonNoShield.TabStop = true;
-            this.radioButtonNoShield.Text = "No Shield";
-            this.radioButtonNoShield.UseVisualStyleBackColor = true;
-            this.radioButtonNoShield.CheckedChanged += new System.EventHandler(this.radioShield);
+            radioButtonNoShield.AutoSize = true;
+            radioButtonNoShield.Location = new Point(12, 35);
+            radioButtonNoShield.Margin = new Padding(5, 6, 5, 6);
+            radioButtonNoShield.Name = "radioButtonNoShield";
+            radioButtonNoShield.Size = new Size(114, 29);
+            radioButtonNoShield.TabIndex = 0;
+            radioButtonNoShield.TabStop = true;
+            radioButtonNoShield.Text = "No Shield";
+            radioButtonNoShield.UseVisualStyleBackColor = true;
+            radioButtonNoShield.CheckedChanged += radioShield;
             // 
             // groupBoxMails
             // 
-            this.groupBoxMails.Controls.Add(this.radioButtonRedMail);
-            this.groupBoxMails.Controls.Add(this.radioButtonBlueMail);
-            this.groupBoxMails.Controls.Add(this.radioButtonGreenMail);
-            this.groupBoxMails.Location = new System.Drawing.Point(500, 46);
-            this.groupBoxMails.Name = "groupBoxMails";
-            this.groupBoxMails.Size = new System.Drawing.Size(142, 89);
-            this.groupBoxMails.TabIndex = 32;
-            this.groupBoxMails.TabStop = false;
-            this.groupBoxMails.Text = "Mails";
-            this.groupBoxMails.Visible = false;
+            groupBoxMails.Controls.Add(radioButtonRedMail);
+            groupBoxMails.Controls.Add(radioButtonBlueMail);
+            groupBoxMails.Controls.Add(radioButtonGreenMail);
+            groupBoxMails.Location = new Point(833, 88);
+            groupBoxMails.Margin = new Padding(5, 6, 5, 6);
+            groupBoxMails.Name = "groupBoxMails";
+            groupBoxMails.Padding = new Padding(5, 6, 5, 6);
+            groupBoxMails.Size = new Size(237, 171);
+            groupBoxMails.TabIndex = 32;
+            groupBoxMails.TabStop = false;
+            groupBoxMails.Text = "Mails";
+            groupBoxMails.Visible = false;
             // 
             // radioButtonRedMail
             // 
-            this.radioButtonRedMail.AutoSize = true;
-            this.radioButtonRedMail.Location = new System.Drawing.Point(6, 63);
-            this.radioButtonRedMail.Name = "radioButtonRedMail";
-            this.radioButtonRedMail.Size = new System.Drawing.Size(67, 17);
-            this.radioButtonRedMail.TabIndex = 2;
-            this.radioButtonRedMail.TabStop = true;
-            this.radioButtonRedMail.Text = "Red Mail";
-            this.radioButtonRedMail.UseVisualStyleBackColor = true;
-            this.radioButtonRedMail.CheckedChanged += new System.EventHandler(this.mailRadio);
+            radioButtonRedMail.AutoSize = true;
+            radioButtonRedMail.Location = new Point(10, 121);
+            radioButtonRedMail.Margin = new Padding(5, 6, 5, 6);
+            radioButtonRedMail.Name = "radioButtonRedMail";
+            radioButtonRedMail.Size = new Size(105, 29);
+            radioButtonRedMail.TabIndex = 2;
+            radioButtonRedMail.TabStop = true;
+            radioButtonRedMail.Text = "Red Mail";
+            radioButtonRedMail.UseVisualStyleBackColor = true;
+            radioButtonRedMail.CheckedChanged += mailRadio;
             // 
             // radioButtonBlueMail
             // 
-            this.radioButtonBlueMail.AutoSize = true;
-            this.radioButtonBlueMail.Location = new System.Drawing.Point(6, 40);
-            this.radioButtonBlueMail.Name = "radioButtonBlueMail";
-            this.radioButtonBlueMail.Size = new System.Drawing.Size(68, 17);
-            this.radioButtonBlueMail.TabIndex = 1;
-            this.radioButtonBlueMail.TabStop = true;
-            this.radioButtonBlueMail.Text = "Blue Mail";
-            this.radioButtonBlueMail.UseVisualStyleBackColor = true;
-            this.radioButtonBlueMail.CheckedChanged += new System.EventHandler(this.mailRadio);
+            radioButtonBlueMail.AutoSize = true;
+            radioButtonBlueMail.Location = new Point(10, 77);
+            radioButtonBlueMail.Margin = new Padding(5, 6, 5, 6);
+            radioButtonBlueMail.Name = "radioButtonBlueMail";
+            radioButtonBlueMail.Size = new Size(108, 29);
+            radioButtonBlueMail.TabIndex = 1;
+            radioButtonBlueMail.TabStop = true;
+            radioButtonBlueMail.Text = "Blue Mail";
+            radioButtonBlueMail.UseVisualStyleBackColor = true;
+            radioButtonBlueMail.CheckedChanged += mailRadio;
             // 
             // radioButtonGreenMail
             // 
-            this.radioButtonGreenMail.AutoSize = true;
-            this.radioButtonGreenMail.Location = new System.Drawing.Point(6, 17);
-            this.radioButtonGreenMail.Name = "radioButtonGreenMail";
-            this.radioButtonGreenMail.Size = new System.Drawing.Size(76, 17);
-            this.radioButtonGreenMail.TabIndex = 0;
-            this.radioButtonGreenMail.TabStop = true;
-            this.radioButtonGreenMail.Text = "Green Mail";
-            this.radioButtonGreenMail.UseVisualStyleBackColor = true;
-            this.radioButtonGreenMail.CheckedChanged += new System.EventHandler(this.mailRadio);
+            radioButtonGreenMail.AutoSize = true;
+            radioButtonGreenMail.Location = new Point(10, 33);
+            radioButtonGreenMail.Margin = new Padding(5, 6, 5, 6);
+            radioButtonGreenMail.Name = "radioButtonGreenMail";
+            radioButtonGreenMail.Size = new Size(121, 29);
+            radioButtonGreenMail.TabIndex = 0;
+            radioButtonGreenMail.TabStop = true;
+            radioButtonGreenMail.Text = "Green Mail";
+            radioButtonGreenMail.UseVisualStyleBackColor = true;
+            radioButtonGreenMail.CheckedChanged += mailRadio;
             // 
             // groupBoxBottles
             // 
-            this.groupBoxBottles.Controls.Add(this.comboBoxBottle4);
-            this.groupBoxBottles.Controls.Add(this.comboBoxBottle3);
-            this.groupBoxBottles.Controls.Add(this.comboBoxBottle2);
-            this.groupBoxBottles.Controls.Add(this.comboBoxBottle1);
-            this.groupBoxBottles.Controls.Add(this.pictureBottle4);
-            this.groupBoxBottles.Controls.Add(this.pictureBottle3);
-            this.groupBoxBottles.Controls.Add(this.pictureBottle2);
-            this.groupBoxBottles.Controls.Add(this.pictureBottle1);
-            this.groupBoxBottles.Location = new System.Drawing.Point(500, 46);
-            this.groupBoxBottles.Name = "groupBoxBottles";
-            this.groupBoxBottles.Size = new System.Drawing.Size(235, 146);
-            this.groupBoxBottles.TabIndex = 33;
-            this.groupBoxBottles.TabStop = false;
-            this.groupBoxBottles.Text = "Bottles";
-            this.groupBoxBottles.Visible = false;
+            groupBoxBottles.Controls.Add(comboBoxBottle4);
+            groupBoxBottles.Controls.Add(comboBoxBottle3);
+            groupBoxBottles.Controls.Add(comboBoxBottle2);
+            groupBoxBottles.Controls.Add(comboBoxBottle1);
+            groupBoxBottles.Controls.Add(pictureBottle4);
+            groupBoxBottles.Controls.Add(pictureBottle3);
+            groupBoxBottles.Controls.Add(pictureBottle2);
+            groupBoxBottles.Controls.Add(pictureBottle1);
+            groupBoxBottles.Location = new Point(833, 88);
+            groupBoxBottles.Margin = new Padding(5, 6, 5, 6);
+            groupBoxBottles.Name = "groupBoxBottles";
+            groupBoxBottles.Padding = new Padding(5, 6, 5, 6);
+            groupBoxBottles.Size = new Size(392, 281);
+            groupBoxBottles.TabIndex = 33;
+            groupBoxBottles.TabStop = false;
+            groupBoxBottles.Text = "Bottles";
+            groupBoxBottles.Visible = false;
             // 
             // comboBoxBottle4
             // 
-            this.comboBoxBottle4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxBottle4.FormattingEnabled = true;
-            this.comboBoxBottle4.Items.AddRange(new object[] {
-            "No Bottle",
-            "Empty Bottle",
-            "Life Medicine (Red Potion)",
-            "Magic Medicine (Green Potion)",
-            "Cure・All Medicine (Blue Potion)",
-            "Faerie",
-            "Bee",
-            "Good Bee",
-            "Mushroom"});
-            this.comboBoxBottle4.Location = new System.Drawing.Point(55, 111);
-            this.comboBoxBottle4.Name = "comboBoxBottle4";
-            this.comboBoxBottle4.Size = new System.Drawing.Size(157, 21);
-            this.comboBoxBottle4.TabIndex = 37;
-            this.comboBoxBottle4.SelectionChangeCommitted += new System.EventHandler(this.comboBoxBottle4_SelectionChangeCommitted);
+            comboBoxBottle4.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxBottle4.FormattingEnabled = true;
+            comboBoxBottle4.Items.AddRange(new object[] { "No Bottle", "Empty Bottle", "Life Medicine (Red Potion)", "Magic Medicine (Green Potion)", "Cure・All Medicine (Blue Potion)", "Faerie", "Bee", "Good Bee", "Mushroom" });
+            comboBoxBottle4.Location = new Point(92, 213);
+            comboBoxBottle4.Margin = new Padding(5, 6, 5, 6);
+            comboBoxBottle4.Name = "comboBoxBottle4";
+            comboBoxBottle4.Size = new Size(259, 33);
+            comboBoxBottle4.TabIndex = 37;
+            comboBoxBottle4.SelectionChangeCommitted += comboBoxBottle4_SelectionChangeCommitted;
             // 
             // comboBoxBottle3
             // 
-            this.comboBoxBottle3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxBottle3.FormattingEnabled = true;
-            this.comboBoxBottle3.Items.AddRange(new object[] {
-            "No Bottle",
-            "Empty Bottle",
-            "Life Medicine (Red Potion)",
-            "Magic Medicine (Green Potion)",
-            "Cure・All Medicine (Blue Potion)",
-            "Faerie",
-            "Bee",
-            "Good Bee",
-            "Mushroom"});
-            this.comboBoxBottle3.Location = new System.Drawing.Point(55, 81);
-            this.comboBoxBottle3.Name = "comboBoxBottle3";
-            this.comboBoxBottle3.Size = new System.Drawing.Size(157, 21);
-            this.comboBoxBottle3.TabIndex = 36;
-            this.comboBoxBottle3.SelectionChangeCommitted += new System.EventHandler(this.comboBoxBottle3_SelectionChangeCommitted);
+            comboBoxBottle3.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxBottle3.FormattingEnabled = true;
+            comboBoxBottle3.Items.AddRange(new object[] { "No Bottle", "Empty Bottle", "Life Medicine (Red Potion)", "Magic Medicine (Green Potion)", "Cure・All Medicine (Blue Potion)", "Faerie", "Bee", "Good Bee", "Mushroom" });
+            comboBoxBottle3.Location = new Point(92, 156);
+            comboBoxBottle3.Margin = new Padding(5, 6, 5, 6);
+            comboBoxBottle3.Name = "comboBoxBottle3";
+            comboBoxBottle3.Size = new Size(259, 33);
+            comboBoxBottle3.TabIndex = 36;
+            comboBoxBottle3.SelectionChangeCommitted += comboBoxBottle3_SelectionChangeCommitted;
             // 
             // comboBoxBottle2
             // 
-            this.comboBoxBottle2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxBottle2.FormattingEnabled = true;
-            this.comboBoxBottle2.Items.AddRange(new object[] {
-            "No Bottle",
-            "Empty Bottle",
-            "Life Medicine (Red Potion)",
-            "Magic Medicine (Green Potion)",
-            "Cure・All Medicine (Blue Potion)",
-            "Faerie",
-            "Bee",
-            "Good Bee",
-            "Mushroom"});
-            this.comboBoxBottle2.Location = new System.Drawing.Point(55, 50);
-            this.comboBoxBottle2.Name = "comboBoxBottle2";
-            this.comboBoxBottle2.Size = new System.Drawing.Size(157, 21);
-            this.comboBoxBottle2.TabIndex = 35;
-            this.comboBoxBottle2.SelectionChangeCommitted += new System.EventHandler(this.comboBoxBottle2_SelectionChangeCommitted);
+            comboBoxBottle2.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxBottle2.FormattingEnabled = true;
+            comboBoxBottle2.Items.AddRange(new object[] { "No Bottle", "Empty Bottle", "Life Medicine (Red Potion)", "Magic Medicine (Green Potion)", "Cure・All Medicine (Blue Potion)", "Faerie", "Bee", "Good Bee", "Mushroom" });
+            comboBoxBottle2.Location = new Point(92, 96);
+            comboBoxBottle2.Margin = new Padding(5, 6, 5, 6);
+            comboBoxBottle2.Name = "comboBoxBottle2";
+            comboBoxBottle2.Size = new Size(259, 33);
+            comboBoxBottle2.TabIndex = 35;
+            comboBoxBottle2.SelectionChangeCommitted += comboBoxBottle2_SelectionChangeCommitted;
             // 
             // comboBoxBottle1
             // 
-            this.comboBoxBottle1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxBottle1.FormattingEnabled = true;
-            this.comboBoxBottle1.Items.AddRange(new object[] {
-            "No Bottle",
-            "Empty Bottle",
-            "Life Medicine (Red Potion)",
-            "Magic Medicine (Green Potion)",
-            "Cure・All Medicine (Blue Potion)",
-            "Faerie",
-            "Bee",
-            "Good Bee",
-            "Mushroom"});
-            this.comboBoxBottle1.Location = new System.Drawing.Point(55, 21);
-            this.comboBoxBottle1.Name = "comboBoxBottle1";
-            this.comboBoxBottle1.Size = new System.Drawing.Size(157, 21);
-            this.comboBoxBottle1.TabIndex = 34;
-            this.comboBoxBottle1.SelectionChangeCommitted += new System.EventHandler(this.comboBoxBottle1_SelectionChangeCommitted);
+            comboBoxBottle1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxBottle1.FormattingEnabled = true;
+            comboBoxBottle1.Items.AddRange(new object[] { "No Bottle", "Empty Bottle", "Life Medicine (Red Potion)", "Magic Medicine (Green Potion)", "Cure・All Medicine (Blue Potion)", "Faerie", "Bee", "Good Bee", "Mushroom" });
+            comboBoxBottle1.Location = new Point(92, 40);
+            comboBoxBottle1.Margin = new Padding(5, 6, 5, 6);
+            comboBoxBottle1.Name = "comboBoxBottle1";
+            comboBoxBottle1.Size = new Size(259, 33);
+            comboBoxBottle1.TabIndex = 34;
+            comboBoxBottle1.SelectionChangeCommitted += comboBoxBottle1_SelectionChangeCommitted;
             // 
             // pictureBottle4
             // 
-            this.pictureBottle4.Image = global::ALTTPSRAMEditor.Properties.Resources.D_Bottle;
-            this.pictureBottle4.ImageLocation = "";
-            this.pictureBottle4.InitialImage = global::ALTTPSRAMEditor.Properties.Resources.Bomb;
-            this.pictureBottle4.Location = new System.Drawing.Point(16, 111);
-            this.pictureBottle4.Name = "pictureBottle4";
-            this.pictureBottle4.Size = new System.Drawing.Size(16, 16);
-            this.pictureBottle4.TabIndex = 34;
-            this.pictureBottle4.TabStop = false;
+            pictureBottle4.Image = Properties.Resources.D_Bottle;
+            pictureBottle4.ImageLocation = "";
+            pictureBottle4.InitialImage = Properties.Resources.Bomb;
+            pictureBottle4.Location = new Point(27, 213);
+            pictureBottle4.Margin = new Padding(5, 6, 5, 6);
+            pictureBottle4.Name = "pictureBottle4";
+            pictureBottle4.Size = new Size(27, 31);
+            pictureBottle4.TabIndex = 34;
+            pictureBottle4.TabStop = false;
             // 
             // pictureBottle3
             // 
-            this.pictureBottle3.Image = global::ALTTPSRAMEditor.Properties.Resources.D_Bottle;
-            this.pictureBottle3.ImageLocation = "";
-            this.pictureBottle3.InitialImage = global::ALTTPSRAMEditor.Properties.Resources.Bomb;
-            this.pictureBottle3.Location = new System.Drawing.Point(16, 81);
-            this.pictureBottle3.Name = "pictureBottle3";
-            this.pictureBottle3.Size = new System.Drawing.Size(16, 16);
-            this.pictureBottle3.TabIndex = 33;
-            this.pictureBottle3.TabStop = false;
+            pictureBottle3.Image = Properties.Resources.D_Bottle;
+            pictureBottle3.ImageLocation = "";
+            pictureBottle3.InitialImage = Properties.Resources.Bomb;
+            pictureBottle3.Location = new Point(27, 156);
+            pictureBottle3.Margin = new Padding(5, 6, 5, 6);
+            pictureBottle3.Name = "pictureBottle3";
+            pictureBottle3.Size = new Size(27, 31);
+            pictureBottle3.TabIndex = 33;
+            pictureBottle3.TabStop = false;
             // 
             // pictureBottle2
             // 
-            this.pictureBottle2.Image = global::ALTTPSRAMEditor.Properties.Resources.D_Bottle;
-            this.pictureBottle2.ImageLocation = "";
-            this.pictureBottle2.InitialImage = global::ALTTPSRAMEditor.Properties.Resources.Bomb;
-            this.pictureBottle2.Location = new System.Drawing.Point(16, 50);
-            this.pictureBottle2.Name = "pictureBottle2";
-            this.pictureBottle2.Size = new System.Drawing.Size(16, 16);
-            this.pictureBottle2.TabIndex = 32;
-            this.pictureBottle2.TabStop = false;
+            pictureBottle2.Image = Properties.Resources.D_Bottle;
+            pictureBottle2.ImageLocation = "";
+            pictureBottle2.InitialImage = Properties.Resources.Bomb;
+            pictureBottle2.Location = new Point(27, 96);
+            pictureBottle2.Margin = new Padding(5, 6, 5, 6);
+            pictureBottle2.Name = "pictureBottle2";
+            pictureBottle2.Size = new Size(27, 31);
+            pictureBottle2.TabIndex = 32;
+            pictureBottle2.TabStop = false;
             // 
             // pictureBottle1
             // 
-            this.pictureBottle1.Image = global::ALTTPSRAMEditor.Properties.Resources.D_Bottle;
-            this.pictureBottle1.ImageLocation = "";
-            this.pictureBottle1.InitialImage = global::ALTTPSRAMEditor.Properties.Resources.Bomb;
-            this.pictureBottle1.Location = new System.Drawing.Point(16, 21);
-            this.pictureBottle1.Name = "pictureBottle1";
-            this.pictureBottle1.Size = new System.Drawing.Size(16, 16);
-            this.pictureBottle1.TabIndex = 31;
-            this.pictureBottle1.TabStop = false;
+            pictureBottle1.Image = Properties.Resources.D_Bottle;
+            pictureBottle1.ImageLocation = "";
+            pictureBottle1.InitialImage = Properties.Resources.Bomb;
+            pictureBottle1.Location = new Point(27, 40);
+            pictureBottle1.Margin = new Padding(5, 6, 5, 6);
+            pictureBottle1.Name = "pictureBottle1";
+            pictureBottle1.Size = new Size(27, 31);
+            pictureBottle1.TabIndex = 31;
+            pictureBottle1.TabStop = false;
             // 
             // groupBoxGloves
             // 
-            this.groupBoxGloves.Controls.Add(this.radioButtonTitansMitts);
-            this.groupBoxGloves.Controls.Add(this.radioButtonPowerGloves);
-            this.groupBoxGloves.Controls.Add(this.radioButtonNoGloves);
-            this.groupBoxGloves.Location = new System.Drawing.Point(500, 46);
-            this.groupBoxGloves.Name = "groupBoxGloves";
-            this.groupBoxGloves.Size = new System.Drawing.Size(200, 100);
-            this.groupBoxGloves.TabIndex = 34;
-            this.groupBoxGloves.TabStop = false;
-            this.groupBoxGloves.Text = "Glove Upgrades";
-            this.groupBoxGloves.Visible = false;
+            groupBoxGloves.Controls.Add(radioButtonTitansMitts);
+            groupBoxGloves.Controls.Add(radioButtonPowerGloves);
+            groupBoxGloves.Controls.Add(radioButtonNoGloves);
+            groupBoxGloves.Location = new Point(833, 88);
+            groupBoxGloves.Margin = new Padding(5, 6, 5, 6);
+            groupBoxGloves.Name = "groupBoxGloves";
+            groupBoxGloves.Padding = new Padding(5, 6, 5, 6);
+            groupBoxGloves.Size = new Size(333, 192);
+            groupBoxGloves.TabIndex = 34;
+            groupBoxGloves.TabStop = false;
+            groupBoxGloves.Text = "Glove Upgrades";
+            groupBoxGloves.Visible = false;
             // 
             // radioButtonTitansMitts
             // 
-            this.radioButtonTitansMitts.AutoSize = true;
-            this.radioButtonTitansMitts.Location = new System.Drawing.Point(6, 65);
-            this.radioButtonTitansMitts.Name = "radioButtonTitansMitts";
-            this.radioButtonTitansMitts.Size = new System.Drawing.Size(81, 17);
-            this.radioButtonTitansMitts.TabIndex = 2;
-            this.radioButtonTitansMitts.TabStop = true;
-            this.radioButtonTitansMitts.Text = "Titan\'s Mitts";
-            this.radioButtonTitansMitts.UseVisualStyleBackColor = true;
-            this.radioButtonTitansMitts.CheckedChanged += new System.EventHandler(this.gloveUpgradesRadio);
+            radioButtonTitansMitts.AutoSize = true;
+            radioButtonTitansMitts.Location = new Point(10, 125);
+            radioButtonTitansMitts.Margin = new Padding(5, 6, 5, 6);
+            radioButtonTitansMitts.Name = "radioButtonTitansMitts";
+            radioButtonTitansMitts.Size = new Size(132, 29);
+            radioButtonTitansMitts.TabIndex = 2;
+            radioButtonTitansMitts.TabStop = true;
+            radioButtonTitansMitts.Text = "Titan's Mitts";
+            radioButtonTitansMitts.UseVisualStyleBackColor = true;
+            radioButtonTitansMitts.CheckedChanged += gloveUpgradesRadio;
             // 
             // radioButtonPowerGloves
             // 
-            this.radioButtonPowerGloves.AutoSize = true;
-            this.radioButtonPowerGloves.Location = new System.Drawing.Point(6, 42);
-            this.radioButtonPowerGloves.Name = "radioButtonPowerGloves";
-            this.radioButtonPowerGloves.Size = new System.Drawing.Size(91, 17);
-            this.radioButtonPowerGloves.TabIndex = 1;
-            this.radioButtonPowerGloves.TabStop = true;
-            this.radioButtonPowerGloves.Text = "Power Gloves";
-            this.radioButtonPowerGloves.UseVisualStyleBackColor = true;
-            this.radioButtonPowerGloves.CheckedChanged += new System.EventHandler(this.gloveUpgradesRadio);
+            radioButtonPowerGloves.AutoSize = true;
+            radioButtonPowerGloves.Location = new Point(10, 81);
+            radioButtonPowerGloves.Margin = new Padding(5, 6, 5, 6);
+            radioButtonPowerGloves.Name = "radioButtonPowerGloves";
+            radioButtonPowerGloves.Size = new Size(143, 29);
+            radioButtonPowerGloves.TabIndex = 1;
+            radioButtonPowerGloves.TabStop = true;
+            radioButtonPowerGloves.Text = "Power Gloves";
+            radioButtonPowerGloves.UseVisualStyleBackColor = true;
+            radioButtonPowerGloves.CheckedChanged += gloveUpgradesRadio;
             // 
             // radioButtonNoGloves
             // 
-            this.radioButtonNoGloves.AutoSize = true;
-            this.radioButtonNoGloves.Location = new System.Drawing.Point(6, 19);
-            this.radioButtonNoGloves.Name = "radioButtonNoGloves";
-            this.radioButtonNoGloves.Size = new System.Drawing.Size(75, 17);
-            this.radioButtonNoGloves.TabIndex = 0;
-            this.radioButtonNoGloves.TabStop = true;
-            this.radioButtonNoGloves.Text = "No Gloves";
-            this.radioButtonNoGloves.UseVisualStyleBackColor = true;
-            this.radioButtonNoGloves.CheckedChanged += new System.EventHandler(this.gloveUpgradesRadio);
+            radioButtonNoGloves.AutoSize = true;
+            radioButtonNoGloves.Location = new Point(10, 37);
+            radioButtonNoGloves.Margin = new Padding(5, 6, 5, 6);
+            radioButtonNoGloves.Name = "radioButtonNoGloves";
+            radioButtonNoGloves.Size = new Size(119, 29);
+            radioButtonNoGloves.TabIndex = 0;
+            radioButtonNoGloves.TabStop = true;
+            radioButtonNoGloves.Text = "No Gloves";
+            radioButtonNoGloves.UseVisualStyleBackColor = true;
+            radioButtonNoGloves.CheckedChanged += gloveUpgradesRadio;
             // 
             // groupBoxShovelFlute
             // 
-            this.groupBoxShovelFlute.Controls.Add(this.radioButtonFluteAndBird);
-            this.groupBoxShovelFlute.Controls.Add(this.radioButtonFlute);
-            this.groupBoxShovelFlute.Controls.Add(this.radioButtonShovel);
-            this.groupBoxShovelFlute.Controls.Add(this.radioButtonNoShovelOrFlute);
-            this.groupBoxShovelFlute.Location = new System.Drawing.Point(500, 46);
-            this.groupBoxShovelFlute.Name = "groupBoxShovelFlute";
-            this.groupBoxShovelFlute.Size = new System.Drawing.Size(200, 125);
-            this.groupBoxShovelFlute.TabIndex = 35;
-            this.groupBoxShovelFlute.TabStop = false;
-            this.groupBoxShovelFlute.Text = "Shovel && Flute";
-            this.groupBoxShovelFlute.Visible = false;
+            groupBoxShovelFlute.Controls.Add(radioButtonFluteAndBird);
+            groupBoxShovelFlute.Controls.Add(radioButtonFlute);
+            groupBoxShovelFlute.Controls.Add(radioButtonShovel);
+            groupBoxShovelFlute.Controls.Add(radioButtonNoShovelOrFlute);
+            groupBoxShovelFlute.Location = new Point(833, 88);
+            groupBoxShovelFlute.Margin = new Padding(5, 6, 5, 6);
+            groupBoxShovelFlute.Name = "groupBoxShovelFlute";
+            groupBoxShovelFlute.Padding = new Padding(5, 6, 5, 6);
+            groupBoxShovelFlute.Size = new Size(333, 240);
+            groupBoxShovelFlute.TabIndex = 35;
+            groupBoxShovelFlute.TabStop = false;
+            groupBoxShovelFlute.Text = "Shovel && Flute";
+            groupBoxShovelFlute.Visible = false;
             // 
             // radioButtonFluteAndBird
             // 
-            this.radioButtonFluteAndBird.AutoSize = true;
-            this.radioButtonFluteAndBird.Location = new System.Drawing.Point(6, 88);
-            this.radioButtonFluteAndBird.Name = "radioButtonFluteAndBird";
-            this.radioButtonFluteAndBird.Size = new System.Drawing.Size(78, 17);
-            this.radioButtonFluteAndBird.TabIndex = 3;
-            this.radioButtonFluteAndBird.TabStop = true;
-            this.radioButtonFluteAndBird.Text = "Flute && Bird";
-            this.radioButtonFluteAndBird.UseVisualStyleBackColor = true;
-            this.radioButtonFluteAndBird.CheckedChanged += new System.EventHandler(this.shovelFluteRadio);
+            radioButtonFluteAndBird.AutoSize = true;
+            radioButtonFluteAndBird.Location = new Point(10, 169);
+            radioButtonFluteAndBird.Margin = new Padding(5, 6, 5, 6);
+            radioButtonFluteAndBird.Name = "radioButtonFluteAndBird";
+            radioButtonFluteAndBird.Size = new Size(130, 29);
+            radioButtonFluteAndBird.TabIndex = 3;
+            radioButtonFluteAndBird.TabStop = true;
+            radioButtonFluteAndBird.Text = "Flute && Bird";
+            radioButtonFluteAndBird.UseVisualStyleBackColor = true;
+            radioButtonFluteAndBird.CheckedChanged += shovelFluteRadio;
             // 
             // radioButtonFlute
             // 
-            this.radioButtonFlute.AutoSize = true;
-            this.radioButtonFlute.Location = new System.Drawing.Point(6, 65);
-            this.radioButtonFlute.Name = "radioButtonFlute";
-            this.radioButtonFlute.Size = new System.Drawing.Size(48, 17);
-            this.radioButtonFlute.TabIndex = 2;
-            this.radioButtonFlute.TabStop = true;
-            this.radioButtonFlute.Text = "Flute";
-            this.radioButtonFlute.UseVisualStyleBackColor = true;
-            this.radioButtonFlute.CheckedChanged += new System.EventHandler(this.shovelFluteRadio);
+            radioButtonFlute.AutoSize = true;
+            radioButtonFlute.Location = new Point(10, 125);
+            radioButtonFlute.Margin = new Padding(5, 6, 5, 6);
+            radioButtonFlute.Name = "radioButtonFlute";
+            radioButtonFlute.Size = new Size(75, 29);
+            radioButtonFlute.TabIndex = 2;
+            radioButtonFlute.TabStop = true;
+            radioButtonFlute.Text = "Flute";
+            radioButtonFlute.UseVisualStyleBackColor = true;
+            radioButtonFlute.CheckedChanged += shovelFluteRadio;
             // 
             // radioButtonShovel
             // 
-            this.radioButtonShovel.AutoSize = true;
-            this.radioButtonShovel.Location = new System.Drawing.Point(6, 42);
-            this.radioButtonShovel.Name = "radioButtonShovel";
-            this.radioButtonShovel.Size = new System.Drawing.Size(58, 17);
-            this.radioButtonShovel.TabIndex = 1;
-            this.radioButtonShovel.TabStop = true;
-            this.radioButtonShovel.Text = "Shovel";
-            this.radioButtonShovel.UseVisualStyleBackColor = true;
-            this.radioButtonShovel.CheckedChanged += new System.EventHandler(this.shovelFluteRadio);
+            radioButtonShovel.AutoSize = true;
+            radioButtonShovel.Location = new Point(10, 81);
+            radioButtonShovel.Margin = new Padding(5, 6, 5, 6);
+            radioButtonShovel.Name = "radioButtonShovel";
+            radioButtonShovel.Size = new Size(90, 29);
+            radioButtonShovel.TabIndex = 1;
+            radioButtonShovel.TabStop = true;
+            radioButtonShovel.Text = "Shovel";
+            radioButtonShovel.UseVisualStyleBackColor = true;
+            radioButtonShovel.CheckedChanged += shovelFluteRadio;
             // 
             // radioButtonNoShovelOrFlute
             // 
-            this.radioButtonNoShovelOrFlute.AutoSize = true;
-            this.radioButtonNoShovelOrFlute.Location = new System.Drawing.Point(6, 19);
-            this.radioButtonNoShovelOrFlute.Name = "radioButtonNoShovelOrFlute";
-            this.radioButtonNoShovelOrFlute.Size = new System.Drawing.Size(113, 17);
-            this.radioButtonNoShovelOrFlute.TabIndex = 0;
-            this.radioButtonNoShovelOrFlute.TabStop = true;
-            this.radioButtonNoShovelOrFlute.Text = "No Shovel or Flute";
-            this.radioButtonNoShovelOrFlute.UseVisualStyleBackColor = true;
-            this.radioButtonNoShovelOrFlute.CheckedChanged += new System.EventHandler(this.shovelFluteRadio);
+            radioButtonNoShovelOrFlute.AutoSize = true;
+            radioButtonNoShovelOrFlute.Location = new Point(10, 37);
+            radioButtonNoShovelOrFlute.Margin = new Padding(5, 6, 5, 6);
+            radioButtonNoShovelOrFlute.Name = "radioButtonNoShovelOrFlute";
+            radioButtonNoShovelOrFlute.Size = new Size(184, 29);
+            radioButtonNoShovelOrFlute.TabIndex = 0;
+            radioButtonNoShovelOrFlute.TabStop = true;
+            radioButtonNoShovelOrFlute.Text = "No Shovel or Flute";
+            radioButtonNoShovelOrFlute.UseVisualStyleBackColor = true;
+            radioButtonNoShovelOrFlute.CheckedChanged += shovelFluteRadio;
             // 
             // numericUpDownHeartContainers
             // 
-            this.numericUpDownHeartContainers.Increment = new decimal(new int[] {
-            4,
-            0,
-            0,
-            0});
-            this.numericUpDownHeartContainers.Location = new System.Drawing.Point(6, 32);
-            this.numericUpDownHeartContainers.Maximum = new decimal(new int[] {
-            160,
-            0,
-            0,
-            0});
-            this.numericUpDownHeartContainers.Minimum = new decimal(new int[] {
-            8,
-            0,
-            0,
-            0});
-            this.numericUpDownHeartContainers.Name = "numericUpDownHeartContainers";
-            this.numericUpDownHeartContainers.Size = new System.Drawing.Size(70, 20);
-            this.numericUpDownHeartContainers.TabIndex = 36;
-            this.numericUpDownHeartContainers.Value = new decimal(new int[] {
-            8,
-            0,
-            0,
-            0});
-            this.numericUpDownHeartContainers.Visible = false;
-            this.numericUpDownHeartContainers.ValueChanged += new System.EventHandler(this.numericUpDownHeartContainers_ValueChanged);
+            numericUpDownHeartContainers.Increment = new decimal(new int[] { 4, 0, 0, 0 });
+            numericUpDownHeartContainers.Location = new Point(10, 62);
+            numericUpDownHeartContainers.Margin = new Padding(5, 6, 5, 6);
+            numericUpDownHeartContainers.Maximum = new decimal(new int[] { 160, 0, 0, 0 });
+            numericUpDownHeartContainers.Minimum = new decimal(new int[] { 8, 0, 0, 0 });
+            numericUpDownHeartContainers.Name = "numericUpDownHeartContainers";
+            numericUpDownHeartContainers.Size = new Size(117, 31);
+            numericUpDownHeartContainers.TabIndex = 36;
+            numericUpDownHeartContainers.Value = new decimal(new int[] { 8, 0, 0, 0 });
+            numericUpDownHeartContainers.Visible = false;
+            numericUpDownHeartContainers.ValueChanged += numericUpDownHeartContainers_ValueChanged;
             // 
             // numericUpDownMagic
             // 
-            this.numericUpDownMagic.Location = new System.Drawing.Point(6, 72);
-            this.numericUpDownMagic.Maximum = new decimal(new int[] {
-            128,
-            0,
-            0,
-            0});
-            this.numericUpDownMagic.Name = "numericUpDownMagic";
-            this.numericUpDownMagic.Size = new System.Drawing.Size(70, 20);
-            this.numericUpDownMagic.TabIndex = 37;
-            this.numericUpDownMagic.Visible = false;
-            this.numericUpDownMagic.ValueChanged += new System.EventHandler(this.numericUpDownMagic_ValueChanged);
+            numericUpDownMagic.Location = new Point(10, 138);
+            numericUpDownMagic.Margin = new Padding(5, 6, 5, 6);
+            numericUpDownMagic.Maximum = new decimal(new int[] { 128, 0, 0, 0 });
+            numericUpDownMagic.Name = "numericUpDownMagic";
+            numericUpDownMagic.Size = new Size(117, 31);
+            numericUpDownMagic.TabIndex = 37;
+            numericUpDownMagic.Visible = false;
+            numericUpDownMagic.ValueChanged += numericUpDownMagic_ValueChanged;
             // 
             // labelHeartContainers
             // 
-            this.labelHeartContainers.AutoSize = true;
-            this.labelHeartContainers.Location = new System.Drawing.Point(3, 16);
-            this.labelHeartContainers.Name = "labelHeartContainers";
-            this.labelHeartContainers.Size = new System.Drawing.Size(86, 13);
-            this.labelHeartContainers.TabIndex = 38;
-            this.labelHeartContainers.Text = "Heart Containers";
-            this.labelHeartContainers.Visible = false;
+            labelHeartContainers.AutoSize = true;
+            labelHeartContainers.Location = new Point(5, 31);
+            labelHeartContainers.Margin = new Padding(5, 0, 5, 0);
+            labelHeartContainers.Name = "labelHeartContainers";
+            labelHeartContainers.Size = new Size(144, 25);
+            labelHeartContainers.TabIndex = 38;
+            labelHeartContainers.Text = "Heart Containers";
+            labelHeartContainers.Visible = false;
             // 
             // labelMagic
             // 
-            this.labelMagic.AutoSize = true;
-            this.labelMagic.Location = new System.Drawing.Point(3, 56);
-            this.labelMagic.Name = "labelMagic";
-            this.labelMagic.Size = new System.Drawing.Size(36, 13);
-            this.labelMagic.TabIndex = 39;
-            this.labelMagic.Text = "Magic";
-            this.labelMagic.Visible = false;
+            labelMagic.AutoSize = true;
+            labelMagic.Location = new Point(5, 108);
+            labelMagic.Margin = new Padding(5, 0, 5, 0);
+            labelMagic.Name = "labelMagic";
+            labelMagic.Size = new Size(60, 25);
+            labelMagic.TabIndex = 39;
+            labelMagic.Text = "Magic";
+            labelMagic.Visible = false;
             // 
             // textQuarterMagic
             // 
-            this.textQuarterMagic.Location = new System.Drawing.Point(118, 72);
-            this.textQuarterMagic.Name = "textQuarterMagic";
-            this.textQuarterMagic.ReadOnly = true;
-            this.textQuarterMagic.Size = new System.Drawing.Size(148, 52);
-            this.textQuarterMagic.TabIndex = 41;
-            this.textQuarterMagic.Text = "Note: ¼ Magic will appear as ½  Magic in-game but will still function as intended" +
-    ".";
-            this.textQuarterMagic.Visible = false;
+            textQuarterMagic.Location = new Point(197, 138);
+            textQuarterMagic.Margin = new Padding(5, 6, 5, 6);
+            textQuarterMagic.Name = "textQuarterMagic";
+            textQuarterMagic.ReadOnly = true;
+            textQuarterMagic.Size = new Size(244, 96);
+            textQuarterMagic.TabIndex = 41;
+            textQuarterMagic.Text = "Note: ¼ Magic will appear as ½  Magic in-game but will still function as intended.";
+            textQuarterMagic.Visible = false;
             // 
             // groupPendantsCrystals
             // 
-            this.groupPendantsCrystals.Controls.Add(this.pictureCrystalTR);
-            this.groupPendantsCrystals.Controls.Add(this.pictureCrystalIP);
-            this.groupPendantsCrystals.Controls.Add(this.pictureCrystalTT);
-            this.groupPendantsCrystals.Controls.Add(this.pictureCrystalSW);
-            this.groupPendantsCrystals.Controls.Add(this.pictureCrystalSP);
-            this.groupPendantsCrystals.Controls.Add(this.pictureCrystalMM);
-            this.groupPendantsCrystals.Controls.Add(this.pictureCrystalPoD);
-            this.groupPendantsCrystals.Controls.Add(this.pictureBox3);
-            this.groupPendantsCrystals.Controls.Add(this.pictureRedPendant);
-            this.groupPendantsCrystals.Controls.Add(this.pictureBluePendant);
-            this.groupPendantsCrystals.Controls.Add(this.pictureGreenPendant);
-            this.groupPendantsCrystals.Controls.Add(this.pictureBox2);
-            this.groupPendantsCrystals.Location = new System.Drawing.Point(607, 221);
-            this.groupPendantsCrystals.Name = "groupPendantsCrystals";
-            this.groupPendantsCrystals.Size = new System.Drawing.Size(128, 170);
-            this.groupPendantsCrystals.TabIndex = 43;
-            this.groupPendantsCrystals.TabStop = false;
-            this.groupPendantsCrystals.Text = "Pendants and Crystals";
-            this.groupPendantsCrystals.Visible = false;
+            groupPendantsCrystals.Controls.Add(pictureCrystalTR);
+            groupPendantsCrystals.Controls.Add(pictureCrystalIP);
+            groupPendantsCrystals.Controls.Add(pictureCrystalTT);
+            groupPendantsCrystals.Controls.Add(pictureCrystalSW);
+            groupPendantsCrystals.Controls.Add(pictureCrystalSP);
+            groupPendantsCrystals.Controls.Add(pictureCrystalMM);
+            groupPendantsCrystals.Controls.Add(pictureCrystalPoD);
+            groupPendantsCrystals.Controls.Add(pictureBox3);
+            groupPendantsCrystals.Controls.Add(pictureRedPendant);
+            groupPendantsCrystals.Controls.Add(pictureBluePendant);
+            groupPendantsCrystals.Controls.Add(pictureGreenPendant);
+            groupPendantsCrystals.Controls.Add(pictureBox2);
+            groupPendantsCrystals.Location = new Point(1012, 425);
+            groupPendantsCrystals.Margin = new Padding(5, 6, 5, 6);
+            groupPendantsCrystals.Name = "groupPendantsCrystals";
+            groupPendantsCrystals.Padding = new Padding(5, 6, 5, 6);
+            groupPendantsCrystals.Size = new Size(213, 327);
+            groupPendantsCrystals.TabIndex = 43;
+            groupPendantsCrystals.TabStop = false;
+            groupPendantsCrystals.Text = "Pendants and Crystals";
+            groupPendantsCrystals.Visible = false;
             // 
             // pictureCrystalTR
             // 
-            this.pictureCrystalTR.Image = global::ALTTPSRAMEditor.Properties.Resources.Clear_Crystal;
-            this.pictureCrystalTR.Location = new System.Drawing.Point(55, 112);
-            this.pictureCrystalTR.Name = "pictureCrystalTR";
-            this.pictureCrystalTR.Size = new System.Drawing.Size(16, 16);
-            this.pictureCrystalTR.TabIndex = 54;
-            this.pictureCrystalTR.TabStop = false;
-            this.pictureCrystalTR.Click += new System.EventHandler(this.pictureCrystalTR_Click);
+            pictureCrystalTR.Image = Properties.Resources.Clear_Crystal;
+            pictureCrystalTR.Location = new Point(92, 215);
+            pictureCrystalTR.Margin = new Padding(5, 6, 5, 6);
+            pictureCrystalTR.Name = "pictureCrystalTR";
+            pictureCrystalTR.Size = new Size(27, 31);
+            pictureCrystalTR.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureCrystalTR.TabIndex = 54;
+            pictureCrystalTR.TabStop = false;
+            pictureCrystalTR.Click += pictureCrystalTR_Click;
             // 
             // pictureCrystalIP
             // 
-            this.pictureCrystalIP.Image = global::ALTTPSRAMEditor.Properties.Resources.Clear_Crystal;
-            this.pictureCrystalIP.Location = new System.Drawing.Point(39, 112);
-            this.pictureCrystalIP.Name = "pictureCrystalIP";
-            this.pictureCrystalIP.Size = new System.Drawing.Size(16, 16);
-            this.pictureCrystalIP.TabIndex = 53;
-            this.pictureCrystalIP.TabStop = false;
-            this.pictureCrystalIP.Click += new System.EventHandler(this.pictureCrystalIP_Click);
+            pictureCrystalIP.Image = Properties.Resources.Clear_Crystal;
+            pictureCrystalIP.Location = new Point(65, 215);
+            pictureCrystalIP.Margin = new Padding(5, 6, 5, 6);
+            pictureCrystalIP.Name = "pictureCrystalIP";
+            pictureCrystalIP.Size = new Size(27, 31);
+            pictureCrystalIP.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureCrystalIP.TabIndex = 53;
+            pictureCrystalIP.TabStop = false;
+            pictureCrystalIP.Click += pictureCrystalIP_Click;
             // 
             // pictureCrystalTT
             // 
-            this.pictureCrystalTT.Image = global::ALTTPSRAMEditor.Properties.Resources.Clear_Crystal;
-            this.pictureCrystalTT.Location = new System.Drawing.Point(47, 128);
-            this.pictureCrystalTT.Name = "pictureCrystalTT";
-            this.pictureCrystalTT.Size = new System.Drawing.Size(16, 16);
-            this.pictureCrystalTT.TabIndex = 52;
-            this.pictureCrystalTT.TabStop = false;
-            this.pictureCrystalTT.Click += new System.EventHandler(this.pictureCrystalTT_Click);
+            pictureCrystalTT.Image = Properties.Resources.Clear_Crystal;
+            pictureCrystalTT.Location = new Point(78, 246);
+            pictureCrystalTT.Margin = new Padding(5, 6, 5, 6);
+            pictureCrystalTT.Name = "pictureCrystalTT";
+            pictureCrystalTT.Size = new Size(27, 31);
+            pictureCrystalTT.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureCrystalTT.TabIndex = 52;
+            pictureCrystalTT.TabStop = false;
+            pictureCrystalTT.Click += pictureCrystalTT_Click;
             // 
             // pictureCrystalSW
             // 
-            this.pictureCrystalSW.Image = global::ALTTPSRAMEditor.Properties.Resources.Clear_Crystal;
-            this.pictureCrystalSW.Location = new System.Drawing.Point(63, 128);
-            this.pictureCrystalSW.Name = "pictureCrystalSW";
-            this.pictureCrystalSW.Size = new System.Drawing.Size(16, 16);
-            this.pictureCrystalSW.TabIndex = 51;
-            this.pictureCrystalSW.TabStop = false;
-            this.pictureCrystalSW.Click += new System.EventHandler(this.pictureCrystalSW_Click);
+            pictureCrystalSW.Image = Properties.Resources.Clear_Crystal;
+            pictureCrystalSW.Location = new Point(105, 246);
+            pictureCrystalSW.Margin = new Padding(5, 6, 5, 6);
+            pictureCrystalSW.Name = "pictureCrystalSW";
+            pictureCrystalSW.Size = new Size(27, 31);
+            pictureCrystalSW.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureCrystalSW.TabIndex = 51;
+            pictureCrystalSW.TabStop = false;
+            pictureCrystalSW.Click += pictureCrystalSW_Click;
             // 
             // pictureCrystalSP
             // 
-            this.pictureCrystalSP.Image = global::ALTTPSRAMEditor.Properties.Resources.Clear_Crystal;
-            this.pictureCrystalSP.Location = new System.Drawing.Point(71, 112);
-            this.pictureCrystalSP.Name = "pictureCrystalSP";
-            this.pictureCrystalSP.Size = new System.Drawing.Size(16, 16);
-            this.pictureCrystalSP.TabIndex = 50;
-            this.pictureCrystalSP.TabStop = false;
-            this.pictureCrystalSP.Click += new System.EventHandler(this.pictureCrystalSP_Click);
+            pictureCrystalSP.Image = Properties.Resources.Clear_Crystal;
+            pictureCrystalSP.Location = new Point(118, 215);
+            pictureCrystalSP.Margin = new Padding(5, 6, 5, 6);
+            pictureCrystalSP.Name = "pictureCrystalSP";
+            pictureCrystalSP.Size = new Size(27, 31);
+            pictureCrystalSP.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureCrystalSP.TabIndex = 50;
+            pictureCrystalSP.TabStop = false;
+            pictureCrystalSP.Click += pictureCrystalSP_Click;
             // 
             // pictureCrystalMM
             // 
-            this.pictureCrystalMM.Image = global::ALTTPSRAMEditor.Properties.Resources.Clear_Crystal;
-            this.pictureCrystalMM.Location = new System.Drawing.Point(47, 96);
-            this.pictureCrystalMM.Name = "pictureCrystalMM";
-            this.pictureCrystalMM.Size = new System.Drawing.Size(16, 16);
-            this.pictureCrystalMM.TabIndex = 49;
-            this.pictureCrystalMM.TabStop = false;
-            this.pictureCrystalMM.Click += new System.EventHandler(this.pictureCrystalMM_Click);
+            pictureCrystalMM.Image = Properties.Resources.Clear_Crystal;
+            pictureCrystalMM.Location = new Point(78, 185);
+            pictureCrystalMM.Margin = new Padding(5, 6, 5, 6);
+            pictureCrystalMM.Name = "pictureCrystalMM";
+            pictureCrystalMM.Size = new Size(27, 31);
+            pictureCrystalMM.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureCrystalMM.TabIndex = 49;
+            pictureCrystalMM.TabStop = false;
+            pictureCrystalMM.Click += pictureCrystalMM_Click;
             // 
             // pictureCrystalPoD
             // 
-            this.pictureCrystalPoD.Image = global::ALTTPSRAMEditor.Properties.Resources.Clear_Crystal;
-            this.pictureCrystalPoD.Location = new System.Drawing.Point(63, 96);
-            this.pictureCrystalPoD.Name = "pictureCrystalPoD";
-            this.pictureCrystalPoD.Size = new System.Drawing.Size(16, 16);
-            this.pictureCrystalPoD.TabIndex = 48;
-            this.pictureCrystalPoD.TabStop = false;
-            this.pictureCrystalPoD.Click += new System.EventHandler(this.pictureCrystalPoD_Click);
+            pictureCrystalPoD.Image = Properties.Resources.Clear_Crystal;
+            pictureCrystalPoD.Location = new Point(105, 185);
+            pictureCrystalPoD.Margin = new Padding(5, 6, 5, 6);
+            pictureCrystalPoD.Name = "pictureCrystalPoD";
+            pictureCrystalPoD.Size = new Size(27, 31);
+            pictureCrystalPoD.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureCrystalPoD.TabIndex = 48;
+            pictureCrystalPoD.TabStop = false;
+            pictureCrystalPoD.Click += pictureCrystalPoD_Click;
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Black;
-            this.pictureBox3.Location = new System.Drawing.Point(28, 92);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(72, 64);
-            this.pictureBox3.TabIndex = 47;
-            this.pictureBox3.TabStop = false;
+            pictureBox3.BackColor = Color.Black;
+            pictureBox3.Location = new Point(47, 177);
+            pictureBox3.Margin = new Padding(5, 6, 5, 6);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(120, 123);
+            pictureBox3.TabIndex = 47;
+            pictureBox3.TabStop = false;
             // 
             // pictureRedPendant
             // 
-            this.pictureRedPendant.Image = global::ALTTPSRAMEditor.Properties.Resources.Clear_Pendant;
-            this.pictureRedPendant.Location = new System.Drawing.Point(55, 28);
-            this.pictureRedPendant.Name = "pictureRedPendant";
-            this.pictureRedPendant.Size = new System.Drawing.Size(16, 16);
-            this.pictureRedPendant.TabIndex = 46;
-            this.pictureRedPendant.TabStop = false;
-            this.pictureRedPendant.Click += new System.EventHandler(this.pictureRedPendant_Click);
+            pictureRedPendant.Image = Properties.Resources.Clear_Pendant;
+            pictureRedPendant.Location = new Point(92, 54);
+            pictureRedPendant.Margin = new Padding(5, 6, 5, 6);
+            pictureRedPendant.Name = "pictureRedPendant";
+            pictureRedPendant.Size = new Size(27, 31);
+            pictureRedPendant.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureRedPendant.TabIndex = 46;
+            pictureRedPendant.TabStop = false;
+            pictureRedPendant.Click += pictureRedPendant_Click;
             // 
             // pictureBluePendant
             // 
-            this.pictureBluePendant.Image = global::ALTTPSRAMEditor.Properties.Resources.Clear_Pendant;
-            this.pictureBluePendant.Location = new System.Drawing.Point(39, 56);
-            this.pictureBluePendant.Name = "pictureBluePendant";
-            this.pictureBluePendant.Size = new System.Drawing.Size(16, 16);
-            this.pictureBluePendant.TabIndex = 45;
-            this.pictureBluePendant.TabStop = false;
-            this.pictureBluePendant.Click += new System.EventHandler(this.pictureBluePendant_Click);
+            pictureBluePendant.Image = Properties.Resources.Clear_Pendant;
+            pictureBluePendant.Location = new Point(65, 108);
+            pictureBluePendant.Margin = new Padding(5, 6, 5, 6);
+            pictureBluePendant.Name = "pictureBluePendant";
+            pictureBluePendant.Size = new Size(27, 31);
+            pictureBluePendant.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBluePendant.TabIndex = 45;
+            pictureBluePendant.TabStop = false;
+            pictureBluePendant.Click += pictureBluePendant_Click;
             // 
             // pictureGreenPendant
             // 
-            this.pictureGreenPendant.Image = global::ALTTPSRAMEditor.Properties.Resources.Clear_Pendant;
-            this.pictureGreenPendant.Location = new System.Drawing.Point(71, 56);
-            this.pictureGreenPendant.Name = "pictureGreenPendant";
-            this.pictureGreenPendant.Size = new System.Drawing.Size(16, 16);
-            this.pictureGreenPendant.TabIndex = 44;
-            this.pictureGreenPendant.TabStop = false;
-            this.pictureGreenPendant.Click += new System.EventHandler(this.pictureGreenPendant_Click);
+            pictureGreenPendant.Image = Properties.Resources.Clear_Pendant;
+            pictureGreenPendant.Location = new Point(118, 108);
+            pictureGreenPendant.Margin = new Padding(5, 6, 5, 6);
+            pictureGreenPendant.Name = "pictureGreenPendant";
+            pictureGreenPendant.Size = new Size(27, 31);
+            pictureGreenPendant.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureGreenPendant.TabIndex = 44;
+            pictureGreenPendant.TabStop = false;
+            pictureGreenPendant.Click += pictureGreenPendant_Click;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Black;
-            this.pictureBox2.Location = new System.Drawing.Point(28, 19);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(72, 64);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            pictureBox2.BackColor = Color.Black;
+            pictureBox2.Location = new Point(47, 37);
+            pictureBox2.Margin = new Padding(5, 6, 5, 6);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(120, 123);
+            pictureBox2.TabIndex = 0;
+            pictureBox2.TabStop = false;
             // 
             // groupInventory
             // 
-            this.groupInventory.Controls.Add(this.tableLayoutPanelInventory);
-            this.groupInventory.Location = new System.Drawing.Point(328, 33);
-            this.groupInventory.Name = "groupInventory";
-            this.groupInventory.Size = new System.Drawing.Size(166, 172);
-            this.groupInventory.TabIndex = 44;
-            this.groupInventory.TabStop = false;
-            this.groupInventory.Text = "Inventory";
-            this.groupInventory.Visible = false;
+            groupInventory.Controls.Add(tableLayoutPanelInventory);
+            groupInventory.Location = new Point(547, 63);
+            groupInventory.Margin = new Padding(5, 6, 5, 6);
+            groupInventory.Name = "groupInventory";
+            groupInventory.Padding = new Padding(5, 6, 5, 6);
+            groupInventory.Size = new Size(277, 331);
+            groupInventory.TabIndex = 44;
+            groupInventory.TabStop = false;
+            groupInventory.Text = "Inventory";
+            groupInventory.Visible = false;
             // 
             // groupBoxHUD
             // 
-            this.groupBoxHUD.Controls.Add(this.pictureBoxHeartContainerPreview);
-            this.groupBoxHUD.Controls.Add(this.labelHeartContainers);
-            this.groupBoxHUD.Controls.Add(this.numericUpDownRupeeCounter);
-            this.groupBoxHUD.Controls.Add(this.pictureBoxMagicBar);
-            this.groupBoxHUD.Controls.Add(this.textQuarterMagic);
-            this.groupBoxHUD.Controls.Add(this.numericUpDownHeartContainers);
-            this.groupBoxHUD.Controls.Add(this.labelRupees);
-            this.groupBoxHUD.Controls.Add(this.numericUpDownMagic);
-            this.groupBoxHUD.Controls.Add(this.labelMagic);
-            this.groupBoxHUD.Location = new System.Drawing.Point(328, 221);
-            this.groupBoxHUD.Name = "groupBoxHUD";
-            this.groupBoxHUD.Size = new System.Drawing.Size(272, 138);
-            this.groupBoxHUD.TabIndex = 45;
-            this.groupBoxHUD.TabStop = false;
-            this.groupBoxHUD.Text = "HUD";
-            this.groupBoxHUD.Visible = false;
+            groupBoxHUD.Controls.Add(pictureBoxHeartContainerPreview);
+            groupBoxHUD.Controls.Add(labelHeartContainers);
+            groupBoxHUD.Controls.Add(numericUpDownRupeeCounter);
+            groupBoxHUD.Controls.Add(pictureBoxMagicBar);
+            groupBoxHUD.Controls.Add(textQuarterMagic);
+            groupBoxHUD.Controls.Add(numericUpDownHeartContainers);
+            groupBoxHUD.Controls.Add(labelRupees);
+            groupBoxHUD.Controls.Add(numericUpDownMagic);
+            groupBoxHUD.Controls.Add(labelMagic);
+            groupBoxHUD.Location = new Point(547, 425);
+            groupBoxHUD.Margin = new Padding(5, 6, 5, 6);
+            groupBoxHUD.Name = "groupBoxHUD";
+            groupBoxHUD.Padding = new Padding(5, 6, 5, 6);
+            groupBoxHUD.Size = new Size(453, 265);
+            groupBoxHUD.TabIndex = 45;
+            groupBoxHUD.TabStop = false;
+            groupBoxHUD.Text = "HUD";
+            groupBoxHUD.Visible = false;
             // 
             // pictureBoxHeartContainerPreview
             // 
-            this.pictureBoxHeartContainerPreview.BackColor = System.Drawing.Color.Black;
-            this.pictureBoxHeartContainerPreview.Location = new System.Drawing.Point(96, 32);
-            this.pictureBoxHeartContainerPreview.Name = "pictureBoxHeartContainerPreview";
-            this.pictureBoxHeartContainerPreview.Size = new System.Drawing.Size(84, 20);
-            this.pictureBoxHeartContainerPreview.TabIndex = 42;
-            this.pictureBoxHeartContainerPreview.TabStop = false;
+            pictureBoxHeartContainerPreview.BackColor = Color.Black;
+            pictureBoxHeartContainerPreview.Location = new Point(160, 62);
+            pictureBoxHeartContainerPreview.Margin = new Padding(5, 6, 5, 6);
+            pictureBoxHeartContainerPreview.Name = "pictureBoxHeartContainerPreview";
+            pictureBoxHeartContainerPreview.Size = new Size(140, 38);
+            pictureBoxHeartContainerPreview.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBoxHeartContainerPreview.TabIndex = 42;
+            pictureBoxHeartContainerPreview.TabStop = false;
             // 
             // pictureBoxMagicBar
             // 
-            this.pictureBoxMagicBar.InitialImage = null;
-            this.pictureBoxMagicBar.Location = new System.Drawing.Point(96, 72);
-            this.pictureBoxMagicBar.Name = "pictureBoxMagicBar";
-            this.pictureBoxMagicBar.Size = new System.Drawing.Size(16, 45);
-            this.pictureBoxMagicBar.TabIndex = 40;
-            this.pictureBoxMagicBar.TabStop = false;
-            this.pictureBoxMagicBar.Visible = false;
-            this.pictureBoxMagicBar.Click += new System.EventHandler(this.pictureBoxMagicBar_Click);
+            pictureBoxMagicBar.InitialImage = null;
+            pictureBoxMagicBar.Location = new Point(160, 138);
+            pictureBoxMagicBar.Margin = new Padding(5, 6, 5, 6);
+            pictureBoxMagicBar.Name = "pictureBoxMagicBar";
+            pictureBoxMagicBar.Size = new Size(27, 87);
+            pictureBoxMagicBar.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBoxMagicBar.TabIndex = 40;
+            pictureBoxMagicBar.TabStop = false;
+            pictureBoxMagicBar.Visible = false;
+            pictureBoxMagicBar.Click += pictureBoxMagicBar_Click;
             // 
             // groupBoxAreas
             // 
-            this.groupBoxAreas.Controls.Add(this.textBoxDungeonKeys);
-            this.groupBoxAreas.Controls.Add(this.labelDungeonKeys);
-            this.groupBoxAreas.Controls.Add(this.checkedListBoxDungeonItems);
-            this.groupBoxAreas.Controls.Add(this.listBoxDungeonSelector);
-            this.groupBoxAreas.Location = new System.Drawing.Point(18, 231);
-            this.groupBoxAreas.Name = "groupBoxAreas";
-            this.groupBoxAreas.Size = new System.Drawing.Size(279, 160);
-            this.groupBoxAreas.TabIndex = 46;
-            this.groupBoxAreas.TabStop = false;
-            this.groupBoxAreas.Text = "Area";
-            this.groupBoxAreas.Visible = false;
+            groupBoxAreas.Controls.Add(textBoxDungeonKeys);
+            groupBoxAreas.Controls.Add(labelDungeonKeys);
+            groupBoxAreas.Controls.Add(checkedListBoxDungeonItems);
+            groupBoxAreas.Controls.Add(listBoxDungeonSelector);
+            groupBoxAreas.Location = new Point(30, 444);
+            groupBoxAreas.Margin = new Padding(5, 6, 5, 6);
+            groupBoxAreas.Name = "groupBoxAreas";
+            groupBoxAreas.Padding = new Padding(5, 6, 5, 6);
+            groupBoxAreas.Size = new Size(465, 308);
+            groupBoxAreas.TabIndex = 46;
+            groupBoxAreas.TabStop = false;
+            groupBoxAreas.Text = "Area";
+            groupBoxAreas.Visible = false;
             // 
             // buttonResetDeaths
             // 
-            this.buttonResetDeaths.Enabled = false;
-            this.buttonResetDeaths.Location = new System.Drawing.Point(221, 101);
-            this.buttonResetDeaths.Name = "buttonResetDeaths";
-            this.buttonResetDeaths.Size = new System.Drawing.Size(101, 23);
-            this.buttonResetDeaths.TabIndex = 47;
-            this.buttonResetDeaths.Text = "Reset Deaths";
-            this.buttonResetDeaths.UseVisualStyleBackColor = true;
-            this.buttonResetDeaths.Visible = false;
-            this.buttonResetDeaths.Click += new System.EventHandler(this.buttonResetDeaths_Click);
+            buttonResetDeaths.Enabled = false;
+            buttonResetDeaths.Location = new Point(368, 194);
+            buttonResetDeaths.Margin = new Padding(5, 6, 5, 6);
+            buttonResetDeaths.Name = "buttonResetDeaths";
+            buttonResetDeaths.Size = new Size(168, 44);
+            buttonResetDeaths.TabIndex = 47;
+            buttonResetDeaths.Text = "Reset Deaths";
+            buttonResetDeaths.UseVisualStyleBackColor = true;
+            buttonResetDeaths.Visible = false;
+            buttonResetDeaths.Click += buttonResetDeaths_Click;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(755, 465);
-            this.Controls.Add(this.buttonResetDeaths);
-            this.Controls.Add(this.groupBoxAreas);
-            this.Controls.Add(this.groupBoxHUD);
-            this.Controls.Add(this.groupInventory);
-            this.Controls.Add(this.groupPendantsCrystals);
-            this.Controls.Add(this.groupBoxShovelFlute);
-            this.Controls.Add(this.groupBoxGloves);
-            this.Controls.Add(this.groupBoxBottles);
-            this.Controls.Add(this.groupBoxMails);
-            this.Controls.Add(this.groupBoxShield);
-            this.Controls.Add(this.groupBoxSword);
-            this.Controls.Add(this.groupBoxMushroomPowder);
-            this.Controls.Add(this.groupBoxBombs);
-            this.Controls.Add(this.buttonChangeName);
-            this.Controls.Add(this.groupBoxBoomerangConfig);
-            this.Controls.Add(this.labelDeathsPostGame);
-            this.Controls.Add(this.textBoxDeathsPost);
-            this.Controls.Add(this.labelDeaths);
-            this.Controls.Add(this.textBoxDeathsQuest);
-            this.Controls.Add(this.labelFilename);
-            this.Controls.Add(this.helperText);
-            this.Controls.Add(this.groupFileSelect);
-            this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.groupBoxBowConfig);
-            this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.KeyPreview = true;
-            this.MainMenuStrip = this.menuStrip1;
-            this.MaximizeBox = false;
-            this.Name = "MainForm";
-            this.Text = "A Link to the Past SRAM Editor";
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.groupFileSelect.ResumeLayout(false);
-            this.groupFileSelect.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRupeeCounter)).EndInit();
-            this.tableLayoutPanelInventory.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureHeartPieces)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureMoonPearl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureZorasFlippers)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picturePowerGlove)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoots)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureMushPowd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBow)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBombs)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoomerang)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureHookshot)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureFireRod)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureIceRod)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBombos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEther)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureQuake)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureLamp)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureMagicHammer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureShovelFlute)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBugCatchingNet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBookOfMudora)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBottles)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureCaneOfSomaria)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureCaneOfByrna)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureMagicCape)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureMagicMirror)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureMail)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureShield)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureSword)).EndInit();
-            this.groupBoxBowConfig.ResumeLayout(false);
-            this.groupBoxBowConfig.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownArrowUpgrades)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownArrowsHeld)).EndInit();
-            this.groupBoxBoomerangConfig.ResumeLayout(false);
-            this.groupBoxBoomerangConfig.PerformLayout();
-            this.groupBoxBombs.ResumeLayout(false);
-            this.groupBoxBombs.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBombUpgrades)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBombsHeld)).EndInit();
-            this.groupBoxMushroomPowder.ResumeLayout(false);
-            this.groupBoxMushroomPowder.PerformLayout();
-            this.groupBoxSword.ResumeLayout(false);
-            this.groupBoxSword.PerformLayout();
-            this.groupBoxShield.ResumeLayout(false);
-            this.groupBoxShield.PerformLayout();
-            this.groupBoxMails.ResumeLayout(false);
-            this.groupBoxMails.PerformLayout();
-            this.groupBoxBottles.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBottle4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBottle3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBottle2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBottle1)).EndInit();
-            this.groupBoxGloves.ResumeLayout(false);
-            this.groupBoxGloves.PerformLayout();
-            this.groupBoxShovelFlute.ResumeLayout(false);
-            this.groupBoxShovelFlute.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHeartContainers)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMagic)).EndInit();
-            this.groupPendantsCrystals.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureCrystalTR)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureCrystalIP)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureCrystalTT)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureCrystalSW)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureCrystalSP)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureCrystalMM)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureCrystalPoD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureRedPendant)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBluePendant)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureGreenPendant)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.groupInventory.ResumeLayout(false);
-            this.groupBoxHUD.ResumeLayout(false);
-            this.groupBoxHUD.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHeartContainerPreview)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMagicBar)).EndInit();
-            this.groupBoxAreas.ResumeLayout(false);
-            this.groupBoxAreas.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Control;
+            ClientSize = new Size(1258, 894);
+            Controls.Add(buttonResetDeaths);
+            Controls.Add(groupBoxAreas);
+            Controls.Add(groupBoxHUD);
+            Controls.Add(groupInventory);
+            Controls.Add(groupPendantsCrystals);
+            Controls.Add(groupBoxShovelFlute);
+            Controls.Add(groupBoxGloves);
+            Controls.Add(groupBoxBottles);
+            Controls.Add(groupBoxMails);
+            Controls.Add(groupBoxShield);
+            Controls.Add(groupBoxSword);
+            Controls.Add(groupBoxMushroomPowder);
+            Controls.Add(groupBoxBombs);
+            Controls.Add(buttonChangeName);
+            Controls.Add(groupBoxBoomerangConfig);
+            Controls.Add(labelDeathsPostGame);
+            Controls.Add(textBoxDeathsPost);
+            Controls.Add(labelDeaths);
+            Controls.Add(textBoxDeathsQuest);
+            Controls.Add(labelFilename);
+            Controls.Add(helperText);
+            Controls.Add(groupFileSelect);
+            Controls.Add(menuStrip1);
+            Controls.Add(groupBoxBowConfig);
+            DoubleBuffered = true;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            KeyPreview = true;
+            MainMenuStrip = menuStrip1;
+            Margin = new Padding(5, 6, 5, 6);
+            MaximizeBox = false;
+            Name = "MainForm";
+            Text = "A Link to the Past SRAM Editor";
+            KeyDown += MainForm_KeyDown;
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
+            groupFileSelect.ResumeLayout(false);
+            groupFileSelect.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownRupeeCounter).EndInit();
+            tableLayoutPanelInventory.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureHeartPieces).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureMoonPearl).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureZorasFlippers).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picturePowerGlove).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoots).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureMushPowd).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBow).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBombs).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoomerang).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureHookshot).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureFireRod).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureIceRod).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBombos).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureEther).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureQuake).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureLamp).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureMagicHammer).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureShovelFlute).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBugCatchingNet).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBookOfMudora).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBottles).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureCaneOfSomaria).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureCaneOfByrna).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureMagicCape).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureMagicMirror).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureMail).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureShield).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureSword).EndInit();
+            groupBoxBowConfig.ResumeLayout(false);
+            groupBoxBowConfig.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownArrowUpgrades).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownArrowsHeld).EndInit();
+            groupBoxBoomerangConfig.ResumeLayout(false);
+            groupBoxBoomerangConfig.PerformLayout();
+            groupBoxBombs.ResumeLayout(false);
+            groupBoxBombs.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownBombUpgrades).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownBombsHeld).EndInit();
+            groupBoxMushroomPowder.ResumeLayout(false);
+            groupBoxMushroomPowder.PerformLayout();
+            groupBoxSword.ResumeLayout(false);
+            groupBoxSword.PerformLayout();
+            groupBoxShield.ResumeLayout(false);
+            groupBoxShield.PerformLayout();
+            groupBoxMails.ResumeLayout(false);
+            groupBoxMails.PerformLayout();
+            groupBoxBottles.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBottle4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBottle3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBottle2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBottle1).EndInit();
+            groupBoxGloves.ResumeLayout(false);
+            groupBoxGloves.PerformLayout();
+            groupBoxShovelFlute.ResumeLayout(false);
+            groupBoxShovelFlute.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownHeartContainers).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownMagic).EndInit();
+            groupPendantsCrystals.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureCrystalTR).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureCrystalIP).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureCrystalTT).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureCrystalSW).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureCrystalSP).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureCrystalMM).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureCrystalPoD).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureRedPendant).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBluePendant).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureGreenPendant).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            groupInventory.ResumeLayout(false);
+            groupBoxHUD.ResumeLayout(false);
+            groupBoxHUD.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxHeartContainerPreview).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxMagicBar).EndInit();
+            groupBoxAreas.ResumeLayout(false);
+            groupBoxAreas.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 

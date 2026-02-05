@@ -18,27 +18,27 @@ public static class DrawCharHelper
         var y = tileId / tileset_width * tile_h;
         const int width = 8;
         const int height = 16;
-        const int scale = 2;
-        var crop = new Rectangle(x, y, width * scale, height * scale);
-        var tex = new Bitmap(crop.Width, crop.Height);
+        const int scale = 2; // Scale up for visibility in .NET 10
+        var crop = new Rectangle(x, y, width, height); // Crop the original tile size
+        var tex = new Bitmap(width * scale, height * scale); // Create bitmap at scaled size
 
         using var charGr = Graphics.FromImage(tex);
         charGr.InterpolationMode = InterpolationMode.NearestNeighbor;
         charGr.PixelOffsetMode = PixelOffsetMode.Half;
-        charGr.DrawImage(fnt, new Rectangle(0, 0, tex.Width * scale, tex.Height * scale), crop, GraphicsUnit.Pixel);
+        charGr.DrawImage(fnt, new Rectangle(0, 0, tex.Width, tex.Height), crop, GraphicsUnit.Pixel); // Draw scaled
 
         if (hugLeft)
         {
             return tex;
         }
 
-        var bmp = new Bitmap(crop.Width * 2, crop.Height);
+        var bmp = new Bitmap(tex.Width * 2, tex.Height); // Create wider bitmap for padding
 
         using var hugRightGr = Graphics.FromImage(bmp);
         hugRightGr.InterpolationMode = InterpolationMode.NearestNeighbor;
         hugRightGr.PixelOffsetMode = PixelOffsetMode.Half;
         hugRightGr.Clear(Color.Black);
-        hugRightGr.DrawImage(tex, 8, 2);
+        hugRightGr.DrawImage(tex, width * scale, 2); // Position the scaled character with padding
         return bmp;
     }
 }

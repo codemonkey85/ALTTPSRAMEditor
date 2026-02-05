@@ -8,6 +8,9 @@ namespace ALTTPSRAMEditor;
  SuppressMessage("Style", "IDE1006:Naming Styles")]
 public partial class MainForm : Form
 {
+    private const int nameStartX = 375; // Position to the right of "Filename" label (labelFilename is at x=218, text width ~49)
+    private const int nameStartY = 90; // Align with the "Filename" label (labelFilename is at y=33, adjust to align baselines)
+
     private bool canRefresh = true;
     private bool fileOpen;
 
@@ -922,6 +925,8 @@ public partial class MainForm : Form
 
     protected override void OnPaint(PaintEventArgs e)
     {
+        base.OnPaint(e);
+        
         if (!string.IsNullOrEmpty(fname) && fileOpen)
         {
             var savslot = GetSaveSlot();
@@ -942,7 +947,15 @@ public partial class MainForm : Form
             // Initialize the brush for drawing, then draw the black box behind the player name
             var rectBrush = new SolidBrush(Color.Black);
             const int border = 2;
-            e.Graphics.FillRectangle(rectBrush, new Rectangle(223 - border, 49 - border, 8 * 8 + border * 2, 16 + border * 2));
+            const int scale = 2; // Matching the scale in DrawTile
+            const int charWidth = 8 * scale; // 16 pixels per character
+            const int charHeight = 16 * scale; // 32 pixels per character
+            const int maxNameLength = 6; // Maximum characters in a name
+            e.Graphics.FillRectangle(rectBrush, new Rectangle(
+                nameStartX - border, 
+                nameStartY - border, 
+                charWidth * maxNameLength + border * 2, 
+                charHeight + border * 2));
 
             // Grab the player so we can get their info
             var player = savslot.GetPlayer();
@@ -1016,8 +1029,9 @@ public partial class MainForm : Form
 
             // Get rid of the brush to prevent memory leaks
             rectBrush.Dispose();
+            
+            DrawDisplayPlayerName(e);
         }
-        DrawDisplayPlayerName(e);
     }
 
     private void DrawDisplayPlayerName(PaintEventArgs e)
@@ -1074,13 +1088,18 @@ public partial class MainForm : Form
         var y = tileID / tileset_width * tile_h;
         const int width = 8;
         const int height = 16;
+        const int scale = 2; // Scale up for visibility in .NET 10
         var crop = new Rectangle(x, y, width, height);
-        var bmp = new Bitmap(crop.Width, crop.Height);
+        var bmp = new Bitmap(crop.Width * scale, crop.Height * scale);
 
         using var gr = Graphics.FromImage(bmp);
+        gr.InterpolationMode = InterpolationMode.NearestNeighbor;
+        gr.PixelOffsetMode = PixelOffsetMode.Half;
         gr.DrawImage(source, new Rectangle(0, 0, bmp.Width, bmp.Height), crop, GraphicsUnit.Pixel);
 
-        e.Graphics.DrawImage(bmp, 223 + _pos, 49);
+        e.Graphics.InterpolationMode = InterpolationMode.NearestNeighbor;
+        e.Graphics.PixelOffsetMode = PixelOffsetMode.Half;
+        e.Graphics.DrawImage(bmp, nameStartX + _pos * scale, nameStartY);
     }
 
     private void buttonChangeName_Click(object sender, EventArgs e)

@@ -229,6 +229,9 @@ csharp_prefer_static_anonymous_function = true:suggestion
 csharp_style_prefer_readonly_struct_member = true:suggestion
 csharp_style_allow_blank_line_after_token_in_arrow_expression_clause_experimental = true:silent
 csharp_style_allow_blank_line_after_token_in_conditional_expression_experimental = true:silent
+csharp_style_prefer_simple_property_accessors = true:suggestion
+csharp_style_prefer_implicitly_typed_lambda_expression = true:suggestion
+csharp_style_prefer_unbound_generic_type_in_nameof = true:suggestion
 
 [*.{cs,vb}]
 dotnet_style_operator_placement_when_wrapping = beginning_of_line
