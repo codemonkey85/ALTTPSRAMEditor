@@ -5,6 +5,9 @@ on:
   push:
     branches: [master]
 
+permissions:
+  contents: write
+
 jobs:
   deploy-to-github-pages:
     # use ubuntu-latest image to run steps on
