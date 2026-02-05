@@ -1,4 +1,4 @@
-﻿// ReSharper disable LocalizableElement
+// ReSharper disable LocalizableElement
 using static ALTTPSRAMEditor.Properties.Resources;
 
 namespace ALTTPSRAMEditor;
@@ -44,81 +44,81 @@ public partial class NameChangingFormEn : Form
         // Draw the name to the screen
         UpdateDisplayName();
 
-        kbdENCharA.Image = GetCharTexture(enFnt, 01, SaveRegion.USA);
-        kbdENCharB.Image = GetCharTexture(enFnt, 02, SaveRegion.USA);
-        kbdENCharC.Image = GetCharTexture(enFnt, 03, SaveRegion.USA);
-        kbdENCharD.Image = GetCharTexture(enFnt, 04, SaveRegion.USA);
-        kbdENCharE.Image = GetCharTexture(enFnt, 05, SaveRegion.USA);
-        kbdENCharF.Image = GetCharTexture(enFnt, 06, SaveRegion.USA);
-        kbdENCharG.Image = GetCharTexture(enFnt, 07, SaveRegion.USA);
-        kbdENCharH.Image = GetCharTexture(enFnt, 08, SaveRegion.USA);
-        kbdENCharI.Image = GetCharTexture(enFnt, 09, SaveRegion.USA);
-        kbdENCharJ.Image = GetCharTexture(enFnt, 10, SaveRegion.USA);
-        kbdENCharK.Image = GetCharTexture(enFnt, 11, SaveRegion.USA);
-        kbdENCharL.Image = GetCharTexture(enFnt, 12, SaveRegion.USA);
-        kbdENCharM.Image = GetCharTexture(enFnt, 13, SaveRegion.USA);
-        kbdENCharN.Image = GetCharTexture(enFnt, 14, SaveRegion.USA);
-        kbdENCharO.Image = GetCharTexture(enFnt, 15, SaveRegion.USA);
-        kbdENCharP.Image = GetCharTexture(enFnt, 16, SaveRegion.USA);
-        kbdENCharQ.Image = GetCharTexture(enFnt, 17, SaveRegion.USA);
-        kbdENCharR.Image = GetCharTexture(enFnt, 18, SaveRegion.USA);
-        kbdENCharS.Image = GetCharTexture(enFnt, 19, SaveRegion.USA);
-        kbdENCharT.Image = GetCharTexture(enFnt, 20, SaveRegion.USA);
-        kbdENCharU.Image = GetCharTexture(enFnt, 21, SaveRegion.USA);
-        kbdENCharV.Image = GetCharTexture(enFnt, 22, SaveRegion.USA);
-        kbdENCharW.Image = GetCharTexture(enFnt, 23, SaveRegion.USA);
-        kbdENCharX.Image = GetCharTexture(enFnt, 24, SaveRegion.USA);
-        kbdENCharY.Image = GetCharTexture(enFnt, 25, SaveRegion.USA);
-        kbdENCharZ.Image = GetCharTexture(enFnt, 26, SaveRegion.USA);
+        kbdENCharA.Image = GetCharTexture(enFnt, 01, SaveRegion.USA, scale: 2);
+        kbdENCharB.Image = GetCharTexture(enFnt, 02, SaveRegion.USA, scale: 2);
+        kbdENCharC.Image = GetCharTexture(enFnt, 03, SaveRegion.USA, scale: 2);
+        kbdENCharD.Image = GetCharTexture(enFnt, 04, SaveRegion.USA, scale: 2);
+        kbdENCharE.Image = GetCharTexture(enFnt, 05, SaveRegion.USA, scale: 2);
+        kbdENCharF.Image = GetCharTexture(enFnt, 06, SaveRegion.USA, scale: 2);
+        kbdENCharG.Image = GetCharTexture(enFnt, 07, SaveRegion.USA, scale: 2);
+        kbdENCharH.Image = GetCharTexture(enFnt, 08, SaveRegion.USA, scale: 2);
+        kbdENCharI.Image = GetCharTexture(enFnt, 09, SaveRegion.USA, scale: 2);
+        kbdENCharJ.Image = GetCharTexture(enFnt, 10, SaveRegion.USA, scale: 2);
+        kbdENCharK.Image = GetCharTexture(enFnt, 11, SaveRegion.USA, scale: 2);
+        kbdENCharL.Image = GetCharTexture(enFnt, 12, SaveRegion.USA, scale: 2);
+        kbdENCharM.Image = GetCharTexture(enFnt, 13, SaveRegion.USA, scale: 2);
+        kbdENCharN.Image = GetCharTexture(enFnt, 14, SaveRegion.USA, scale: 2);
+        kbdENCharO.Image = GetCharTexture(enFnt, 15, SaveRegion.USA, scale: 2);
+        kbdENCharP.Image = GetCharTexture(enFnt, 16, SaveRegion.USA, scale: 2);
+        kbdENCharQ.Image = GetCharTexture(enFnt, 17, SaveRegion.USA, scale: 2);
+        kbdENCharR.Image = GetCharTexture(enFnt, 18, SaveRegion.USA, scale: 2);
+        kbdENCharS.Image = GetCharTexture(enFnt, 19, SaveRegion.USA, scale: 2);
+        kbdENCharT.Image = GetCharTexture(enFnt, 20, SaveRegion.USA, scale: 2);
+        kbdENCharU.Image = GetCharTexture(enFnt, 21, SaveRegion.USA, scale: 2);
+        kbdENCharV.Image = GetCharTexture(enFnt, 22, SaveRegion.USA, scale: 2);
+        kbdENCharW.Image = GetCharTexture(enFnt, 23, SaveRegion.USA, scale: 2);
+        kbdENCharX.Image = GetCharTexture(enFnt, 24, SaveRegion.USA, scale: 2);
+        kbdENCharY.Image = GetCharTexture(enFnt, 25, SaveRegion.USA, scale: 2);
+        kbdENCharZ.Image = GetCharTexture(enFnt, 26, SaveRegion.USA, scale: 2);
 
-        kbdENCharSmallA.Image = GetCharTexture(enFnt, 28, SaveRegion.USA);
-        kbdENCharSmallB.Image = GetCharTexture(enFnt, 29, SaveRegion.USA);
-        kbdENCharSmallC.Image = GetCharTexture(enFnt, 30, SaveRegion.USA);
-        kbdENCharSmallD.Image = GetCharTexture(enFnt, 31, SaveRegion.USA);
-        kbdENCharSmallE.Image = GetCharTexture(enFnt, 32, SaveRegion.USA);
-        kbdENCharSmallF.Image = GetCharTexture(enFnt, 33, SaveRegion.USA);
-        kbdENCharSmallG.Image = GetCharTexture(enFnt, 34, SaveRegion.USA);
-        kbdENCharSmallH.Image = GetCharTexture(enFnt, 35, SaveRegion.USA);
-        kbdENCharSmallI.Image = GetCharTexture(enFnt, 36, SaveRegion.USA);
-        kbdENCharSmallJ.Image = GetCharTexture(enFnt, 37, SaveRegion.USA);
-        kbdENCharSmallK.Image = GetCharTexture(enFnt, 38, SaveRegion.USA);
-        kbdENCharSmallL.Image = GetCharTexture(enFnt, 39, SaveRegion.USA);
-        kbdENCharSmallM.Image = GetCharTexture(enFnt, 40, SaveRegion.USA);
-        kbdENCharSmallN.Image = GetCharTexture(enFnt, 41, SaveRegion.USA);
-        kbdENCharSmallO.Image = GetCharTexture(enFnt, 42, SaveRegion.USA);
-        kbdENCharSmallP.Image = GetCharTexture(enFnt, 43, SaveRegion.USA);
-        kbdENCharSmallQ.Image = GetCharTexture(enFnt, 44, SaveRegion.USA);
-        kbdENCharSmallR.Image = GetCharTexture(enFnt, 45, SaveRegion.USA);
-        kbdENCharSmallS.Image = GetCharTexture(enFnt, 46, SaveRegion.USA);
-        kbdENCharSmallT.Image = GetCharTexture(enFnt, 47, SaveRegion.USA);
-        kbdENCharSmallU.Image = GetCharTexture(enFnt, 48, SaveRegion.USA);
-        kbdENCharSmallV.Image = GetCharTexture(enFnt, 49, SaveRegion.USA);
-        kbdENCharSmallW.Image = GetCharTexture(enFnt, 50, SaveRegion.USA);
-        kbdENCharSmallX.Image = GetCharTexture(enFnt, 51, SaveRegion.USA);
-        kbdENCharSmallY.Image = GetCharTexture(enFnt, 52, SaveRegion.USA);
-        kbdENCharSmallZ.Image = GetCharTexture(enFnt, 53, SaveRegion.USA);
+        kbdENCharSmallA.Image = GetCharTexture(enFnt, 28, SaveRegion.USA, scale: 2);
+        kbdENCharSmallB.Image = GetCharTexture(enFnt, 29, SaveRegion.USA, scale: 2);
+        kbdENCharSmallC.Image = GetCharTexture(enFnt, 30, SaveRegion.USA, scale: 2);
+        kbdENCharSmallD.Image = GetCharTexture(enFnt, 31, SaveRegion.USA, scale: 2);
+        kbdENCharSmallE.Image = GetCharTexture(enFnt, 32, SaveRegion.USA, scale: 2);
+        kbdENCharSmallF.Image = GetCharTexture(enFnt, 33, SaveRegion.USA, scale: 2);
+        kbdENCharSmallG.Image = GetCharTexture(enFnt, 34, SaveRegion.USA, scale: 2);
+        kbdENCharSmallH.Image = GetCharTexture(enFnt, 35, SaveRegion.USA, scale: 2);
+        kbdENCharSmallI.Image = GetCharTexture(enFnt, 36, SaveRegion.USA, scale: 2);
+        kbdENCharSmallJ.Image = GetCharTexture(enFnt, 37, SaveRegion.USA, scale: 2);
+        kbdENCharSmallK.Image = GetCharTexture(enFnt, 38, SaveRegion.USA, scale: 2);
+        kbdENCharSmallL.Image = GetCharTexture(enFnt, 39, SaveRegion.USA, scale: 2);
+        kbdENCharSmallM.Image = GetCharTexture(enFnt, 40, SaveRegion.USA, scale: 2);
+        kbdENCharSmallN.Image = GetCharTexture(enFnt, 41, SaveRegion.USA, scale: 2);
+        kbdENCharSmallO.Image = GetCharTexture(enFnt, 42, SaveRegion.USA, scale: 2);
+        kbdENCharSmallP.Image = GetCharTexture(enFnt, 43, SaveRegion.USA, scale: 2);
+        kbdENCharSmallQ.Image = GetCharTexture(enFnt, 44, SaveRegion.USA, scale: 2);
+        kbdENCharSmallR.Image = GetCharTexture(enFnt, 45, SaveRegion.USA, scale: 2);
+        kbdENCharSmallS.Image = GetCharTexture(enFnt, 46, SaveRegion.USA, scale: 2);
+        kbdENCharSmallT.Image = GetCharTexture(enFnt, 47, SaveRegion.USA, scale: 2);
+        kbdENCharSmallU.Image = GetCharTexture(enFnt, 48, SaveRegion.USA, scale: 2);
+        kbdENCharSmallV.Image = GetCharTexture(enFnt, 49, SaveRegion.USA, scale: 2);
+        kbdENCharSmallW.Image = GetCharTexture(enFnt, 50, SaveRegion.USA, scale: 2);
+        kbdENCharSmallX.Image = GetCharTexture(enFnt, 51, SaveRegion.USA, scale: 2);
+        kbdENCharSmallY.Image = GetCharTexture(enFnt, 52, SaveRegion.USA, scale: 2);
+        kbdENCharSmallZ.Image = GetCharTexture(enFnt, 53, SaveRegion.USA, scale: 2);
 
-        kbdENCharHyphen.Image = GetCharTexture(enFnt, 54, SaveRegion.USA);
-        kbdENCharPeriod.Image = GetCharTexture(enFnt, 55, SaveRegion.USA);
-        kbdENCharComma.Image = GetCharTexture(enFnt, 56, SaveRegion.USA);
+        kbdENCharHyphen.Image = GetCharTexture(enFnt, 54, SaveRegion.USA, scale: 2);
+        kbdENCharPeriod.Image = GetCharTexture(enFnt, 55, SaveRegion.USA, scale: 2);
+        kbdENCharComma.Image = GetCharTexture(enFnt, 56, SaveRegion.USA, scale: 2);
 
-        kbdENChar0.Image = GetCharTexture(enFnt, 59, SaveRegion.USA);
-        kbdENChar1.Image = GetCharTexture(enFnt, 60, SaveRegion.USA);
-        kbdENChar2.Image = GetCharTexture(enFnt, 61, SaveRegion.USA);
-        kbdENChar3.Image = GetCharTexture(enFnt, 62, SaveRegion.USA);
-        kbdENChar4.Image = GetCharTexture(enFnt, 63, SaveRegion.USA);
-        kbdENChar5.Image = GetCharTexture(enFnt, 64, SaveRegion.USA);
-        kbdENChar6.Image = GetCharTexture(enFnt, 65, SaveRegion.USA);
-        kbdENChar7.Image = GetCharTexture(enFnt, 66, SaveRegion.USA);
-        kbdENChar8.Image = GetCharTexture(enFnt, 67, SaveRegion.USA);
-        kbdENChar9.Image = GetCharTexture(enFnt, 68, SaveRegion.USA);
-        kbdENCharExclamation.Image = GetCharTexture(enFnt, 69, SaveRegion.USA);
-        kbdENCharQuestion.Image = GetCharTexture(enFnt, 70, SaveRegion.USA);
-        kbdENCharParenthaseesLeft.Image = GetCharTexture(enFnt, 71, SaveRegion.USA);
-        kbdENCharParenthaseesRight.Image = GetCharTexture(enFnt, 72, SaveRegion.USA);
+        kbdENChar0.Image = GetCharTexture(enFnt, 59, SaveRegion.USA, scale: 2);
+        kbdENChar1.Image = GetCharTexture(enFnt, 60, SaveRegion.USA, scale: 2);
+        kbdENChar2.Image = GetCharTexture(enFnt, 61, SaveRegion.USA, scale: 2);
+        kbdENChar3.Image = GetCharTexture(enFnt, 62, SaveRegion.USA, scale: 2);
+        kbdENChar4.Image = GetCharTexture(enFnt, 63, SaveRegion.USA, scale: 2);
+        kbdENChar5.Image = GetCharTexture(enFnt, 64, SaveRegion.USA, scale: 2);
+        kbdENChar6.Image = GetCharTexture(enFnt, 65, SaveRegion.USA, scale: 2);
+        kbdENChar7.Image = GetCharTexture(enFnt, 66, SaveRegion.USA, scale: 2);
+        kbdENChar8.Image = GetCharTexture(enFnt, 67, SaveRegion.USA, scale: 2);
+        kbdENChar9.Image = GetCharTexture(enFnt, 68, SaveRegion.USA, scale: 2);
+        kbdENCharExclamation.Image = GetCharTexture(enFnt, 69, SaveRegion.USA, scale: 2);
+        kbdENCharQuestion.Image = GetCharTexture(enFnt, 70, SaveRegion.USA, scale: 2);
+        kbdENCharParenthaseesLeft.Image = GetCharTexture(enFnt, 71, SaveRegion.USA, scale: 2);
+        kbdENCharParenthaseesRight.Image = GetCharTexture(enFnt, 72, SaveRegion.USA, scale: 2);
 
-        kbdENMoveLeft.Image = GetCharTexture(enFnt, 57, SaveRegion.USA);
-        kbdENMoveRight.Image = GetCharTexture(enFnt, 58, SaveRegion.USA);
+        kbdENMoveLeft.Image = GetCharTexture(enFnt, 57, SaveRegion.USA, scale: 2);
+        kbdENMoveRight.Image = GetCharTexture(enFnt, 58, SaveRegion.USA, scale: 2);
         Refresh();
     }
 
@@ -308,3 +308,4 @@ public partial class NameChangingFormEn : Form
         Close();
     }
 }
+

@@ -1,4 +1,4 @@
-﻿namespace ALTTPSRAMEditor
+namespace ALTTPSRAMEditor
 {
     partial class NameChangingFormEn
     {
@@ -198,6 +198,7 @@
             this.kbdENCharA.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharA.TabIndex = 0;
             this.kbdENCharA.TabStop = false;
+                        this.kbdENCharA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharA.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharB
@@ -208,6 +209,7 @@
             this.kbdENCharB.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharB.TabIndex = 1;
             this.kbdENCharB.TabStop = false;
+                        this.kbdENCharB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharB.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // pictureENNameChar0
@@ -218,6 +220,7 @@
             this.pictureENNameChar0.Size = new System.Drawing.Size(16, 32);
             this.pictureENNameChar0.TabIndex = 2;
             this.pictureENNameChar0.TabStop = false;
+                        this.pictureENNameChar0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             // 
             // pictureENNameChar1
             // 
@@ -227,6 +230,7 @@
             this.pictureENNameChar1.Size = new System.Drawing.Size(16, 32);
             this.pictureENNameChar1.TabIndex = 3;
             this.pictureENNameChar1.TabStop = false;
+                        this.pictureENNameChar1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             // 
             // pictureENNameChar2
             // 
@@ -236,6 +240,7 @@
             this.pictureENNameChar2.Size = new System.Drawing.Size(16, 32);
             this.pictureENNameChar2.TabIndex = 4;
             this.pictureENNameChar2.TabStop = false;
+                        this.pictureENNameChar2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             // 
             // pictureENNameChar3
             // 
@@ -245,6 +250,7 @@
             this.pictureENNameChar3.Size = new System.Drawing.Size(16, 32);
             this.pictureENNameChar3.TabIndex = 5;
             this.pictureENNameChar3.TabStop = false;
+                        this.pictureENNameChar3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             // 
             // pictureENNameChar4
             // 
@@ -254,6 +260,7 @@
             this.pictureENNameChar4.Size = new System.Drawing.Size(16, 32);
             this.pictureENNameChar4.TabIndex = 6;
             this.pictureENNameChar4.TabStop = false;
+                        this.pictureENNameChar4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             // 
             // pictureENNameChar5
             // 
@@ -263,6 +270,7 @@
             this.pictureENNameChar5.Size = new System.Drawing.Size(16, 32);
             this.pictureENNameChar5.TabIndex = 7;
             this.pictureENNameChar5.TabStop = false;
+                        this.pictureENNameChar5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             // 
             // pictureENCharHeart
             // 
@@ -272,6 +280,7 @@
             this.pictureENCharHeart.Size = new System.Drawing.Size(16, 16);
             this.pictureENCharHeart.TabIndex = 8;
             this.pictureENCharHeart.TabStop = false;
+                        this.pictureENCharHeart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             // 
             // kbdENCharC
             // 
@@ -281,6 +290,7 @@
             this.kbdENCharC.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharC.TabIndex = 9;
             this.kbdENCharC.TabStop = false;
+                        this.kbdENCharC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharC.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharD
@@ -291,6 +301,7 @@
             this.kbdENCharD.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharD.TabIndex = 10;
             this.kbdENCharD.TabStop = false;
+                        this.kbdENCharD.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharD.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharE
@@ -301,6 +312,7 @@
             this.kbdENCharE.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharE.TabIndex = 11;
             this.kbdENCharE.TabStop = false;
+                        this.kbdENCharE.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharE.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharF
@@ -311,6 +323,7 @@
             this.kbdENCharF.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharF.TabIndex = 12;
             this.kbdENCharF.TabStop = false;
+                        this.kbdENCharF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharF.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharG
@@ -321,6 +334,7 @@
             this.kbdENCharG.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharG.TabIndex = 13;
             this.kbdENCharG.TabStop = false;
+                        this.kbdENCharG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharG.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharH
@@ -331,6 +345,7 @@
             this.kbdENCharH.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharH.TabIndex = 14;
             this.kbdENCharH.TabStop = false;
+                        this.kbdENCharH.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharH.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharI
@@ -341,6 +356,7 @@
             this.kbdENCharI.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharI.TabIndex = 15;
             this.kbdENCharI.TabStop = false;
+                        this.kbdENCharI.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharI.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharJ
@@ -351,6 +367,7 @@
             this.kbdENCharJ.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharJ.TabIndex = 16;
             this.kbdENCharJ.TabStop = false;
+                        this.kbdENCharJ.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharJ.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharK
@@ -361,6 +378,7 @@
             this.kbdENCharK.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharK.TabIndex = 17;
             this.kbdENCharK.TabStop = false;
+                        this.kbdENCharK.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharK.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharL
@@ -371,6 +389,7 @@
             this.kbdENCharL.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharL.TabIndex = 18;
             this.kbdENCharL.TabStop = false;
+                        this.kbdENCharL.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharL.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharM
@@ -381,6 +400,7 @@
             this.kbdENCharM.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharM.TabIndex = 19;
             this.kbdENCharM.TabStop = false;
+                        this.kbdENCharM.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharM.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharN
@@ -391,6 +411,7 @@
             this.kbdENCharN.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharN.TabIndex = 20;
             this.kbdENCharN.TabStop = false;
+                        this.kbdENCharN.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharN.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharO
@@ -401,6 +422,7 @@
             this.kbdENCharO.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharO.TabIndex = 21;
             this.kbdENCharO.TabStop = false;
+                        this.kbdENCharO.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharO.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharP
@@ -411,6 +433,7 @@
             this.kbdENCharP.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharP.TabIndex = 22;
             this.kbdENCharP.TabStop = false;
+                        this.kbdENCharP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharP.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharQ
@@ -421,6 +444,7 @@
             this.kbdENCharQ.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharQ.TabIndex = 23;
             this.kbdENCharQ.TabStop = false;
+                        this.kbdENCharQ.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharQ.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharR
@@ -431,6 +455,7 @@
             this.kbdENCharR.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharR.TabIndex = 24;
             this.kbdENCharR.TabStop = false;
+                        this.kbdENCharR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharR.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharS
@@ -441,6 +466,7 @@
             this.kbdENCharS.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharS.TabIndex = 25;
             this.kbdENCharS.TabStop = false;
+                        this.kbdENCharS.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharS.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharT
@@ -451,6 +477,7 @@
             this.kbdENCharT.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharT.TabIndex = 26;
             this.kbdENCharT.TabStop = false;
+                        this.kbdENCharT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharT.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharU
@@ -461,6 +488,7 @@
             this.kbdENCharU.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharU.TabIndex = 27;
             this.kbdENCharU.TabStop = false;
+                        this.kbdENCharU.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharU.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharV
@@ -471,6 +499,7 @@
             this.kbdENCharV.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharV.TabIndex = 28;
             this.kbdENCharV.TabStop = false;
+                        this.kbdENCharV.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharV.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharW
@@ -481,6 +510,7 @@
             this.kbdENCharW.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharW.TabIndex = 29;
             this.kbdENCharW.TabStop = false;
+                        this.kbdENCharW.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharW.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharX
@@ -491,6 +521,7 @@
             this.kbdENCharX.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharX.TabIndex = 30;
             this.kbdENCharX.TabStop = false;
+                        this.kbdENCharX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharX.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharY
@@ -501,6 +532,7 @@
             this.kbdENCharY.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharY.TabIndex = 31;
             this.kbdENCharY.TabStop = false;
+                        this.kbdENCharY.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharY.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharZ
@@ -511,6 +543,7 @@
             this.kbdENCharZ.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharZ.TabIndex = 32;
             this.kbdENCharZ.TabStop = false;
+                        this.kbdENCharZ.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharZ.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharSmallA
@@ -521,6 +554,7 @@
             this.kbdENCharSmallA.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharSmallA.TabIndex = 33;
             this.kbdENCharSmallA.TabStop = false;
+                        this.kbdENCharSmallA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharSmallA.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharSmallB
@@ -531,6 +565,7 @@
             this.kbdENCharSmallB.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharSmallB.TabIndex = 34;
             this.kbdENCharSmallB.TabStop = false;
+                        this.kbdENCharSmallB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharSmallB.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharSmallK
@@ -541,6 +576,7 @@
             this.kbdENCharSmallK.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharSmallK.TabIndex = 35;
             this.kbdENCharSmallK.TabStop = false;
+                        this.kbdENCharSmallK.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharSmallK.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharSmallU
@@ -551,6 +587,7 @@
             this.kbdENCharSmallU.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharSmallU.TabIndex = 36;
             this.kbdENCharSmallU.TabStop = false;
+                        this.kbdENCharSmallU.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharSmallU.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENChar0
@@ -561,6 +598,7 @@
             this.kbdENChar0.Size = new System.Drawing.Size(32, 32);
             this.kbdENChar0.TabIndex = 37;
             this.kbdENChar0.TabStop = false;
+                        this.kbdENChar0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENChar0.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENChar5
@@ -571,6 +609,7 @@
             this.kbdENChar5.Size = new System.Drawing.Size(32, 32);
             this.kbdENChar5.TabIndex = 38;
             this.kbdENChar5.TabStop = false;
+                        this.kbdENChar5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENChar5.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharExclamation
@@ -581,6 +620,7 @@
             this.kbdENCharExclamation.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharExclamation.TabIndex = 39;
             this.kbdENCharExclamation.TabStop = false;
+                        this.kbdENCharExclamation.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharExclamation.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharSmallC
@@ -591,6 +631,7 @@
             this.kbdENCharSmallC.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharSmallC.TabIndex = 40;
             this.kbdENCharSmallC.TabStop = false;
+                        this.kbdENCharSmallC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharSmallC.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharSmallD
@@ -601,6 +642,7 @@
             this.kbdENCharSmallD.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharSmallD.TabIndex = 41;
             this.kbdENCharSmallD.TabStop = false;
+                        this.kbdENCharSmallD.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharSmallD.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharSmallE
@@ -611,6 +653,7 @@
             this.kbdENCharSmallE.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharSmallE.TabIndex = 42;
             this.kbdENCharSmallE.TabStop = false;
+                        this.kbdENCharSmallE.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharSmallE.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharSmallF
@@ -621,6 +664,7 @@
             this.kbdENCharSmallF.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharSmallF.TabIndex = 43;
             this.kbdENCharSmallF.TabStop = false;
+                        this.kbdENCharSmallF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharSmallF.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharSmallG
@@ -631,6 +675,7 @@
             this.kbdENCharSmallG.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharSmallG.TabIndex = 44;
             this.kbdENCharSmallG.TabStop = false;
+                        this.kbdENCharSmallG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharSmallG.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharSmallH
@@ -641,6 +686,7 @@
             this.kbdENCharSmallH.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharSmallH.TabIndex = 45;
             this.kbdENCharSmallH.TabStop = false;
+                        this.kbdENCharSmallH.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharSmallH.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharSmallI
@@ -651,6 +697,7 @@
             this.kbdENCharSmallI.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharSmallI.TabIndex = 46;
             this.kbdENCharSmallI.TabStop = false;
+                        this.kbdENCharSmallI.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharSmallI.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharSmallJ
@@ -661,6 +708,7 @@
             this.kbdENCharSmallJ.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharSmallJ.TabIndex = 47;
             this.kbdENCharSmallJ.TabStop = false;
+                        this.kbdENCharSmallJ.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharSmallJ.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharSmallL
@@ -671,6 +719,7 @@
             this.kbdENCharSmallL.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharSmallL.TabIndex = 48;
             this.kbdENCharSmallL.TabStop = false;
+                        this.kbdENCharSmallL.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharSmallL.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharSmallM
@@ -681,6 +730,7 @@
             this.kbdENCharSmallM.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharSmallM.TabIndex = 49;
             this.kbdENCharSmallM.TabStop = false;
+                        this.kbdENCharSmallM.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharSmallM.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharSmallN
@@ -691,6 +741,7 @@
             this.kbdENCharSmallN.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharSmallN.TabIndex = 50;
             this.kbdENCharSmallN.TabStop = false;
+                        this.kbdENCharSmallN.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharSmallN.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharSmallO
@@ -701,6 +752,7 @@
             this.kbdENCharSmallO.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharSmallO.TabIndex = 51;
             this.kbdENCharSmallO.TabStop = false;
+                        this.kbdENCharSmallO.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharSmallO.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharSmallP
@@ -711,6 +763,7 @@
             this.kbdENCharSmallP.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharSmallP.TabIndex = 52;
             this.kbdENCharSmallP.TabStop = false;
+                        this.kbdENCharSmallP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharSmallP.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharSmallQ
@@ -721,6 +774,7 @@
             this.kbdENCharSmallQ.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharSmallQ.TabIndex = 53;
             this.kbdENCharSmallQ.TabStop = false;
+                        this.kbdENCharSmallQ.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharSmallQ.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharSmallR
@@ -731,6 +785,7 @@
             this.kbdENCharSmallR.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharSmallR.TabIndex = 54;
             this.kbdENCharSmallR.TabStop = false;
+                        this.kbdENCharSmallR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharSmallR.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharSmallS
@@ -741,6 +796,7 @@
             this.kbdENCharSmallS.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharSmallS.TabIndex = 55;
             this.kbdENCharSmallS.TabStop = false;
+                        this.kbdENCharSmallS.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharSmallS.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharSmallT
@@ -751,6 +807,7 @@
             this.kbdENCharSmallT.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharSmallT.TabIndex = 56;
             this.kbdENCharSmallT.TabStop = false;
+                        this.kbdENCharSmallT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharSmallT.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharSmallV
@@ -761,6 +818,7 @@
             this.kbdENCharSmallV.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharSmallV.TabIndex = 57;
             this.kbdENCharSmallV.TabStop = false;
+                        this.kbdENCharSmallV.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharSmallV.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharSmallW
@@ -771,6 +829,7 @@
             this.kbdENCharSmallW.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharSmallW.TabIndex = 58;
             this.kbdENCharSmallW.TabStop = false;
+                        this.kbdENCharSmallW.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharSmallW.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharSmallX
@@ -781,6 +840,7 @@
             this.kbdENCharSmallX.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharSmallX.TabIndex = 59;
             this.kbdENCharSmallX.TabStop = false;
+                        this.kbdENCharSmallX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharSmallX.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharSmallY
@@ -791,6 +851,7 @@
             this.kbdENCharSmallY.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharSmallY.TabIndex = 60;
             this.kbdENCharSmallY.TabStop = false;
+                        this.kbdENCharSmallY.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharSmallY.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharSmallZ
@@ -801,6 +862,7 @@
             this.kbdENCharSmallZ.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharSmallZ.TabIndex = 61;
             this.kbdENCharSmallZ.TabStop = false;
+                        this.kbdENCharSmallZ.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharSmallZ.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENChar1
@@ -811,6 +873,7 @@
             this.kbdENChar1.Size = new System.Drawing.Size(32, 32);
             this.kbdENChar1.TabIndex = 62;
             this.kbdENChar1.TabStop = false;
+                        this.kbdENChar1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENChar1.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENChar2
@@ -821,6 +884,7 @@
             this.kbdENChar2.Size = new System.Drawing.Size(32, 32);
             this.kbdENChar2.TabIndex = 63;
             this.kbdENChar2.TabStop = false;
+                        this.kbdENChar2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENChar2.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENChar3
@@ -831,6 +895,7 @@
             this.kbdENChar3.Size = new System.Drawing.Size(32, 32);
             this.kbdENChar3.TabIndex = 64;
             this.kbdENChar3.TabStop = false;
+                        this.kbdENChar3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENChar3.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENChar4
@@ -841,6 +906,7 @@
             this.kbdENChar4.Size = new System.Drawing.Size(32, 32);
             this.kbdENChar4.TabIndex = 65;
             this.kbdENChar4.TabStop = false;
+                        this.kbdENChar4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENChar4.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENChar6
@@ -851,6 +917,7 @@
             this.kbdENChar6.Size = new System.Drawing.Size(32, 32);
             this.kbdENChar6.TabIndex = 66;
             this.kbdENChar6.TabStop = false;
+                        this.kbdENChar6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENChar6.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENChar7
@@ -861,6 +928,7 @@
             this.kbdENChar7.Size = new System.Drawing.Size(32, 32);
             this.kbdENChar7.TabIndex = 67;
             this.kbdENChar7.TabStop = false;
+                        this.kbdENChar7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENChar7.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENChar8
@@ -871,6 +939,7 @@
             this.kbdENChar8.Size = new System.Drawing.Size(32, 32);
             this.kbdENChar8.TabIndex = 68;
             this.kbdENChar8.TabStop = false;
+                        this.kbdENChar8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENChar8.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENChar9
@@ -881,6 +950,7 @@
             this.kbdENChar9.Size = new System.Drawing.Size(32, 32);
             this.kbdENChar9.TabIndex = 69;
             this.kbdENChar9.TabStop = false;
+                        this.kbdENChar9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENChar9.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharQuestion
@@ -891,6 +961,7 @@
             this.kbdENCharQuestion.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharQuestion.TabIndex = 70;
             this.kbdENCharQuestion.TabStop = false;
+                        this.kbdENCharQuestion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharQuestion.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharParenthaseesLeft
@@ -901,6 +972,7 @@
             this.kbdENCharParenthaseesLeft.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharParenthaseesLeft.TabIndex = 71;
             this.kbdENCharParenthaseesLeft.TabStop = false;
+                        this.kbdENCharParenthaseesLeft.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharParenthaseesLeft.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharParenthaseesRight
@@ -911,6 +983,7 @@
             this.kbdENCharParenthaseesRight.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharParenthaseesRight.TabIndex = 72;
             this.kbdENCharParenthaseesRight.TabStop = false;
+                        this.kbdENCharParenthaseesRight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharParenthaseesRight.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENMoveLeft
@@ -921,6 +994,7 @@
             this.kbdENMoveLeft.Size = new System.Drawing.Size(32, 32);
             this.kbdENMoveLeft.TabIndex = 73;
             this.kbdENMoveLeft.TabStop = false;
+                        this.kbdENMoveLeft.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENMoveLeft.Click += new System.EventHandler(this.kbdEnMoveLeft_Click);
             // 
             // kbdENMoveRight
@@ -931,6 +1005,7 @@
             this.kbdENMoveRight.Size = new System.Drawing.Size(32, 32);
             this.kbdENMoveRight.TabIndex = 74;
             this.kbdENMoveRight.TabStop = false;
+                        this.kbdENMoveRight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENMoveRight.Click += new System.EventHandler(this.kbdEnMoveRight_Click);
             // 
             // kbdENEnd
@@ -942,6 +1017,7 @@
             this.kbdENEnd.Size = new System.Drawing.Size(52, 40);
             this.kbdENEnd.TabIndex = 75;
             this.kbdENEnd.TabStop = false;
+                        this.kbdENEnd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENEnd.Click += new System.EventHandler(this.kbdEnEnd_Click);
             // 
             // kbdENCharHyphen
@@ -952,6 +1028,7 @@
             this.kbdENCharHyphen.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharHyphen.TabIndex = 76;
             this.kbdENCharHyphen.TabStop = false;
+                        this.kbdENCharHyphen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharHyphen.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharPeriod
@@ -962,6 +1039,7 @@
             this.kbdENCharPeriod.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharPeriod.TabIndex = 77;
             this.kbdENCharPeriod.TabStop = false;
+                        this.kbdENCharPeriod.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharPeriod.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENCharComma
@@ -972,6 +1050,7 @@
             this.kbdENCharComma.Size = new System.Drawing.Size(32, 32);
             this.kbdENCharComma.TabIndex = 78;
             this.kbdENCharComma.TabStop = false;
+                        this.kbdENCharComma.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENCharComma.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // kbdENSpace
@@ -983,6 +1062,7 @@
             this.kbdENSpace.Size = new System.Drawing.Size(84, 40);
             this.kbdENSpace.TabIndex = 79;
             this.kbdENSpace.TabStop = false;
+                        this.kbdENSpace.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.kbdENSpace.Click += new System.EventHandler(this.KbdEnChar_Click);
             // 
             // NameChangingFormEN

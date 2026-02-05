@@ -4,7 +4,7 @@ namespace ALTTPSRAMEditor;
 public static class DrawCharHelper
 {
     [SuppressMessage("Interoperability", "CA1416:Validate platform compatibility", Justification = "This is a Windows Forms application.")]
-    public static Image GetCharTexture(Bitmap fnt, int tileId, SaveRegion saveRegion = SaveRegion.JPN, bool hugLeft = false)
+    public static Image GetCharTexture(Bitmap fnt, int tileId, SaveRegion saveRegion = SaveRegion.JPN, bool hugLeft = false, int scale = 1)
     {
         var tileset_width = saveRegion switch
         {
@@ -18,7 +18,6 @@ public static class DrawCharHelper
         var y = tileId / tileset_width * tile_h;
         const int width = 8;
         const int height = 16;
-        const int scale = 2; // Scale up for visibility in .NET 10
         var crop = new Rectangle(x, y, width, height); // Crop the original tile size
         var tex = new Bitmap(width * scale, height * scale); // Create bitmap at scaled size
 
