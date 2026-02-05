@@ -1,48 +1,40 @@
-using Library.Classes;
-
 namespace Library.Services;
 
 /// <summary>
-///     Facade service that coordinates all game-related services
-///     Provides a simplified interface for the UI layer
+/// Facade service that coordinates all game-related services
+/// Provides a simplified interface for the UI layer
 /// </summary>
 public class GameService
 {
-    private readonly SramFileService _fileService;
-    private readonly GameStateService _gameStateService;
+    private readonly SramFileService fileService = new();
+    private readonly GameStateService gameStateService = new();
 
-    public GameService()
-    {
-        _fileService = new SramFileService();
-        _gameStateService = new GameStateService();
-    }
-
-    public bool HasLoadedFile => _gameStateService.HasLoadedFile;
+    public bool HasLoadedFile => gameStateService.HasLoadedFile;
     public string CurrentFilePath { get; private set; } = string.Empty;
 
-    public int CurrentSlot => _gameStateService.CurrentSlot;
+    public int CurrentSlot => gameStateService.CurrentSlot;
 
     public event EventHandler<SaveSlotChangedEventArgs>? SaveSlotChanged
     {
-        add => _gameStateService.SaveSlotChanged += value;
-        remove => _gameStateService.SaveSlotChanged -= value;
+        add => gameStateService.SaveSlotChanged += value;
+        remove => gameStateService.SaveSlotChanged -= value;
     }
 
     public event EventHandler<SramLoadedEventArgs>? SramLoaded
     {
-        add => _gameStateService.SramLoaded += value;
-        remove => _gameStateService.SramLoaded -= value;
+        add => gameStateService.SramLoaded += value;
+        remove => gameStateService.SramLoaded -= value;
     }
 
     #region File Operations
 
     /// <summary>
-    ///     Opens an SRAM file
+    /// Opens an SRAM file
     /// </summary>
     public (bool success, string message, SaveRegion? region) OpenFile(string filePath,
         TextCharacterData textCharacterData)
     {
-        var loadResult = _fileService.LoadSramFile(filePath);
+        var loadResult = fileService.LoadSramFile(filePath);
 
         if (!loadResult.Success || loadResult.Data is null)
         {
@@ -50,18 +42,18 @@ public class GameService
         }
 
         CurrentFilePath = filePath;
-        var region = _gameStateService.LoadSram(loadResult.Data, textCharacterData);
+        var region = gameStateService.LoadSram(loadResult.Data, textCharacterData);
 
         return (true, $"Opened {filePath}", region);
     }
 
     /// <summary>
-    ///     Loads SRAM data from memory
+    /// Loads SRAM data from memory
     /// </summary>
     public (bool success, string message, SaveRegion? region) LoadSramData(byte[] data,
         TextCharacterData textCharacterData, string fileName = "")
     {
-        var loadResult = _fileService.LoadSramData(data);
+        var loadResult = fileService.LoadSramData(data);
 
         if (!loadResult.Success || loadResult.Data is null)
         {
@@ -69,13 +61,15 @@ public class GameService
         }
 
         CurrentFilePath = fileName;
-        var region = _gameStateService.LoadSram(loadResult.Data, textCharacterData);
+        var region = gameStateService.LoadSram(loadResult.Data, textCharacterData);
 
-        return (true, string.IsNullOrWhiteSpace(fileName) ? "Loaded SRAM data" : $"Opened {fileName}", region);
+        return (true, string.IsNullOrWhiteSpace(fileName)
+            ? "Loaded SRAM data"
+            : $"Opened {fileName}", region);
     }
 
     /// <summary>
-    ///     Saves the current SRAM file
+    /// Saves the current SRAM file
     /// </summary>
     public (bool success, string message) SaveFile()
     {
@@ -84,8 +78,8 @@ public class GameService
             return (false, "Load a file first!");
         }
 
-        var outputData = _gameStateService.MergeSaveData();
-        var saveResult = _fileService.SaveSramFile(CurrentFilePath, outputData);
+        var outputData = gameStateService.MergeSaveData();
+        var saveResult = fileService.SaveSramFile(CurrentFilePath, outputData);
 
         return saveResult.Success
             ? (true, $"Saved file at {CurrentFilePath}")
@@ -93,31 +87,31 @@ public class GameService
     }
 
     /// <summary>
-    ///     Returns the current SRAM data for saving elsewhere
+    /// Returns the current SRAM data for saving elsewhere
     /// </summary>
-    public byte[] GetSaveData() => _gameStateService.MergeSaveData();
+    public byte[] GetSaveData() => gameStateService.MergeSaveData();
 
     #endregion
 
     #region Save Slot Operations
 
     /// <summary>
-    ///     Changes the active save slot
+    /// Changes the active save slot
     /// </summary>
-    public void SetCurrentSlot(int slot) => _gameStateService.SetCurrentSlot(slot);
+    public void SetCurrentSlot(int slot) => gameStateService.SetCurrentSlot(slot);
 
     /// <summary>
-    ///     Gets information about the current save slot
+    /// Gets information about the current save slot
     /// </summary>
-    public SaveSlot GetCurrentSaveSlot() => _gameStateService.GetCurrentSaveSlot();
+    public SaveSlot GetCurrentSaveSlot() => gameStateService.GetCurrentSaveSlot();
 
     /// <summary>
-    ///     Gets a specific save slot by number
+    /// Gets a specific save slot by number
     /// </summary>
-    public SaveSlot GetSaveSlot(int slot) => _gameStateService.GetSaveSlot(slot);
+    public SaveSlot GetSaveSlot(int slot) => gameStateService.GetSaveSlot(slot);
 
     /// <summary>
-    ///     Gets whether the current save slot is valid
+    /// Gets whether the current save slot is valid
     /// </summary>
     public bool IsCurrentSlotValid()
     {
@@ -133,39 +127,39 @@ public class GameService
     }
 
     /// <summary>
-    ///     Creates a new save file
+    /// Creates a new save file
     /// </summary>
     public SaveSlot CreateFile(int slot, SaveRegion region, TextCharacterData textCharacterData) =>
-        _gameStateService.CreateFile(slot, region, textCharacterData);
+        gameStateService.CreateFile(slot, region, textCharacterData);
 
     /// <summary>
-    ///     Copies a save file
+    /// Copies a save file
     /// </summary>
     public string CopyFile(int slot, TextCharacterData textCharacterData) =>
-        _gameStateService.CopyFile(slot, textCharacterData);
+        gameStateService.CopyFile(slot, textCharacterData);
 
     /// <summary>
-    ///     Writes changes to a save file
+    /// Writes changes to a save file
     /// </summary>
     public SaveSlot WriteFile(int slot, TextCharacterData textCharacterData) =>
-        _gameStateService.WriteFile(slot, textCharacterData);
+        gameStateService.WriteFile(slot, textCharacterData);
 
     /// <summary>
-    ///     Erases a save file
+    /// Erases a save file
     /// </summary>
-    public void EraseFile(int slot) => _gameStateService.EraseFile(slot);
+    public void EraseFile(int slot) => gameStateService.EraseFile(slot);
 
     #endregion
 
     #region Player Data Operations
 
     /// <summary>
-    ///     Gets the current player
+    /// Gets the current player
     /// </summary>
-    public Link GetCurrentPlayer() => _gameStateService.GetCurrentPlayer();
+    public Link GetCurrentPlayer() => gameStateService.GetCurrentPlayer();
 
     /// <summary>
-    ///     Gets comprehensive player statistics
+    /// Gets comprehensive player statistics
     /// </summary>
     public ViewModels.PlayerStats GetPlayerStats()
     {
@@ -187,22 +181,22 @@ public class GameService
     }
 
     /// <summary>
-    ///     Updates player name
+    /// Updates player name
     /// </summary>
     public void SetPlayerName(string name) => GetCurrentSaveSlot().SetPlayerName(name);
 
     /// <summary>
-    ///     Updates player name (raw format)
+    /// Updates player name (raw format)
     /// </summary>
     public void SetPlayerNameRaw(ushort[] nameData) => GetCurrentSaveSlot().SetPlayerNameRaw(nameData);
 
     /// <summary>
-    ///     Gets player name
+    /// Gets player name
     /// </summary>
     public string GetPlayerName() => GetCurrentSaveSlot().GetPlayerName();
 
     /// <summary>
-    ///     Sets rupee count
+    /// Sets rupee count
     /// </summary>
     public void SetRupees(int value)
     {
@@ -212,17 +206,17 @@ public class GameService
     }
 
     /// <summary>
-    ///     Sets heart containers
+    /// Sets heart containers
     /// </summary>
     public void SetHeartContainers(int value) => GetCurrentPlayer().SetHeartContainers(value);
 
     /// <summary>
-    ///     Sets current magic
+    /// Sets current magic
     /// </summary>
     public void SetMagic(int value) => GetCurrentPlayer().SetMagic(value);
 
     /// <summary>
-    ///     Cycles magic upgrade level
+    /// Cycles magic upgrade level
     /// </summary>
     public int CycleMagicUpgrade()
     {
@@ -234,7 +228,7 @@ public class GameService
     }
 
     /// <summary>
-    ///     Resets death counter
+    /// Resets death counter
     /// </summary>
     public void ResetDeaths(bool showOnFileSelect) => GetCurrentSaveSlot().ResetFileDeaths(showOnFileSelect);
 
@@ -243,33 +237,33 @@ public class GameService
     #region Item Operations
 
     /// <summary>
-    ///     Sets an item/equipment value
+    /// Sets an item/equipment value
     /// </summary>
     public void SetItem(int address, byte value) => GetCurrentPlayer().SetHasItemEquipment(address, value);
 
     /// <summary>
-    ///     Gets an item/equipment value
+    /// Gets an item/equipment value
     /// </summary>
     public int GetItem(int address) => GetCurrentPlayer().GetItemEquipment(address);
 
     /// <summary>
-    ///     Toggles an item on/off
+    /// Toggles an item on/off
     /// </summary>
     public void ToggleItem(int address, int enabledValue) =>
         ItemManagementService.ToggleItem(GetCurrentPlayer(), address, enabledValue);
 
     /// <summary>
-    ///     Toggles Pegasus Boots
+    /// Toggles Pegasus Boots
     /// </summary>
     public void TogglePegasusBoots() => ItemManagementService.TogglePegasusBoots(GetCurrentPlayer());
 
     /// <summary>
-    ///     Toggles Zora's Flippers
+    /// Toggles Zora's Flippers
     /// </summary>
     public void ToggleZorasFlippers() => ItemManagementService.ToggleZorasFlippers(GetCurrentPlayer());
 
     /// <summary>
-    ///     Sets arrow count and validates against max
+    /// Sets arrow count and validates against max
     /// </summary>
     public void SetArrows(int count, int upgradeLevel)
     {
@@ -279,7 +273,7 @@ public class GameService
     }
 
     /// <summary>
-    ///     Sets bomb count and validates against max
+    /// Sets bomb count and validates against max
     /// </summary>
     public void SetBombs(int count, int upgradeLevel)
     {
@@ -289,17 +283,17 @@ public class GameService
     }
 
     /// <summary>
-    ///     Sets arrow upgrade level
+    /// Sets arrow upgrade level
     /// </summary>
     public void SetArrowUpgrades(int level) => GetCurrentPlayer().SetCurrArrowUpgrades(level);
 
     /// <summary>
-    ///     Sets bomb upgrade level
+    /// Sets bomb upgrade level
     /// </summary>
     public void SetBombUpgrades(int level) => GetCurrentPlayer().SetCurrBombUpgrades(level);
 
     /// <summary>
-    ///     Gets bottle states
+    /// Gets bottle states
     /// </summary>
     public ViewModels.BottleState GetBottleState()
     {
@@ -314,7 +308,7 @@ public class GameService
     }
 
     /// <summary>
-    ///     Sets bottle contents and updates selected bottle
+    /// Sets bottle contents and updates selected bottle
     /// </summary>
     public void SetBottleContents(int bottleNumber, byte contents)
     {
@@ -333,7 +327,7 @@ public class GameService
     }
 
     /// <summary>
-    ///     Increments heart pieces
+    /// Increments heart pieces
     /// </summary>
     public (int heartContainers, int heartPieces) IncrementHeartPiece()
     {
@@ -354,7 +348,7 @@ public class GameService
     }
 
     /// <summary>
-    ///     Decrements heart pieces
+    /// Decrements heart pieces
     /// </summary>
     public (int heartContainers, int heartPieces) DecrementHeartPiece()
     {
@@ -379,7 +373,7 @@ public class GameService
     #region Collectibles
 
     /// <summary>
-    ///     Gets collectible state (pendants and crystals)
+    /// Gets collectible state (pendants and crystals)
     /// </summary>
     public ViewModels.CollectibleState GetCollectibleState()
     {
@@ -391,12 +385,12 @@ public class GameService
     }
 
     /// <summary>
-    ///     Toggles a pendant
+    /// Toggles a pendant
     /// </summary>
     public void TogglePendant(int pendantBit) => GetCurrentSaveSlot().TogglePendant(pendantBit);
 
     /// <summary>
-    ///     Toggles a crystal
+    /// Toggles a crystal
     /// </summary>
     public void ToggleCrystal(int crystalBit) => GetCurrentSaveSlot().ToggleCrystal(crystalBit);
 
@@ -405,12 +399,12 @@ public class GameService
     #region Utility
 
     /// <summary>
-    ///     Gets ability flags
+    /// Gets ability flags
     /// </summary>
     public byte GetAbilityFlags() => GetCurrentPlayer().GetAbilityFlags();
 
     /// <summary>
-    ///     Gets save region
+    /// Gets save region
     /// </summary>
     public SaveRegion GetSaveRegion() => GetCurrentSaveSlot().GetRegion();
 

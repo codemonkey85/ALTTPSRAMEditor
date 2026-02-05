@@ -1,14 +1,14 @@
 namespace Library.Services;
 
 /// <summary>
-///     Service responsible for SRAM file I/O operations
+/// Service responsible for SRAM file I/O operations
 /// </summary>
 public class SramFileService
 {
     private const int SrmSize = 0x2000;
 
     /// <summary>
-    ///     Loads and validates an SRAM file
+    /// Loads and validates an SRAM file
     /// </summary>
     public FileLoadResult LoadSramFile(string filePath)
     {
@@ -33,7 +33,7 @@ public class SramFileService
     }
 
     /// <summary>
-    ///     Loads and validates SRAM data from an in-memory buffer
+    /// Loads and validates SRAM data from an in-memory buffer
     /// </summary>
     public FileLoadResult LoadSramData(byte[] data)
     {
@@ -52,7 +52,7 @@ public class SramFileService
     }
 
     /// <summary>
-    ///     Saves SRAM data to a file
+    /// Saves SRAM data to a file
     /// </summary>
     public FileSaveResult SaveSramFile(string filePath, byte[] data)
     {
@@ -95,6 +95,7 @@ public class SramFileService
         bool Success,
         byte[]? Data = null,
         string? ErrorMessage = null,
+        // ReSharper disable once NotAccessedPositionalProperty.Global
         long? FileSize = null);
 
     public record FileSaveResult(

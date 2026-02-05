@@ -1,9 +1,7 @@
-using Library.Classes;
-
 namespace Library.Services;
 
 /// <summary>
-///     Service responsible for item and equipment management logic
+/// Service responsible for item and equipment management logic
 /// </summary>
 public static class ItemManagementService
 {
@@ -41,16 +39,12 @@ public static class ItemManagementService
         Bottle4ContentsAddress
     ];
 
-    private static readonly Dictionary<string, AbilityConfig> AbilityConfigs = new()
-    {
-        ["PegasusBoots"] = new(PegasusBootsAddress, 0x4, 0xFB),
-        ["ZorasFlippers"] = new(ZorasFlippersAddress, 0x2, 0xFD)
-    };
+    private static readonly Dictionary<string, AbilityConfig> AbilityConfigs = new() { ["PegasusBoots"] = new(PegasusBootsAddress, 0x4, 0xFB), ["ZorasFlippers"] = new(ZorasFlippersAddress, 0x2, 0xFD) };
 
     #region Magic Upgrades
 
     /// <summary>
-    ///     Cycles through magic upgrade levels
+    /// Cycles through magic upgrade levels
     /// </summary>
     public static int CycleMagicUpgrade(int currentUpgrade) => currentUpgrade switch
     {
@@ -67,7 +61,7 @@ public static class ItemManagementService
     #region Capacity Calculations
 
     /// <summary>
-    ///     Gets the maximum capacity for a given upgrade type and level
+    /// Gets the maximum capacity for a given upgrade type and level
     /// </summary>
     private static int GetMaxCapacity(Dictionary<int, int> capacityMap, int upgradeLevel) =>
         capacityMap.TryGetValue(upgradeLevel, out var capacity)
@@ -75,12 +69,12 @@ public static class ItemManagementService
             : capacityMap[0];
 
     /// <summary>
-    ///     Gets the maximum arrow count based on upgrade level
+    /// Gets the maximum arrow count based on upgrade level
     /// </summary>
     public static int GetMaxArrows(int upgradeLevel) => GetMaxCapacity(ArrowCapacities, upgradeLevel);
 
     /// <summary>
-    ///     Gets the maximum bomb count based on upgrade level
+    /// Gets the maximum bomb count based on upgrade level
     /// </summary>
     public static int GetMaxBombs(int upgradeLevel) => GetMaxCapacity(BombCapacities, upgradeLevel);
 
@@ -89,7 +83,7 @@ public static class ItemManagementService
     #region Bottle Management
 
     /// <summary>
-    ///     Finds the first non-empty bottle contents
+    /// Finds the first non-empty bottle contents
     /// </summary>
     public static int GetInventoryBottleContents(Link player)
     {
@@ -106,7 +100,7 @@ public static class ItemManagementService
     }
 
     /// <summary>
-    ///     Sets the selected bottle for the player based on which bottles have contents
+    /// Sets the selected bottle for the player based on which bottles have contents
     /// </summary>
     public static void UpdateSelectedBottle(Link player)
     {
@@ -123,7 +117,7 @@ public static class ItemManagementService
     }
 
     /// <summary>
-    ///     Normalizes bottle content value (game uses 1 for empty in some contexts, 9 in others)
+    /// Normalizes bottle content value (game uses 1 for empty in some contexts, 9 in others)
     /// </summary>
     public static int NormalizeBottleContent(int contentValue) => contentValue switch
     {
@@ -137,7 +131,7 @@ public static class ItemManagementService
     #region Item Toggles
 
     /// <summary>
-    ///     Toggles an item on/off
+    /// Toggles an item on/off
     /// </summary>
     public static void ToggleItem(Link player, int address, int enabledValue)
     {
@@ -148,7 +142,7 @@ public static class ItemManagementService
     }
 
     /// <summary>
-    ///     Generic method to toggle items that require ability flag updates
+    /// Generic method to toggle items that require ability flag updates
     /// </summary>
     private static void ToggleAbilityItem(Link player, AbilityConfig config)
     {
@@ -170,13 +164,13 @@ public static class ItemManagementService
     }
 
     /// <summary>
-    ///     Toggles Pegasus Boots (requires ability flag update)
+    /// Toggles Pegasus Boots (requires ability flag update)
     /// </summary>
     public static void TogglePegasusBoots(Link player) =>
         ToggleAbilityItem(player, AbilityConfigs["PegasusBoots"]);
 
     /// <summary>
-    ///     Toggles Zora's Flippers (requires ability flag update)
+    /// Toggles Zora's Flippers (requires ability flag update)
     /// </summary>
     public static void ToggleZorasFlippers(Link player) =>
         ToggleAbilityItem(player, AbilityConfigs["ZorasFlippers"]);
@@ -192,7 +186,7 @@ public static class ItemManagementService
     private const int HeartContainerValue = 8;
 
     /// <summary>
-    ///     Updates heart pieces and heart containers when incrementing
+    /// Updates heart pieces and heart containers when incrementing
     /// </summary>
     public static (int heartContainers, int heartPieces) IncrementHeartPiece(
         int currentContainers,
@@ -215,7 +209,7 @@ public static class ItemManagementService
     }
 
     /// <summary>
-    ///     Updates heart pieces and heart containers when decrementing
+    /// Updates heart pieces and heart containers when decrementing
     /// </summary>
     public static (int heartContainers, int heartPieces) DecrementHeartPiece(
         int currentContainers,

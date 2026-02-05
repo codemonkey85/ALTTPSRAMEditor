@@ -1,7 +1,7 @@
 namespace Library.Services;
 
 /// <summary>
-///     Models for transferring data between services and UI
+/// Models for transferring data between services and UI
 /// </summary>
 public static class ViewModels
 {
