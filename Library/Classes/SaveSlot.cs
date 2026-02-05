@@ -4,12 +4,12 @@ namespace Library.Classes;
 
 public class SaveSlot
 {
+    private readonly byte[] Data;
     private readonly byte[] ItemsAndEquipment;
     private readonly Link Player;
     private readonly SaveRegion SaveRegion;
     private readonly TextCharacterData TextCharacterData;
     private byte Crystals;
-    private readonly byte[] Data;
     private bool IsValid;
     private byte Pendants;
     private string PlayerName = string.Empty;

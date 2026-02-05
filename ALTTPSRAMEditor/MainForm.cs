@@ -42,10 +42,9 @@ public partial class MainForm : Form
     ];
 
     private static int pos;
-    private static SaveRegion saveRegion = SaveRegion.JPN;
-    private static SRAM? sdat;
-    private static string fname = string.Empty;
-    private static string displayPlayerName = string.Empty;
+
+    // Services
+    private readonly GameService _gameService;
 
     // Initialize the font data
     private readonly Image en_fnt = en_font;
@@ -56,24 +55,38 @@ public partial class MainForm : Form
     private readonly Image jpn_fnt = jpn_font;
 
     private bool canRefresh = true;
-    private bool fileOpen;
+    private string displayPlayerName = string.Empty;
+    private SaveRegion saveRegion = SaveRegion.JPN;
 
     public MainForm(TextCharacterData textCharacterData)
     {
         InitializeComponent();
         TextCharacterData = textCharacterData;
+        _gameService = new GameService();
+
+        // Subscribe to service events
+        _gameService.SaveSlotChanged += OnSaveSlotChanged;
+        _gameService.SramLoaded += OnSramLoaded;
     }
 
     public TextCharacterData TextCharacterData { get; }
 
-    private SaveSlot GetSaveSlot() => radioFile2.Checked
-        ? SRAM.GetSaveSlot(2)
-        : radioFile3.Checked
-            ? SRAM.GetSaveSlot(3)
-            : SRAM.GetSaveSlot(1);
+    private void OnSaveSlotChanged(object? sender, SaveSlotChangedEventArgs e)
+    {
+        UpdatePlayerName();
+        UpdateAllConfigurables(e.SaveSlot);
+        Refresh();
+    }
 
-    private Link GetCurrentSlotPlayer() =>
-        GetSaveSlot().GetPlayer();
+    private void OnSramLoaded(object? sender, SramLoadedEventArgs e)
+    {
+        saveRegion = e.Region;
+        Console.WriteLine($" - {e.Region} Save Detected");
+    }
+
+    private SaveSlot GetSaveSlot() => _gameService.GetCurrentSaveSlot();
+
+    private Link GetCurrentSlotPlayer() => _gameService.GetCurrentPlayer();
 
     private void opensrmToolStripMenuItem_Click(object sender, EventArgs e) => OpenSRM();
 
@@ -90,149 +103,69 @@ public partial class MainForm : Form
             return;
         }
 
-        fname = fd1.FileName;
+        var (success, message, region) = _gameService.OpenFile(fd1.FileName, TextCharacterData);
 
-        try
+        if (!success)
         {
-            // Open the text file using a File Stream
-            var bytes = File.ReadAllBytes(fname);
-            var fileSize = new FileInfo(fname).Length;
-            switch (fileSize)
-            {
-                case srm_size:
-                    OpenSRMGoodSize(bytes);
-                    break;
-                case > srm_size:
-                    {
-                        var validFile = true;
-
-                        if (fileSize <= 0x8000)
-                        {
-                            for (var i = 0x2000; i < 0x8000; i++)
-                            {
-                                if (bytes[i] != 0x0)
-                                {
-                                    validFile = false;
-                                }
-                            }
-                        }
-                        else
-                        {
-                            validFile = false;
-                        }
-
-                        if (!validFile)
-                        {
-                            MessageBox.Show(
-                                "Invalid SRAM File. (Randomizer saves aren't supported. Maybe one day...?)");
-                        }
-                        else
-                        {
-                            OpenSRMGoodSize(bytes);
-                        }
-
-                        break;
-                    }
-                default:
-                    MessageBox.Show("Invalid SRAM File.");
-                    break;
-            }
+            MessageBox.Show(message);
+            helperText.Text = message;
+            return;
         }
-        catch (IOException)
-        {
-            helperText.Text = $"""
-                               File reading conflict: {fname}.
-                               Is it open in another program?
-                               """;
-        }
-        catch (Exception e)
-        {
-            MessageBox.Show($"""
-                             The file could not be read:
-                             {e.Message}
-                             """);
-        }
-    }
 
-    private void OpenSRMGoodSize(byte[] _bytes)
-    {
-        Console.Write($"Opened {fname}");
-        fileOpen = true;
-        helperText.Text = $"Opened {fname}";
-        sdat = new SRAM(_bytes, TextCharacterData);
+        helperText.Text = message;
+        saveRegion = region!.Value;
+
         radioFile1.Enabled = true;
         radioFile2.Enabled = true;
         radioFile3.Enabled = true;
 
-        // Determine the overall region of the .srm and initialize the save slots
-        var savslot = SRAM.GetSaveSlot(1);
-        var savslot2 = SRAM.GetSaveSlot(2);
-        var savslot3 = SRAM.GetSaveSlot(3);
-        if (savslot.GetRegion() == SaveRegion.JPN || savslot2.GetRegion() == SaveRegion.JPN ||
-            savslot3.GetRegion() == SaveRegion.JPN)
-        {
-            Console.WriteLine(" - JPN Save Detected");
-            saveRegion = SaveRegion.JPN;
-        }
-        else if (savslot.GetRegion() == SaveRegion.USA || savslot2.GetRegion() == SaveRegion.USA ||
-                 savslot3.GetRegion() == SaveRegion.USA)
-        {
-            Console.WriteLine(" - USA Save Detected");
-            saveRegion = SaveRegion.USA;
-        }
-        else
-        {
-            saveRegion = SaveRegion.EUR;
-        }
+        // Determine which save slot we have opened and update UI
+        var currentSlot = radioFile1.Checked ? 1 : radioFile2.Checked ? 2 : 3;
+        _gameService.SetCurrentSlot(currentSlot);
 
-        // Determine which save slot we have opened
-        var thisSlot = radioFile1.Checked ? savslot : radioFile2.Checked ? savslot2 : savslot3;
+        var thisSlot = GetSaveSlot();
         if (thisSlot.SaveIsValid())
         {
             UpdatePlayerName();
-            thisSlot.GetPlayer();
             UpdateAllConfigurables(thisSlot);
         }
         else
         {
-            HideAllGroupBoxesExcept(groupFileSelect);
-            groupBoxHUD.Visible = false;
-            groupInventory.Visible = false;
-            groupPendantsCrystals.Visible = false;
-            labelFilename.Visible = false;
-            buttonChangeName.Visible = false;
-            buttonResetDeaths.Visible = false;
-            buttonCreate.Enabled = true;
-            buttonCreate.Visible = true;
-            buttonCopy.Visible = false;
+            ShowEmptySlotUI();
         }
 
-        Refresh(); // Update the screen, including the player name
+        Refresh();
     }
 
     private void SaveSRM()
     {
-        if (sdat is null || string.IsNullOrEmpty(fname))
+        if (!_gameService.HasLoadedFile)
         {
             helperText.Text = "Load a file first!";
-            return; // Abort saving if there isn't a valid file open.
+            return;
         }
 
-        var outputData = sdat.MergeSaveData();
+        var (success, message) = _gameService.SaveFile();
+        helperText.Text = message;
 
-        try
+        if (success)
         {
-            File.WriteAllBytes(fname, outputData);
-            helperText.Text = $"Saved file at {fname}";
             buttonWrite.Enabled = false;
         }
-        catch (IOException)
-        {
-            helperText.Text = $"""
-                               File writing conflict: {fname}.
-                               Is it open in another program?
-                               """;
-        }
+    }
+
+    private void ShowEmptySlotUI()
+    {
+        HideAllGroupBoxesExcept(groupFileSelect);
+        groupBoxHUD.Visible = false;
+        groupInventory.Visible = false;
+        groupPendantsCrystals.Visible = false;
+        labelFilename.Visible = false;
+        buttonChangeName.Visible = false;
+        buttonResetDeaths.Visible = false;
+        buttonCreate.Enabled = true;
+        buttonCreate.Visible = true;
+        buttonCopy.Visible = false;
     }
 
     private void exitToolStripMenuItem_Click(object sender, EventArgs e) =>
@@ -276,26 +209,11 @@ public partial class MainForm : Form
 
     private void buttonCreate_Click(object sender, EventArgs e)
     {
-        SaveSlot? savslot = null;
-
-        if (radioFile1.Checked)
-        {
-            savslot = SRAM.CreateFile(1, saveRegion, TextCharacterData);
-            helperText.Text = "Created File 1!";
-        }
-        else if (radioFile2.Checked)
-        {
-            savslot = SRAM.CreateFile(2, saveRegion, TextCharacterData);
-            helperText.Text = "Created File 2!";
-        }
-        else if (radioFile3.Checked)
-        {
-            savslot = SRAM.CreateFile(3, saveRegion, TextCharacterData);
-            helperText.Text = "Created File 3!";
-        }
+        var slot = radioFile1.Checked ? 1 : radioFile2.Checked ? 2 : 3;
+        var savslot = _gameService.CreateFile(slot, saveRegion, TextCharacterData);
+        helperText.Text = $"Created File {slot}!";
 
         UpdatePlayerName();
-        savslot?.GetPlayer();
         UpdateAllConfigurables(savslot);
 
         Refresh();
@@ -303,22 +221,9 @@ public partial class MainForm : Form
 
     private void buttonCopy_Click(object sender, EventArgs e)
     {
-        var message = string.Empty;
-        if (radioFile1.Checked)
-        {
-            message = SRAM.CopyFile(1, TextCharacterData);
-            helperText.Text = "Copied File 1!";
-        }
-        else if (radioFile2.Checked)
-        {
-            message = SRAM.CopyFile(2, TextCharacterData);
-            helperText.Text = "Copied File 2!";
-        }
-        else if (radioFile3.Checked)
-        {
-            message = SRAM.CopyFile(3, TextCharacterData);
-            helperText.Text = "Copied File 3!";
-        }
+        var slot = radioFile1.Checked ? 1 : radioFile2.Checked ? 2 : 3;
+        var message = _gameService.CopyFile(slot, TextCharacterData);
+        helperText.Text = $"Copied File {slot}!";
 
         if (message is { Length: > 0 })
         {
@@ -330,21 +235,9 @@ public partial class MainForm : Form
 
     private void buttonWrite_Click(object sender, EventArgs e)
     {
-        var savslot = SRAM.WriteFile(1, TextCharacterData);
-        if (radioFile1.Checked)
-        {
-            helperText.Text = "Wrote to File 1!";
-        }
-        else if (radioFile2.Checked)
-        {
-            savslot = SRAM.WriteFile(2, TextCharacterData);
-            helperText.Text = "Wrote to File 2!";
-        }
-        else if (radioFile3.Checked)
-        {
-            savslot = SRAM.WriteFile(3, TextCharacterData);
-            helperText.Text = "Wrote to File 3!";
-        }
+        var slot = radioFile1.Checked ? 1 : radioFile2.Checked ? 2 : 3;
+        var savslot = _gameService.WriteFile(slot, TextCharacterData);
+        helperText.Text = $"Wrote to File {slot}!";
 
         UpdateAllConfigurables(savslot);
         Refresh();
@@ -352,19 +245,7 @@ public partial class MainForm : Form
 
     private void buttonErase_Click(object sender, EventArgs e)
     {
-        var selFile = 1;
-        if (radioFile1.Checked)
-        {
-            selFile = 1;
-        }
-        else if (radioFile2.Checked)
-        {
-            selFile = 2;
-        }
-        else if (radioFile3.Checked)
-        {
-            selFile = 3;
-        }
+        var selFile = radioFile1.Checked ? 1 : radioFile2.Checked ? 2 : 3;
 
         var dialogResult = MessageBox.Show(
             $"You are about to PERMANENTLY ERASE File {selFile}! Are you sure you want to erase it? There is no undo!",
@@ -376,10 +257,9 @@ public partial class MainForm : Form
             return;
         }
 
-        SRAM.EraseFile(selFile);
+        _gameService.EraseFile(selFile);
         helperText.Text = $"Erased File {selFile}.";
-        var savslot = SRAM.GetSaveSlot(selFile);
-        savslot.SetIsValid(false);
+        var savslot = _gameService.GetSaveSlot(selFile);
         canRefresh = true;
         UpdateAllConfigurables(savslot);
     }
@@ -409,29 +289,17 @@ public partial class MainForm : Form
         Refresh(); // Update the screen, including the player name
     }
 
-    private void UpdateArrowsMax() => numericUpDownArrowsHeld.Maximum = numericUpDownArrowUpgrades.Value switch
+    private void UpdateArrowsMax()
     {
-        1 => 35,
-        2 => 40,
-        3 => 45,
-        4 => 50,
-        5 => 55,
-        6 => 60,
-        7 => 70,
-        _ => 30
-    };
+        var maxArrows = ItemManagementService.GetMaxArrows((int)numericUpDownArrowUpgrades.Value);
+        numericUpDownArrowsHeld.Maximum = maxArrows;
+    }
 
-    private void UpdateBombsMax() => numericUpDownBombsHeld.Maximum = numericUpDownBombUpgrades.Value switch
+    private void UpdateBombsMax()
     {
-        1 => 15,
-        2 => 20,
-        3 => 25,
-        4 => 30,
-        5 => 35,
-        6 => 40,
-        7 => 50,
-        _ => 10
-    };
+        var maxBombs = ItemManagementService.GetMaxBombs((int)numericUpDownBombUpgrades.Value);
+        numericUpDownBombsHeld.Maximum = maxBombs;
+    }
 
     private void UpdateAllConfigurables(SaveSlot? savslot)
     {
@@ -929,21 +797,24 @@ public partial class MainForm : Form
             return;
         }
 
+        var slot = radioFile1.Checked ? 1 : radioFile2.Checked ? 2 : 3;
+        _gameService.SetCurrentSlot(slot);
+
         var savslot = GetSaveSlot();
         var player = savslot.GetPlayer();
         UpdatePlayerName();
         numericUpDownRupeeCounter.Value = player.GetRupeesValue();
         UpdateAllConfigurables(savslot);
         helperText.Text = !savslot.SaveIsValid()
-            ? $"Save slot {savslot} is empty or invalid."
-            : $"Editing Save slot {savslot}.";
+            ? $"Save slot {slot} is empty or invalid."
+            : $"Editing Save slot {slot}.";
     }
 
     protected override void OnPaint(PaintEventArgs e)
     {
         base.OnPaint(e);
 
-        if (string.IsNullOrEmpty(fname) || !fileOpen)
+        if (!_gameService.HasLoadedFile)
         {
             return;
         }
@@ -1093,7 +964,7 @@ public partial class MainForm : Form
         }
     }
 
-    private static void DrawTile(Image source, int tileID, PaintEventArgs e, int _pos)
+    private void DrawTile(Image source, int tileID, PaintEventArgs e, int _pos)
     {
         var tileset_width = 27; // English Font
         if (saveRegion == SaveRegion.JPN)
@@ -1298,45 +1169,12 @@ public partial class MainForm : Form
     private void CheckForBottles()
     {
         var player = GetCurrentSlotPlayer();
-        // Update the picture so it represents what the inventory bottle should actually have
-        int _inventoryBottleFill;
-        if (player.GetItemEquipment(Bottle1ContentsAddress) > 0)
-        {
-            _inventoryBottleFill = player.GetItemEquipment(Bottle1ContentsAddress);
-            player.SetSelectedBottle(1);
-        }
-        else if (player.GetItemEquipment(Bottle2ContentsAddress) > 0)
-        {
-            _inventoryBottleFill = player.GetItemEquipment(Bottle2ContentsAddress);
-            player.SetSelectedBottle(2);
-        }
-        else if (player.GetItemEquipment(Bottle3ContentsAddress) > 0)
-        {
-            _inventoryBottleFill = player.GetItemEquipment(Bottle3ContentsAddress);
-            player.SetSelectedBottle(3);
-        }
-        else if (player.GetItemEquipment(Bottle4ContentsAddress) > 0)
-        {
-            _inventoryBottleFill = player.GetItemEquipment(Bottle4ContentsAddress);
-            player.SetSelectedBottle(4);
-        }
-        else
-        {
-            _inventoryBottleFill = 0;
-            player.SetSelectedBottle(0);
-        }
+        ItemManagementService.UpdateSelectedBottle(player);
 
-        if (_inventoryBottleFill == 1)
-        {
-            _inventoryBottleFill = 9;
-        }
+        var inventoryBottleFill = ItemManagementService.GetInventoryBottleContents(player);
+        inventoryBottleFill = ItemManagementService.NormalizeBottleContent(inventoryBottleFill);
 
-        if (_inventoryBottleFill - 1 < 0)
-        {
-            _inventoryBottleFill = 1;
-        }
-
-        pictureBottles.Image = bottleContentsImg[bottleContents[_inventoryBottleFill - 1]];
+        pictureBottles.Image = bottleContentsImg[bottleContents[inventoryBottleFill - 1]];
     }
 
     private void comboBoxBottle1_SelectionChangeCommitted(object sender, EventArgs e)
@@ -1396,41 +1234,25 @@ public partial class MainForm : Form
     private void pictureBoots_Click(object sender, EventArgs e)
     {
         var player = GetCurrentSlotPlayer();
-        var flags = player.GetAbilityFlags();
-        if (player.GetItemEquipment(PegasusBootsAddress) == 1)
-        {
-            pictureBoots.Image = D_Pegasus_Boots;
-            flags &= 0xFB; // To turn it off, bitwise and with b11111011
-            player.SetHasItemEquipment(PegasusBootsAddress, 0x0);
-            player.SetHasItemEquipment(AbilityFlagsAddress, flags);
-        }
-        else
-        {
-            pictureBoots.Image = Pegasus_Boots;
-            flags |= 0x4; // Turn it on, bitwise or with b00000100
-            player.SetHasItemEquipment(PegasusBootsAddress, 0x1);
-            player.SetHasItemEquipment(AbilityFlagsAddress, flags);
-        }
+        var wasEnabled = player.GetItemEquipment(PegasusBootsAddress) == 1;
+
+        ItemManagementService.TogglePegasusBoots(player);
+
+        pictureBoots.Image = wasEnabled
+            ? D_Pegasus_Boots
+            : Pegasus_Boots;
     }
 
     private void pictureZorasFlippers_Click(object sender, EventArgs e)
     {
         var player = GetCurrentSlotPlayer();
-        var flags = player.GetAbilityFlags();
-        if (player.GetItemEquipment(ZorasFlippersAddress) == 1)
-        {
-            pictureZorasFlippers.Image = D_Zora_s_Flippers;
-            flags &= 0xFD; // To turn it off, bitwise and with b11111101
-            player.SetHasItemEquipment(ZorasFlippersAddress, 0x0);
-            player.SetHasItemEquipment(AbilityFlagsAddress, flags);
-        }
-        else
-        {
-            pictureZorasFlippers.Image = Zora_s_Flippers;
-            flags |= 0x2; // Turn it on, bitwise or with b00000010
-            player.SetHasItemEquipment(ZorasFlippersAddress, 0x1);
-            player.SetHasItemEquipment(AbilityFlagsAddress, flags);
-        }
+        var wasEnabled = player.GetItemEquipment(ZorasFlippersAddress) == 1;
+
+        ItemManagementService.ToggleZorasFlippers(player);
+
+        pictureZorasFlippers.Image = wasEnabled
+            ? D_Zora_s_Flippers
+            : Zora_s_Flippers;
     }
 
     private static bool GetBit(byte b, int bitNumber)
@@ -1555,20 +1377,23 @@ public partial class MainForm : Form
     private void pictureHeartPieces_MouseClick(object sender, MouseEventArgs e)
     {
         var player = GetCurrentSlotPlayer();
-        var playerCurrHearts = player.GetHeartContainers();
-        var playerCurrHeartPieces = player.GetHeartPieces();
+
         // ReSharper disable once SwitchStatementHandlesSomeKnownEnumValuesWithDefault
         switch (e.Button)
         {
             case MouseButtons.Left:
                 {
-                    if (playerCurrHearts <= 152 && playerCurrHeartPieces < 24)
-                    {
-                        if ((playerCurrHeartPieces + 1) % 4 == 0)
-                        {
-                            player.SetHeartContainers(playerCurrHearts + 8);
-                        }
+                    var (newContainers, newPieces) = ItemManagementService.IncrementHeartPiece(
+                        player.GetHeartContainers(),
+                        player.GetHeartPieces());
 
+                    if (newContainers != player.GetHeartContainers())
+                    {
+                        player.SetHeartContainers(newContainers);
+                        player.IncrementHeartPieces();
+                    }
+                    else if (newPieces != player.GetHeartPieces())
+                    {
                         player.IncrementHeartPieces();
                     }
 
@@ -1576,13 +1401,17 @@ public partial class MainForm : Form
                 }
             case MouseButtons.Right:
                 {
-                    if (playerCurrHearts > 8 && playerCurrHeartPieces > 0)
-                    {
-                        if (player.GetHeartPieces() % 4 == 0)
-                        {
-                            player.SetHeartContainers(playerCurrHearts - 8);
-                        }
+                    var (newContainers, newPieces) = ItemManagementService.DecrementHeartPiece(
+                        player.GetHeartContainers(),
+                        player.GetHeartPieces());
 
+                    if (newContainers != player.GetHeartContainers())
+                    {
+                        player.SetHeartContainers(newContainers);
+                        player.DecrementHeartPieces();
+                    }
+                    else if (newPieces != player.GetHeartPieces())
+                    {
                         player.DecrementHeartPieces();
                     }
 
@@ -1594,7 +1423,6 @@ public partial class MainForm : Form
 
         UpdateHeartPieceUI();
         numericUpDownHeartContainers.Value = player.GetHeartContainers();
-        //pictureHeartPieces
     }
 
     private void ToggleCrystalPendant(bool isCrystal, int _val)
@@ -1722,17 +1550,17 @@ public partial class MainForm : Form
     private void pictureBoxMagicBar_Click(object sender, EventArgs e)
     {
         var player = GetCurrentSlotPlayer();
-        var currMagicUpgrade = player.GetCurrMagicUpgrade();
+        var newUpgrade = ItemManagementService.CycleMagicUpgrade(player.GetCurrMagicUpgrade());
+        player.SetMagicUpgrade(newUpgrade);
 
-        var (magicBarImage, magicUpgrade, magicBarTextVisible) = currMagicUpgrade switch
+        var (magicBarImage, magicBarTextVisible) = newUpgrade switch
         {
-            0x1 => (lttp_magic_bar_quarter, 0x2, true),
-            0x2 => (lttp_magic_bar, 0x0, false),
-            _ => (lttp_magic_bar_halved, 0x1, false)
+            0x1 => (lttp_magic_bar_halved, false),
+            0x2 => (lttp_magic_bar_quarter, true),
+            _ => (lttp_magic_bar, false)
         };
 
         pictureBoxMagicBar.Image = magicBarImage;
-        player.SetMagicUpgrade(magicUpgrade);
         textQuarterMagic.Visible = magicBarTextVisible;
 
         Refresh();
