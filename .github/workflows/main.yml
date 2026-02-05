@@ -26,10 +26,10 @@ jobs:
         run: dotnet workload install wasm-tools
 
       - name: Restore NuGet packages
-        run: dotnet restore
+        run: dotnet restore ALTTPSRAMEditor.BlazorWasm/ALTTPSRAMEditor.BlazorWasm.csproj
 
       - name: Test
-        run: dotnet test
+        run: dotnet test ALTTPSRAMEditor.BlazorWasm/ALTTPSRAMEditor.BlazorWasm.csproj
 
       # publishes Blazor project to the release-folder
       - name: Publish .NET Core Project
