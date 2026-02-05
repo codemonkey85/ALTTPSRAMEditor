@@ -1,20 +1,22 @@
 // ReSharper disable LocalizableElement
+
 using static ALTTPSRAMEditor.Properties.Resources;
 
 namespace ALTTPSRAMEditor;
 
-[SuppressMessage("Interoperability", "CA1416:Validate platform compatibility", Justification = "This is a Windows Forms application."),
- SuppressMessage("Style", "IDE1006:Naming Styles")]
+[SuppressMessage("Interoperability", "CA1416:Validate platform compatibility",
+    Justification = "This is a Windows Forms application.")]
+[SuppressMessage("Style", "IDE1006:Naming Styles")]
 public partial class NameChangingFormEn : Form
 {
-    private Bitmap enFnt = default!;
     private readonly StringBuilder currName;
     private readonly ushort[] currNameRaw;
     private readonly Dictionary<char, int> enChar;
-    private readonly Dictionary<ushort, char> rawEnChar;
-    private int charPos;
-    private bool autoClose;
     private readonly MainForm mainForm;
+    private readonly Dictionary<ushort, char> rawEnChar;
+    private bool autoClose;
+    private int charPos;
+    private Bitmap enFnt = null!;
 
     public NameChangingFormEn(MainForm mainForm)
     {
@@ -162,6 +164,7 @@ public partial class NameChangingFormEn : Form
         {
             currNameRaw[i] = rawEnChar.FirstOrDefault(x => x.Value == currName[i]).Key;
         }
+
         mainForm.SetPlayerNameRaw(currNameRaw);
         mainForm.UpdatePlayerName();
     }
@@ -172,6 +175,7 @@ public partial class NameChangingFormEn : Form
         {
             return;
         }
+
         var dialogSave = MessageBox.Show(
             "Would you like to save your changes?",
             "Save Changes?",
@@ -308,4 +312,3 @@ public partial class NameChangingFormEn : Form
         Close();
     }
 }
-

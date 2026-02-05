@@ -1,19 +1,20 @@
 ﻿// ReSharper disable InconsistentNaming
+
 namespace Library.Classes;
 
 [Serializable]
 public class Link
 {
-    private readonly byte[] itemsAndEquipment;
     private readonly byte abilityFlags;
-    private int heartPieces;
-    private int heartContainers;
-    private int currMagic;
-    private readonly int bombsHeld;
     private readonly int arrowsHeld;
-    private int currMagicUpgrade;
+    private readonly int bombsHeld;
+    private readonly byte[] itemsAndEquipment;
     private int currArrowUpgrades;
     private int currBombUpgrades;
+    private int currMagic;
+    private int currMagicUpgrade;
+    private int heartContainers;
+    private int heartPieces;
     private int selectedBottle; // The bottle that is currently selected in the inventory screen
 
     // ReSharper disable once ParameterTypeCanBeEnumerable.Local
@@ -37,7 +38,7 @@ public class Link
             5 => 35,
             6 => 40,
             7 => 50,
-            _ => 10,
+            _ => 10
         };
 
         if (bombsHeld > _bombsMax)
@@ -57,7 +58,7 @@ public class Link
             5 => 55,
             6 => 60,
             7 => 70,
-            _ => 30,
+            _ => 30
         };
 
         if (arrowsHeld > _arrowsMax)
@@ -109,7 +110,7 @@ public class Link
     {
         currMagic = val;
         itemsAndEquipment[MagicPowerAddress] = (byte)val; // Max MP
-        itemsAndEquipment[MagicLeftToFillAddress] = 0;// (byte)val; // MP left to fill
+        itemsAndEquipment[MagicLeftToFillAddress] = 0; // (byte)val; // MP left to fill
     }
 
     public void SetMagicUpgrade(int val)

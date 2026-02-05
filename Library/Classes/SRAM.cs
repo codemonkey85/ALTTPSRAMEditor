@@ -1,37 +1,39 @@
 ﻿// ReSharper disable InconsistentNaming
+
 namespace Library.Classes;
 
 [Serializable]
 public class SRAM
 {
-    private byte[] data;
     private const int slot1 = 0x0;
     private const int slot1m = 0xF00;
     private const int slot2 = 0x500;
     private const int slot2m = 0x1400;
     private const int slot3 = 0xA00;
+
     private const int slot3m = 0x1900;
-    private readonly byte[] outsav = new byte[0x2000];
+
     //Addresses $1E00 to $1FFE in SRAM are not used.
     //private const int mempointer = 0x1FFE; // used as the offset to know where the memory will be stored in the SRAM
     //(02 is the first file, 04 the second and 06 the third) 
     //private int currsave = 00; // 00 - No File, 02 - File 1, 04 - File 2, 06 - File 3
     private static SaveSlot
-        savslot1 = default!,
-        savslot2 = default!,
-        savslot3 = default!,
-        savslot1m = default!,
-        savslot2m = default!,
-        savslot3m = default!,
-        savslotTemp = default!;
+        savslot1 = null!,
+        savslot2 = null!,
+        savslot3 = null!,
+        savslot1m = null!,
+        savslot2m = null!,
+        savslot3m = null!,
+        savslotTemp = null!;
 
-    public TextCharacterData TextCharacterData { get; }
+    private readonly byte[] outsav = new byte[0x2000];
+    private byte[] data;
 
     /*
-    * These offsets directly correspond to $7E:F for a particular save file is being played.
-    * When the game is finished it writes the information into bank $70 in the corresponding slot + offsets presented here.
-    * (e.g. For the second save file, the information will be saved to $70:0500 to $70:09FF, and mirrored at $70:1400 to $70:18FF.)
-    */
+     * These offsets directly correspond to $7E:F for a particular save file is being played.
+     * When the game is finished it writes the information into bank $70 in the corresponding slot + offsets presented here.
+     * (e.g. For the second save file, the information will be saved to $70:0500 to $70:09FF, and mirrored at $70:1400 to $70:18FF.)
+     */
 
     // ReSharper disable once ParameterTypeCanBeEnumerable.Local
     public SRAM(byte[] data_in, TextCharacterData textCharacterData)
@@ -50,6 +52,8 @@ public class SRAM
         GenerateSaveSlot(slot3m, slot3m + 0x500, 6);
     }
 
+    public TextCharacterData TextCharacterData { get; }
+
     public static SaveSlot GetSaveSlot(int slot) => slot switch
     {
         2 => savslot2,
@@ -57,7 +61,7 @@ public class SRAM
         4 => savslot1m,
         5 => savslot2m,
         6 => savslot3m,
-        _ => savslot1,
+        _ => savslot1
     };
 
     private void GenerateSaveSlot(int start, int end, int thisSlot)
@@ -204,6 +208,7 @@ public class SRAM
                 savslot = savslot3;
                 break;
         }
+
         return savslot;
     }
 
@@ -226,6 +231,7 @@ public class SRAM
                     returnMessage = "Save slot 1 is empty or corrupted. Copying from Mirror Data instead.";
                     copyData = savslot1m.GetData();
                 }
+
                 break;
             case 2:
                 if (savslot2.SaveIsValid())
@@ -237,6 +243,7 @@ public class SRAM
                     returnMessage = "Save slot 2 is empty or corrupted. Copying from Mirror Data instead.";
                     copyData = savslot2m.GetData();
                 }
+
                 break;
             case 3:
                 if (savslot3.SaveIsValid())
@@ -248,6 +255,7 @@ public class SRAM
                     returnMessage = "Save slot 3 is empty or corrupted. Copying from Mirror Data instead.";
                     copyData = savslot3m.GetData();
                 }
+
                 break;
         }
 

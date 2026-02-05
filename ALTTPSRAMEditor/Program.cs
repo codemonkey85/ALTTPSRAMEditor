@@ -3,10 +3,9 @@ var thread = new Thread(() =>
 {
     var builder = Host.CreateDefaultBuilder(args);
 
-    builder.ConfigureServices(
-        services => services
-            .AddScoped<TextCharacterData>()
-            .AddScoped<MainForm>());
+    builder.ConfigureServices(services => services
+        .AddScoped<TextCharacterData>()
+        .AddScoped<MainForm>());
 
     using var host = builder.Build();
 

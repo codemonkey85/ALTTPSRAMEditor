@@ -1,20 +1,21 @@
 ﻿// ReSharper disable InconsistentNaming
+
 namespace Library.Classes;
 
 public class SaveSlot
 {
+    private readonly byte[] ItemsAndEquipment;
+    private readonly Link Player;
+    private readonly SaveRegion SaveRegion;
+    private readonly TextCharacterData TextCharacterData;
+    private byte Crystals;
     private byte[] Data;
+    private bool IsValid;
+    private byte Pendants;
     private string PlayerName = string.Empty;
     private ushort[] PlayerNameRaw;
-    private ushort TotalChecksum;
-    private readonly Link Player;
-    private byte Pendants;
-    private byte Crystals;
-    private bool IsValid;
     private int SlotIndex;
-    private readonly TextCharacterData TextCharacterData;
-    private readonly SaveRegion SaveRegion;
-    private readonly byte[] ItemsAndEquipment;
+    private ushort TotalChecksum;
 
     // ReSharper disable once ParameterTypeCanBeEnumerable.Local
     public SaveSlot(byte[] data_in, int _slot, TextCharacterData textCharacterData)
@@ -101,6 +102,7 @@ public class SaveSlot
                     Data[i + 1] = (byte)(PlayerNameRaw[j] >> 8);
                     j++;
                 }
+
                 break;
             case SaveRegion.JPN:
                 for (var i = 0x3D9; i <= 0x3E0; i += 2)
@@ -109,6 +111,7 @@ public class SaveSlot
                     Data[i + 1] = (byte)(PlayerNameRaw[j] >> 8);
                     j++;
                 }
+
                 break;
         }
     }
@@ -140,6 +143,7 @@ public class SaveSlot
                     PlayerNameRaw[j] = (ushort)(Data[i + 1] << 8 | Data[i]);
                     j++;
                 }
+
                 break;
             case SaveRegion.JPN:
                 PlayerNameRaw = new ushort[4];
@@ -148,8 +152,10 @@ public class SaveSlot
                     PlayerNameRaw[j] = (ushort)(Data[i + 1] << 8 | Data[i]);
                     j++;
                 }
+
                 break;
         }
+
         ConvertPlayerNameRawToString(PlayerNameRaw);
     }
 
@@ -181,6 +187,7 @@ public class SaveSlot
                 default:
                     throw new ArgumentOutOfRangeException(nameof(_playerNameRaw));
             }
+
             j++;
         }
     }
@@ -202,6 +209,7 @@ public class SaveSlot
                     PlayerNameRaw[j] = _newName[j];
                     j++;
                 }
+
                 break;
             case SaveRegion.JPN:
                 for (var i = 0x3D9; i <= 0x3DF; i += 2)
@@ -209,6 +217,7 @@ public class SaveSlot
                     PlayerNameRaw[j] = _newName[j];
                     j++;
                 }
+
                 break;
         }
     }
@@ -228,7 +237,9 @@ public class SaveSlot
         {
             checksum += (ushort)(Data[i + 1] << 8 | Data[i]);
         }
-        TotalChecksum = (ushort)(0x5A5A - checksum); // Calculate as 32-bit integer, then convert it to a 16-bit unsigned int
+
+        TotalChecksum =
+            (ushort)(0x5A5A - checksum); // Calculate as 32-bit integer, then convert it to a 16-bit unsigned int
 
         Data[0x4FE] = (byte)(TotalChecksum & 0xff);
         Data[0x4FF] = (byte)(TotalChecksum >> 8);
@@ -264,6 +275,7 @@ public class SaveSlot
             var word = (ushort)(Data[i + 1] << 8 | Data[i]);
             checksum += word;
         }
+
         return checksum == 0x5A5A; // The save is valid if the checksum total is exactly 0x5A5A
     }
 
@@ -283,7 +295,7 @@ public class SaveSlot
         }
     }
 
-    public static bool GetBit(byte b, int bitNumber)
+    private static bool GetBit(byte b, int bitNumber)
     {
         bitNumber++;
         return (b & 1 << bitNumber - 1) != 0;
@@ -436,7 +448,8 @@ public class SaveSlot
 
     public void ClearData()
     {
-        Array.Clear(Data, 0, Data.Length - 2); // Invalidate the data by storing 0 to everything besides the checksum check
+        Array.Clear(Data, 0,
+            Data.Length - 2); // Invalidate the data by storing 0 to everything besides the checksum check
         IsValid = false;
     }
 }

@@ -2,13 +2,6 @@
 
 public static class Enums
 {
-    public enum SaveRegion
-    {
-        USA,
-        JPN,
-        EUR
-    };
-
     public enum BottleContents
     {
         NONE,
@@ -20,5 +13,12 @@ public static class Enums
         FAERIE,
         BEE,
         GOOD_BEE
-    };
+    }
+
+    public enum SaveRegion
+    {
+        USA,
+        JPN,
+        EUR
+    }
 }

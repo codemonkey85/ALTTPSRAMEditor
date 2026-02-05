@@ -1,45 +1,47 @@
 ﻿// ReSharper disable InconsistentNaming
 // ReSharper disable LocalizableElement
+
 using static ALTTPSRAMEditor.Properties.Resources;
 
 namespace ALTTPSRAMEditor;
 
-[SuppressMessage("Interoperability", "CA1416:Validate platform compatibility", Justification = "This is a Windows Forms application."),
- SuppressMessage("Style", "IDE1006:Naming Styles")]
+[SuppressMessage("Interoperability", "CA1416:Validate platform compatibility",
+    Justification = "This is a Windows Forms application.")]
+[SuppressMessage("Style", "IDE1006:Naming Styles")]
 public partial class MainForm : Form
 {
-    private const int nameStartX = 375; // Position to the right of "Filename" label (labelFilename is at x=218, text width ~49)
-    private const int nameStartY = 90; // Align with the "Filename" label (labelFilename is at y=33, adjust to align baselines)
+    private const int
+        nameStartX = 375; // Position to the right of "Filename" label (labelFilename is at x=218, text width ~49)
 
-    private bool canRefresh = true;
-    private bool fileOpen;
+    private const int
+        nameStartY = 90; // Align with the "Filename" label (labelFilename is at y=33, adjust to align baselines)
 
     // Define bottle array
     private static readonly int[] bottleContents =
-        [
-            (int)BottleContents.NONE,
-            (int)BottleContents.EMPTY,
-            (int)BottleContents.RED_POTION,
-            (int)BottleContents.GREEN_POTION,
-            (int)BottleContents.BLUE_POTION,
-            (int)BottleContents.FAERIE,
-            (int)BottleContents.BEE,
-            (int)BottleContents.GOOD_BEE,
-            (int)BottleContents.MUSHROOM
-        ];
+    [
+        (int)BottleContents.NONE,
+        (int)BottleContents.EMPTY,
+        (int)BottleContents.RED_POTION,
+        (int)BottleContents.GREEN_POTION,
+        (int)BottleContents.BLUE_POTION,
+        (int)BottleContents.FAERIE,
+        (int)BottleContents.BEE,
+        (int)BottleContents.GOOD_BEE,
+        (int)BottleContents.MUSHROOM
+    ];
 
     private static readonly Bitmap[] bottleContentsImg =
-        [
-            D_Bottle,
-            Bottle,
-            Red_Potion,
-            Green_Potion,
-            Blue_Potion,
-            Fairy,
-            Bee,
-            Bee,
-            Mushroom
-        ];
+    [
+        D_Bottle,
+        Bottle,
+        Red_Potion,
+        Green_Potion,
+        Blue_Potion,
+        Fairy,
+        Bee,
+        Bee,
+        Mushroom
+    ];
 
     private static int pos;
     private static SaveRegion saveRegion = SaveRegion.JPN;
@@ -47,15 +49,16 @@ public partial class MainForm : Form
     private static string fname = string.Empty;
     private static string displayPlayerName = string.Empty;
 
+    // Initialize the font data
+    private readonly Image en_fnt = en_font;
+
     // Initialize some assets
     private readonly Image imgHeartContainerFull = HeartContainerFull;
     private readonly Image imgHeartContainerPartial = HeartContainerPartial;
-
-    // Initialize the font data
-    private readonly Image en_fnt = en_font;
     private readonly Image jpn_fnt = jpn_font;
 
-    public TextCharacterData TextCharacterData { get; }
+    private bool canRefresh = true;
+    private bool fileOpen;
 
     public MainForm(TextCharacterData textCharacterData)
     {
@@ -63,11 +66,13 @@ public partial class MainForm : Form
         TextCharacterData = textCharacterData;
     }
 
+    public TextCharacterData TextCharacterData { get; }
+
     private SaveSlot GetSaveSlot() => radioFile2.Checked
-    ? SRAM.GetSaveSlot(2)
-    : radioFile3.Checked
-        ? SRAM.GetSaveSlot(3)
-        : SRAM.GetSaveSlot(1);
+        ? SRAM.GetSaveSlot(2)
+        : radioFile3.Checked
+            ? SRAM.GetSaveSlot(3)
+            : SRAM.GetSaveSlot(1);
 
     private Link GetCurrentSlotPlayer() =>
         GetSaveSlot().GetPlayer();
@@ -86,10 +91,11 @@ public partial class MainForm : Form
         {
             return;
         }
+
         fname = fd1.FileName;
 
         try
-        { 
+        {
             // Open the text file using a File Stream
             var bytes = File.ReadAllBytes(fname);
             var fileSize = new FileInfo(fname).Length;
@@ -119,7 +125,8 @@ public partial class MainForm : Form
 
                         if (!validFile)
                         {
-                            MessageBox.Show("Invalid SRAM File. (Randomizer saves aren't supported. Maybe one day...?)");
+                            MessageBox.Show(
+                                "Invalid SRAM File. (Randomizer saves aren't supported. Maybe one day...?)");
                         }
                         else
                         {
@@ -136,16 +143,16 @@ public partial class MainForm : Form
         catch (IOException)
         {
             helperText.Text = $"""
-                File reading conflict: {fname}.
-                Is it open in another program?
-                """;
+                               File reading conflict: {fname}.
+                               Is it open in another program?
+                               """;
         }
         catch (Exception e)
         {
             MessageBox.Show($"""
-                The file could not be read:
-                {e.Message}
-                """);
+                             The file could not be read:
+                             {e.Message}
+                             """);
         }
     }
 
@@ -163,12 +170,14 @@ public partial class MainForm : Form
         var savslot = SRAM.GetSaveSlot(1);
         var savslot2 = SRAM.GetSaveSlot(2);
         var savslot3 = SRAM.GetSaveSlot(3);
-        if (savslot.GetRegion() == SaveRegion.JPN || savslot2.GetRegion() == SaveRegion.JPN || savslot3.GetRegion() == SaveRegion.JPN)
+        if (savslot.GetRegion() == SaveRegion.JPN || savslot2.GetRegion() == SaveRegion.JPN ||
+            savslot3.GetRegion() == SaveRegion.JPN)
         {
             Console.WriteLine(" - JPN Save Detected");
             saveRegion = SaveRegion.JPN;
         }
-        else if (savslot.GetRegion() == SaveRegion.USA || savslot2.GetRegion() == SaveRegion.USA || savslot3.GetRegion() == SaveRegion.USA)
+        else if (savslot.GetRegion() == SaveRegion.USA || savslot2.GetRegion() == SaveRegion.USA ||
+                 savslot3.GetRegion() == SaveRegion.USA)
         {
             Console.WriteLine(" - USA Save Detected");
             saveRegion = SaveRegion.USA;
@@ -199,6 +208,7 @@ public partial class MainForm : Form
             buttonCreate.Visible = true;
             buttonCopy.Visible = false;
         }
+
         Refresh(); // Update the screen, including the player name
     }
 
@@ -221,9 +231,9 @@ public partial class MainForm : Form
         catch (IOException)
         {
             helperText.Text = $"""
-                File writing conflict: {fname}.
-                Is it open in another program?
-                """;
+                               File writing conflict: {fname}.
+                               Is it open in another program?
+                               """;
         }
     }
 
@@ -239,6 +249,7 @@ public partial class MainForm : Form
         {
             return;
         }
+
         switch (e.KeyCode.ToString())
         {
             case "O": // CTRL+O: Open file
@@ -257,11 +268,11 @@ public partial class MainForm : Form
     private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
     {
         const string toolCredits = """
-            ALTTP SRAM Editor
-            - Created by mysterypaint 2018
+                                   ALTTP SRAM Editor
+                                   - Created by mysterypaint 2018
 
-            Special thanks to alttp.run for the reverse-engineering documentation. http://alttp.run/hacking/index.php?title=SRAM_Map
-            """;
+                                   Special thanks to alttp.run for the reverse-engineering documentation. http://alttp.run/hacking/index.php?title=SRAM_Map
+                                   """;
         MessageBox.Show(toolCredits);
     }
 
@@ -315,6 +326,7 @@ public partial class MainForm : Form
         {
             MessageBox.Show(message);
         }
+
         buttonWrite.Enabled = true;
     }
 
@@ -335,6 +347,7 @@ public partial class MainForm : Form
             savslot = SRAM.WriteFile(3, TextCharacterData);
             helperText.Text = "Wrote to File 3!";
         }
+
         UpdateAllConfigurables(savslot);
         Refresh();
     }
@@ -393,6 +406,7 @@ public partial class MainForm : Form
             buttonChangeName.Enabled = true;
             buttonResetDeaths.Enabled = true;
         }
+
         displayPlayerName = _str ?? savslot.GetPlayerName();
         Refresh(); // Update the screen, including the player name
     }
@@ -406,7 +420,7 @@ public partial class MainForm : Form
         5 => 55,
         6 => 60,
         7 => 70,
-        _ => 30,
+        _ => 30
     };
 
     private void UpdateBombsMax() => numericUpDownBombsHeld.Maximum = numericUpDownBombUpgrades.Value switch
@@ -418,7 +432,7 @@ public partial class MainForm : Form
         5 => 35,
         6 => 40,
         7 => 50,
-        _ => 10,
+        _ => 10
     };
 
     private void UpdateAllConfigurables(SaveSlot? savslot)
@@ -485,7 +499,7 @@ public partial class MainForm : Form
         {
             0x1 => lttp_magic_bar_halved,
             0x2 => lttp_magic_bar_quarter,
-            _ => lttp_magic_bar,
+            _ => lttp_magic_bar
         };
 
         CheckBowAndArrows();
@@ -781,7 +795,7 @@ public partial class MainForm : Form
                 0x2 => (bowOption2, Bow_and_Arrow),
                 0x3 => (bowOption3, Bow_and_Light_Arrow),
                 0x4 => (bowOption4, Bow_and_Light_Arrow),
-                _ => (bowOptionNone, D_Bow),
+                _ => (bowOptionNone, D_Bow)
             };
             option.Checked = true;
             pictureBow.Image = image;
@@ -793,7 +807,7 @@ public partial class MainForm : Form
             {
                 0x1 => (radioButtonBlueBoomerang, Boomerang),
                 0x2 => (radioButtonRedBoomerang, Magical_Boomerang),
-                _ => (radioButtonNoBoomerang, D_Boomerang),
+                _ => (radioButtonNoBoomerang, D_Boomerang)
             };
             option.Checked = true;
             pictureBoomerang.Image = image;
@@ -806,7 +820,7 @@ public partial class MainForm : Form
                 0x1 => (radioButtonShovel, Shovel),
                 0x2 => (radioButtonFlute, Flute),
                 0x3 => (radioButtonFluteAndBird, Flute),
-                _ => (radioButtonNoShovelOrFlute, D_Shovel),
+                _ => (radioButtonNoShovelOrFlute, D_Shovel)
             };
             option.Checked = true;
             pictureShovelFlute.Image = image;
@@ -818,7 +832,7 @@ public partial class MainForm : Form
             {
                 0x1 => (radioButtonPowerGloves, Power_Glove),
                 0x2 => (radioButtonTitansMitts, Titan_s_Mitt),
-                _ => (radioButtonNoGloves, D_Power_Glove),
+                _ => (radioButtonNoGloves, D_Power_Glove)
             };
             option.Checked = true;
             picturePowerGlove.Image = image;
@@ -830,7 +844,7 @@ public partial class MainForm : Form
             {
                 0x1 => (radioButtonMushroom, Mushroom),
                 0x2 => (radioButtonPowder, Magic_Powder),
-                _ => (radioButtonNoMushPowd, D_Mushroom),
+                _ => (radioButtonNoMushPowd, D_Mushroom)
             };
             option.Checked = true;
             pictureMushPowd.Image = image;
@@ -844,7 +858,7 @@ public partial class MainForm : Form
                 0x2 => (radioButtonMasterSword, Master_Sword),
                 0x3 => (radioButtonTemperedSword, Tempered_Sword),
                 0x4 => (radioButtonGoldenSword, Golden_Sword),
-                _ => (radioButtonNoSword, D_Fighter_s_Sword),
+                _ => (radioButtonNoSword, D_Fighter_s_Sword)
             };
             option.Checked = true;
             pictureSword.Image = image;
@@ -857,7 +871,7 @@ public partial class MainForm : Form
                 0x1 => (radioButtonBlueShield, Fighter_s_Shield),
                 0x2 => (radioButtonHerosShield, Red_Shield),
                 0x3 => (radioButtonMirrorShield, Mirror_Shield),
-                _ => (radioButtonNoShield, D_Fighter_s_Shield),
+                _ => (radioButtonNoShield, D_Fighter_s_Shield)
             };
             option.Checked = true;
             pictureShield.Image = image;
@@ -869,7 +883,7 @@ public partial class MainForm : Form
             {
                 0x1 => (radioButtonBlueMail, Blue_Tunic),
                 0x2 => (radioButtonRedMail, Red_Tunic),
-                _ => (radioButtonGreenMail, Green_Tunic),
+                _ => (radioButtonGreenMail, Green_Tunic)
             };
             option.Checked = true;
             pictureMail.Image = image;
@@ -885,6 +899,7 @@ public partial class MainForm : Form
         {
             return;
         }
+
         var player = GetCurrentSlotPlayer();
         var (flag, image) = btn.Name switch
         {
@@ -903,7 +918,9 @@ public partial class MainForm : Form
     {
         var player = GetCurrentSlotPlayer();
         var val = (ushort)numericUpDownRupeeCounter.Value;
-        player.SetRupeesValue(val > 999 ? (ushort)999 : val);
+        player.SetRupeesValue(val > 999
+            ? (ushort)999
+            : val);
     }
 
     private void fileRadio(object sender, EventArgs e)
@@ -913,6 +930,7 @@ public partial class MainForm : Form
         {
             return;
         }
+
         var savslot = GetSaveSlot();
         var player = savslot.GetPlayer();
         UpdatePlayerName();
@@ -926,112 +944,115 @@ public partial class MainForm : Form
     protected override void OnPaint(PaintEventArgs e)
     {
         base.OnPaint(e);
-        
-        if (!string.IsNullOrEmpty(fname) && fileOpen)
+
+        if (string.IsNullOrEmpty(fname) || !fileOpen)
         {
-            var savslot = GetSaveSlot();
+            return;
+        }
 
-            if (!savslot.SaveIsValid() || !savslot.GetIsValid())
+        var savslot = GetSaveSlot();
+
+        if (!savslot.SaveIsValid() || !savslot.GetIsValid())
+        {
+            textQuarterMagic.Visible = false;
+            if (!canRefresh)
             {
-                textQuarterMagic.Visible = false;
-                if (!canRefresh)
-                {
-                    return;
-                }
-
-                canRefresh = false;
-                Refresh();
                 return;
             }
 
-            // Initialize the brush for drawing, then draw the black box behind the player name
-            var rectBrush = new SolidBrush(Color.Black);
-            const int border = 2;
-            const int scale = 2; // Matching the scale in DrawTile
-            const int charWidth = 8 * scale; // 16 pixels per character
-            const int charHeight = 16 * scale; // 32 pixels per character
-            const int maxNameLength = 6; // Maximum characters in a name
-            e.Graphics.FillRectangle(rectBrush, new Rectangle(
-                nameStartX - border, 
-                nameStartY - border, 
-                charWidth * maxNameLength + border * 2, 
-                charHeight + border * 2));
-
-            // Grab the player so we can get their info
-            var player = savslot.GetPlayer();
-
-            // Now we'll loop through and draw all the hearts as required to represent the player's health
-            // First, create a blank canvas so we can draw to it (this is abstract, won't show up on the screen, it's just in the computer memory)
-            var fillRect = new Rectangle(0, 0, 84, 20);
-            var tex = new Bitmap(fillRect.Width, fillRect.Height);
-
-            // Draw onto the blank canvas we created
-            using var heartContainersGr = Graphics.FromImage(tex);
-            // Apply some pixel-perfect settings before we draw anything...
-            heartContainersGr.Clear(Color.Transparent);
-            heartContainersGr.InterpolationMode = InterpolationMode.NearestNeighbor;
-            heartContainersGr.PixelOffsetMode = PixelOffsetMode.Half;
-
-            double heartContainers = player.GetHeartContainers();
-            for (var i = 0; i < heartContainers / 8; i++)
-            {
-                var xOff = i % 10 * 8;
-                var yOff = i / 10 * 8;
-                if (i >= heartContainers / 8.0f - 1.0f && heartContainers % 8 != 0)
-                {
-                    heartContainersGr.DrawImage(imgHeartContainerPartial, 2 + xOff, 2 + yOff);
-                }
-                else
-                {
-                    heartContainersGr.DrawImage(imgHeartContainerFull, 2 + xOff, 2 + yOff);
-                }
-            }
-
-            // Write all the contents of the canvas into the heart container preview PictureBox on the Form
-            pictureBoxHeartContainerPreview.Image = tex;
-            Image magicContainer = player.GetCurrMagicUpgrade() switch
-            {
-                0x1 => lttp_magic_bar_halved,
-                0x2 => lttp_magic_bar_quarter,
-                _ => lttp_magic_bar,
-            };
-
-            // Create another blank canvas so we can draw to it
-            fillRect = new Rectangle(0, 0, magicContainer.Width, magicContainer.Height);
-            tex = new Bitmap(fillRect.Width, fillRect.Height);
-
-            // Draw onto the blank canvas we created
-            using var magicMeterGr = Graphics.FromImage(tex);
-            // Apply some pixel-perfect settings before we draw anything...
-            magicMeterGr.Clear(Color.Transparent);
-            magicMeterGr.InterpolationMode = InterpolationMode.NearestNeighbor;
-            magicMeterGr.PixelOffsetMode = PixelOffsetMode.Half;
-
-            // Draw the empty magic bar container into the canvas (not to the screen)
-            var currMagic = player.GetCurrMagic();
-            magicMeterGr.DrawImage(magicContainer, 0, 0);
-
-            // Using a colored rectangle, fill the magic bar with a bar representing magic, based on what the player's current magic value is
-            rectBrush.Color = ColorTranslator.FromHtml("#FF21C329");
-            fillRect = new Rectangle(0 + 4, 0 - (currMagic + 3) / 4 + 40, 8, (currMagic + 3) / 4);
-            magicMeterGr.FillRectangle(rectBrush, fillRect);
-
-            // If necessary, draw the white "1-pixel-line" part of the magic bar fill, for aesthetic purposes
-            if (currMagic > 0)
-            {
-                rectBrush.Color = ColorTranslator.FromHtml("#FFFFFBFF");
-                fillRect = new Rectangle(5, -((currMagic + 3) / 4) + 40, 6, 1);
-                magicMeterGr.FillRectangle(rectBrush, fillRect); // Could probably use a pen w/ DrawLine() here, but might as well recycle the rectangle
-            }
-
-            // Write all the contents of the canvas into the magic bar's PictureBox on the Form
-            pictureBoxMagicBar.Image = tex;
-
-            // Get rid of the brush to prevent memory leaks
-            rectBrush.Dispose();
-            
-            DrawDisplayPlayerName(e);
+            canRefresh = false;
+            Refresh();
+            return;
         }
+
+        // Initialize the brush for drawing, then draw the black box behind the player name
+        var rectBrush = new SolidBrush(Color.Black);
+        const int border = 2;
+        const int scale = 2; // Matching the scale in DrawTile
+        const int charWidth = 8 * scale; // 16 pixels per character
+        const int charHeight = 16 * scale; // 32 pixels per character
+        const int maxNameLength = 6; // Maximum characters in a name
+        e.Graphics.FillRectangle(rectBrush, new Rectangle(
+            nameStartX - border,
+            nameStartY - border,
+            charWidth * maxNameLength + border * 2,
+            charHeight + border * 2));
+
+        // Grab the player so we can get their info
+        var player = savslot.GetPlayer();
+
+        // Now we'll loop through and draw all the hearts as required to represent the player's health
+        // First, create a blank canvas so we can draw to it (this is abstract, won't show up on the screen, it's just in the computer memory)
+        var fillRect = new Rectangle(0, 0, 84, 20);
+        var tex = new Bitmap(fillRect.Width, fillRect.Height);
+
+        // Draw onto the blank canvas we created
+        using var heartContainersGr = Graphics.FromImage(tex);
+        // Apply some pixel-perfect settings before we draw anything...
+        heartContainersGr.Clear(Color.Transparent);
+        heartContainersGr.InterpolationMode = InterpolationMode.NearestNeighbor;
+        heartContainersGr.PixelOffsetMode = PixelOffsetMode.Half;
+
+        double heartContainers = player.GetHeartContainers();
+        for (var i = 0; i < heartContainers / 8; i++)
+        {
+            var xOff = i % 10 * 8;
+            var yOff = i / 10 * 8;
+            if (i >= heartContainers / 8.0f - 1.0f && heartContainers % 8 != 0)
+            {
+                heartContainersGr.DrawImage(imgHeartContainerPartial, 2 + xOff, 2 + yOff);
+            }
+            else
+            {
+                heartContainersGr.DrawImage(imgHeartContainerFull, 2 + xOff, 2 + yOff);
+            }
+        }
+
+        // Write all the contents of the canvas into the heart container preview PictureBox on the Form
+        pictureBoxHeartContainerPreview.Image = tex;
+        Image magicContainer = player.GetCurrMagicUpgrade() switch
+        {
+            0x1 => lttp_magic_bar_halved,
+            0x2 => lttp_magic_bar_quarter,
+            _ => lttp_magic_bar
+        };
+
+        // Create another blank canvas so we can draw to it
+        fillRect = new Rectangle(0, 0, magicContainer.Width, magicContainer.Height);
+        tex = new Bitmap(fillRect.Width, fillRect.Height);
+
+        // Draw onto the blank canvas we created
+        using var magicMeterGr = Graphics.FromImage(tex);
+        // Apply some pixel-perfect settings before we draw anything...
+        magicMeterGr.Clear(Color.Transparent);
+        magicMeterGr.InterpolationMode = InterpolationMode.NearestNeighbor;
+        magicMeterGr.PixelOffsetMode = PixelOffsetMode.Half;
+
+        // Draw the empty magic bar container into the canvas (not to the screen)
+        var currMagic = player.GetCurrMagic();
+        magicMeterGr.DrawImage(magicContainer, 0, 0);
+
+        // Using a colored rectangle, fill the magic bar with a bar representing magic, based on what the player's current magic value is
+        rectBrush.Color = ColorTranslator.FromHtml("#FF21C329");
+        fillRect = new Rectangle(0 + 4, 0 - (currMagic + 3) / 4 + 40, 8, (currMagic + 3) / 4);
+        magicMeterGr.FillRectangle(rectBrush, fillRect);
+
+        // If necessary, draw the white "1-pixel-line" part of the magic bar fill, for aesthetic purposes
+        if (currMagic > 0)
+        {
+            rectBrush.Color = ColorTranslator.FromHtml("#FFFFFBFF");
+            fillRect = new Rectangle(5, -((currMagic + 3) / 4) + 40, 6, 1);
+            magicMeterGr.FillRectangle(rectBrush,
+                fillRect); // Could probably use a pen w/ DrawLine() here, but might as well recycle the rectangle
+        }
+
+        // Write all the contents of the canvas into the magic bar's PictureBox on the Form
+        pictureBoxMagicBar.Image = tex;
+
+        // Get rid of the brush to prevent memory leaks
+        rectBrush.Dispose();
+
+        DrawDisplayPlayerName(e);
     }
 
     private void DrawDisplayPlayerName(PaintEventArgs e)
@@ -1113,7 +1134,8 @@ public partial class MainForm : Form
     private void numericUpDownArrowsHeld_ValueChanged(object sender, EventArgs e)
     {
         var player = GetCurrentSlotPlayer();
-        player.SetHasItemEquipment(ArrowCountAddress, (byte)numericUpDownArrowsHeld.Value); // Set the new arrow count value
+        player.SetHasItemEquipment(ArrowCountAddress,
+            (byte)numericUpDownArrowsHeld.Value); // Set the new arrow count value
     }
 
     private void pictureBox1_Click(object sender, EventArgs e) =>
@@ -1133,6 +1155,7 @@ public partial class MainForm : Form
                 c.Visible = false;
             }
         }
+
         currentGroupBox.Visible = true;
     }
 
@@ -1142,6 +1165,7 @@ public partial class MainForm : Form
         {
             return;
         }
+
         var player = GetCurrentSlotPlayer();
         var (flag, image) = btn.Name switch
         {
@@ -1175,10 +1199,13 @@ public partial class MainForm : Form
     private void numericUpDownBombsHeld_ValueChanged(object sender, EventArgs e)
     {
         var player = GetCurrentSlotPlayer();
-        player.SetHasItemEquipment(BombCountAddress, (byte)numericUpDownBombsHeld.Value); // Set the new bomb count value
+        player.SetHasItemEquipment(BombCountAddress,
+            (byte)numericUpDownBombsHeld.Value); // Set the new bomb count value
 
         // Update the UI picture if necessary
-        pictureBombs.Image = numericUpDownBombsHeld.Value <= 0 ? D_Bomb : (Image)Bomb;
+        pictureBombs.Image = numericUpDownBombsHeld.Value <= 0
+            ? D_Bomb
+            : (Image)Bomb;
     }
 
     private void pictureBombs_Click(object sender, EventArgs e) => HideAllGroupBoxesExcept(groupBoxBombs);
@@ -1191,6 +1218,7 @@ public partial class MainForm : Form
         {
             return;
         }
+
         var player = GetCurrentSlotPlayer();
         var (flag, image) = btn.Name switch
         {
@@ -1209,6 +1237,7 @@ public partial class MainForm : Form
         {
             return;
         }
+
         var player = GetCurrentSlotPlayer();
         var (flag, image) = btn.Name switch
         {
@@ -1231,6 +1260,7 @@ public partial class MainForm : Form
         {
             return;
         }
+
         var player = GetCurrentSlotPlayer();
         var (flag, image) = btn.Name switch
         {
@@ -1254,6 +1284,7 @@ public partial class MainForm : Form
         {
             return;
         }
+
         var player = GetCurrentSlotPlayer();
         var (flag, image) = btn.Name switch
         {
@@ -1476,6 +1507,7 @@ public partial class MainForm : Form
         {
             return;
         }
+
         var player = GetCurrentSlotPlayer();
         var (flag, image) = btn.Name switch
         {
@@ -1495,6 +1527,7 @@ public partial class MainForm : Form
         {
             return;
         }
+
         var player = GetCurrentSlotPlayer();
         var (flag, image) = btn.Name switch
         {
@@ -1515,7 +1548,7 @@ public partial class MainForm : Form
             1 => Piece_of_Heart_Quarter,
             2 => Piece_of_Heart_Half,
             3 => Piece_of_Heart_Three_Quarters,
-            _ => Piece_of_Heart_Empty,
+            _ => Piece_of_Heart_Empty
         };
         pictureHeartPieces.Image = outImg;
         Refresh();
@@ -1559,6 +1592,7 @@ public partial class MainForm : Form
             default:
                 throw new ArgumentOutOfRangeException($"{nameof(e)}.{nameof(e.Button)}");
         }
+
         UpdateHeartPieceUI();
         numericUpDownHeartContainers.Value = player.GetHeartContainers();
         //pictureHeartPieces
@@ -1695,7 +1729,7 @@ public partial class MainForm : Form
         {
             0x1 => (lttp_magic_bar_quarter, 0x2, true),
             0x2 => (lttp_magic_bar, 0x0, false),
-            _ => (lttp_magic_bar_halved, 0x1, false),
+            _ => (lttp_magic_bar_halved, 0x1, false)
         };
 
         pictureBoxMagicBar.Image = magicBarImage;
@@ -1742,12 +1776,15 @@ public partial class MainForm : Form
     private void buttonResetDeaths_Click(object sender, EventArgs e)
     {
         var savslot = GetSaveSlot();
-        var dialogResult = MessageBox.Show("Reset all deaths/saves for this save file?", "Reset Deaths/Saves?", MessageBoxButtons.YesNo);
+        var dialogResult = MessageBox.Show("Reset all deaths/saves for this save file?", "Reset Deaths/Saves?",
+            MessageBoxButtons.YesNo);
         if (dialogResult != DialogResult.Yes)
         {
             return;
         }
-        var postGame = MessageBox.Show("Show the deaths on the File Select Screen?", "Show on File Select Screen?", MessageBoxButtons.YesNo);
+
+        var postGame = MessageBox.Show("Show the deaths on the File Select Screen?", "Show on File Select Screen?",
+            MessageBoxButtons.YesNo);
         savslot.ResetFileDeaths(postGame != DialogResult.No);
     }
 }

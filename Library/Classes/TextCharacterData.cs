@@ -2,11 +2,6 @@
 
 public class TextCharacterData
 {
-    public Dictionary<char, int> EnChar { get; } = [];
-    public Dictionary<char, int> JpChar { get; } = [];
-    public Dictionary<ushort, char> RawEnChar { get; } = [];
-    public Dictionary<ushort, char> RawJpChar { get; } = [];
-
     public TextCharacterData()
     {
         // Define Font lookup tables
@@ -577,4 +572,9 @@ public class TextCharacterData
         //rawJPChar.Add(0x0189, '-'); <- Exactly the same as hiragana; accounted for in the name-reading code
         RawJpChar.Add(0x018E, '~');
     }
+
+    public Dictionary<char, int> EnChar { get; } = [];
+    public Dictionary<char, int> JpChar { get; } = [];
+    public Dictionary<ushort, char> RawEnChar { get; } = [];
+    public Dictionary<ushort, char> RawJpChar { get; } = [];
 }
