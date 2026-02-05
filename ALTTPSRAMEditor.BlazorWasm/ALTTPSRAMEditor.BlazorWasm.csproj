@@ -16,4 +16,13 @@
         <ProjectReference Include="..\Library\Library.csproj"/>
     </ItemGroup>
 
+    <!-- Tailwind: exclude input from publish and include as None -->
+    <ItemGroup>
+        <Content Remove="wwwroot\css\tailwind.input.css" />
+        <None Include="wwwroot\css\tailwind.input.css" />
+    </ItemGroup>
+
+    <!-- Import Tailwind build targets -->
+    <Import Project="Tailwind.targets" />
+
 </Project>

@@ -1,0 +1,3 @@
+/* Import only theme variables and utilities; omit base/preflight to avoid global resets */
+@import "tailwindcss/theme";
+@import "tailwindcss/utilities";
