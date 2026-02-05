@@ -1,7 +1,7 @@
 ﻿namespace ALTTPSRAMEditor.BlazorWasm.Pages;
 
 // ReSharper disable once ClassNeverInstantiated.Global
-public partial class Index
+public partial class Home
 {
     private const long MaxSrmSize = 0x8000;
 
