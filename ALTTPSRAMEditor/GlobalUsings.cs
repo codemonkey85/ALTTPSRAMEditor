@@ -10,3 +10,4 @@ global using System.Text;
 global using static ALTTPSRAMEditor.DrawCharHelper;
 global using static Library.Classes.Constants;
 global using static Library.Classes.Enums;
+global using static ALTTPSRAMEditor.Properties.Resources;

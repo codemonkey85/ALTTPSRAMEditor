@@ -1,8 +1,6 @@
 ﻿// ReSharper disable InconsistentNaming
 // ReSharper disable LocalizableElement
 
-using static ALTTPSRAMEditor.Properties.Resources;
-
 namespace ALTTPSRAMEditor;
 
 [SuppressMessage("Interoperability", "CA1416:Validate platform compatibility",
@@ -1125,9 +1123,9 @@ public partial class MainForm : Form
 
     private void buttonChangeName_Click(object sender, EventArgs e)
     {
-        var nameForm = saveRegion == SaveRegion.JPN
+        Form nameForm = saveRegion == SaveRegion.JPN
             ? new NameChangingFormJp(this)
-            : (Form)new NameChangingFormEn(this);
+            : new NameChangingFormEn(this);
         nameForm.ShowDialog();
     }
 
@@ -1559,6 +1557,7 @@ public partial class MainForm : Form
         var player = GetCurrentSlotPlayer();
         var playerCurrHearts = player.GetHeartContainers();
         var playerCurrHeartPieces = player.GetHeartPieces();
+        // ReSharper disable once SwitchStatementHandlesSomeKnownEnumValuesWithDefault
         switch (e.Button)
         {
             case MouseButtons.Left:

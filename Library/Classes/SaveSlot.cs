@@ -9,7 +9,7 @@ public class SaveSlot
     private readonly SaveRegion SaveRegion;
     private readonly TextCharacterData TextCharacterData;
     private byte Crystals;
-    private byte[] Data;
+    private readonly byte[] Data;
     private bool IsValid;
     private byte Pendants;
     private string PlayerName = string.Empty;
@@ -193,8 +193,6 @@ public class SaveSlot
     }
 
     public Link GetPlayer() => Player;
-
-    public ushort[] GetPlayerNameRaw() => PlayerNameRaw;
 
     public void SetPlayerNameRaw(ushort[] _newName)
     {
@@ -442,9 +440,6 @@ public class SaveSlot
     public string GetPlayerName() => PlayerName;
 
     public void SetPlayerName(string str) => PlayerName = str;
-
-    // ReSharper disable once ParameterTypeCanBeEnumerable.Global
-    public void SetData(byte[] in_data) => Data = [.. in_data];
 
     public void ClearData()
     {

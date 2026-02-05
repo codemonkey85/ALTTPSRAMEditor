@@ -1,7 +1,5 @@
 // ReSharper disable LocalizableElement
 
-using static ALTTPSRAMEditor.Properties.Resources;
-
 namespace ALTTPSRAMEditor;
 
 [SuppressMessage("Interoperability", "CA1416:Validate platform compatibility",
