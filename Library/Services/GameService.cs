@@ -56,6 +56,25 @@ public class GameService
     }
 
     /// <summary>
+    ///     Loads SRAM data from memory
+    /// </summary>
+    public (bool success, string message, SaveRegion? region) LoadSramData(byte[] data,
+        TextCharacterData textCharacterData, string fileName = "")
+    {
+        var loadResult = _fileService.LoadSramData(data);
+
+        if (!loadResult.Success || loadResult.Data is null)
+        {
+            return (false, loadResult.ErrorMessage ?? "Unknown error", null);
+        }
+
+        CurrentFilePath = fileName;
+        var region = _gameStateService.LoadSram(loadResult.Data, textCharacterData);
+
+        return (true, string.IsNullOrWhiteSpace(fileName) ? "Loaded SRAM data" : $"Opened {fileName}", region);
+    }
+
+    /// <summary>
     ///     Saves the current SRAM file
     /// </summary>
     public (bool success, string message) SaveFile()
@@ -72,6 +91,11 @@ public class GameService
             ? (true, $"Saved file at {CurrentFilePath}")
             : (false, saveResult.ErrorMessage ?? "Unknown error");
     }
+
+    /// <summary>
+    ///     Returns the current SRAM data for saving elsewhere
+    /// </summary>
+    public byte[] GetSaveData() => _gameStateService.MergeSaveData();
 
     #endregion
 

@@ -20,14 +20,7 @@ public class SramFileService
             }
 
             var bytes = File.ReadAllBytes(filePath);
-            var fileSize = new FileInfo(filePath).Length;
-
-            return fileSize switch
-            {
-                SrmSize => new FileLoadResult(true, bytes, FileSize: fileSize),
-                > SrmSize => ValidateLargerFile(bytes, fileSize),
-                _ => new FileLoadResult(false, ErrorMessage: "Invalid SRAM File.")
-            };
+            return LoadSramData(bytes);
         }
         catch (IOException ex)
         {
@@ -37,6 +30,25 @@ public class SramFileService
         {
             return new FileLoadResult(false, ErrorMessage: $"The file could not be read: {ex.Message}");
         }
+    }
+
+    /// <summary>
+    ///     Loads and validates SRAM data from an in-memory buffer
+    /// </summary>
+    public FileLoadResult LoadSramData(byte[] data)
+    {
+        if (data.Length == 0)
+        {
+            return new FileLoadResult(false, ErrorMessage: "Invalid SRAM File.");
+        }
+
+        var fileSize = data.LongLength;
+        return fileSize switch
+        {
+            SrmSize => new FileLoadResult(true, data, FileSize: fileSize),
+            > SrmSize => ValidateLargerFile(data, fileSize),
+            _ => new FileLoadResult(false, ErrorMessage: "Invalid SRAM File.")
+        };
     }
 
     /// <summary>
