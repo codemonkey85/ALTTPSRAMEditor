@@ -6,26 +6,26 @@
 <MudPaper Class="p-6 mb-6">
     <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <div>
-            <MudText Typo="Typo.h4">SRAM Editor</MudText>
-            <MudText Typo="Typo.subtitle2"
-                     Color="Color.Secondary">Load an SRAM file to begin editing.
+            <MudText Typo="@Typo.h4">SRAM Editor</MudText>
+            <MudText Typo="@Typo.subtitle2"
+                     Color="@Color.Secondary">Load an SRAM file to begin editing.
             </MudText>
         </div>
         <div class="relative inline-block">
-            <MudButton Variant="Variant.Filled"
-                       Color="Color.Primary"
+            <MudButton Variant="@Variant.Filled"
+                       Color="@Color.Primary"
                        StartIcon="@Icons.Material.Filled.UploadFile">
                 Load SRAM
             </MudButton>
-            <InputFile OnChange="HandleFileSelected"
+            <InputFile OnChange="@HandleFileSelected"
                        accept=".srm"
                        class="absolute inset-0 h-full w-full cursor-pointer opacity-0"/>
         </div>
     </div>
     @if (!string.IsNullOrWhiteSpace(StatusMessage))
     {
-        <MudAlert Severity="Severity.Info"
-                  Dense="true"
+        <MudAlert Severity="@Severity.Info"
+                  Dense="@true"
                   Class="mt-4">@StatusMessage</MudAlert>
     }
 </MudPaper>
@@ -34,43 +34,43 @@
 {
     <div class="grid grid-cols-1 gap-4 lg:grid-cols-3">
         <MudPaper Class="p-4">
-            <MudText Typo="Typo.subtitle1">Current File</MudText>
+            <MudText Typo="@Typo.subtitle1">Current File</MudText>
             <MudRadioGroup T="int"
-                           @bind-Value="SelectedSlot"
+                           @bind-Value="@SelectedSlot"
                            Class="mt-2">
                 <MudRadio T="int"
                           Value="1"
-                          Color="Color.Primary">File 1
+                          Color="@Color.Primary">File 1
                 </MudRadio>
                 <MudRadio T="int"
                           Value="2"
-                          Color="Color.Primary">File 2
+                          Color="@Color.Primary">File 2
                 </MudRadio>
                 <MudRadio T="int"
                           Value="3"
-                          Color="Color.Primary">File 3
+                          Color="@Color.Primary">File 3
                 </MudRadio>
             </MudRadioGroup>
             <MudStack Spacing="1"
                       Class="mt-4">
-                <MudButton Variant="Variant.Outlined"
-                           OnClick="CreateFile">Create
+                <MudButton Variant="@Variant.Outlined"
+                           OnClick="@CreateFile">Create
                 </MudButton>
-                <MudButton Variant="Variant.Outlined"
-                           OnClick="CopyFile">Copy
+                <MudButton Variant="@Variant.Outlined"
+                           OnClick="@CopyFile">Copy
                 </MudButton>
-                <MudButton Variant="Variant.Outlined"
-                           OnClick="WriteFile">Write
+                <MudButton Variant="@Variant.Outlined"
+                           OnClick="@WriteFile">Write
                 </MudButton>
-                <MudButton Variant="Variant.Outlined"
-                           Color="Color.Error"
-                           OnClick="EraseFile">Erase
+                <MudButton Variant="@Variant.Outlined"
+                           Color="@Color.Error"
+                           OnClick="@EraseFile">Erase
                 </MudButton>
             </MudStack>
         </MudPaper>
 
         <MudPaper Class="p-4">
-            <MudText Typo="Typo.subtitle1">Filename</MudText>
+            <MudText Typo="@Typo.subtitle1">Filename</MudText>
             <div class="relative mt-2 h-12 w-48">
                 <img class="pixelated h-full w-full"
                      src="@GetResourceUrl(GetFilenamePanelImage())"
@@ -82,34 +82,34 @@
                 @PlayerName
             </span>
             </div>
-            <MudTextField @bind-Value="PlayerName"
+            <MudTextField @bind-Value="@PlayerName"
                           Label="Player Name"
-                          Variant="Variant.Outlined"
+                          Variant="@Variant.Outlined"
                           Class="mt-3"/>
             <MudStack Row="true"
                       Spacing="1"
                       Class="mt-3 flex-wrap">
-                <MudButton Variant="Variant.Filled"
-                           Color="Color.Primary"
-                           OnClick="ApplyPlayerName">Change Name
+                <MudButton Variant="@Variant.Filled"
+                           Color="@Color.Primary"
+                           OnClick="@ApplyPlayerName">Change Name
                 </MudButton>
-                <MudButton Variant="Variant.Outlined"
-                           OnClick="ResetDeaths">Reset Deaths
+                <MudButton Variant="@Variant.Outlined"
+                           OnClick="@ResetDeaths">Reset Deaths
                 </MudButton>
             </MudStack>
             <MudDivider Class="my-4"/>
-            <MudText Typo="Typo.subtitle2"
-                     Color="Color.Secondary">Region: @CurrentRegion</MudText>
+            <MudText Typo="@Typo.subtitle2"
+                     Color="@Color.Secondary">Region: @CurrentRegion</MudText>
         </MudPaper>
 
         <MudPaper Class="p-4">
-            <MudText Typo="Typo.subtitle1">Inventory</MudText>
+            <MudText Typo="@Typo.subtitle1">Inventory</MudText>
             <div class="mt-3 grid grid-cols-5 gap-2 rounded bg-black p-3">
                 @foreach (var slot in InventorySlots)
                 {
                     <button type="button"
                             class="flex items-center justify-center rounded border border-slate-700 bg-slate-900 p-1 hover:border-slate-400"
-                            @onclick="() => ToggleInventoryItem(slot)">
+                            @onclick="@(() => ToggleInventoryItem(slot))">
                         <img class="pixelated h-10 w-10"
                              src="@slot.ImageSelector()"
                              alt="@slot.Name"/>
@@ -121,24 +121,24 @@
 
     <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 mt-4">
         <MudPaper Class="p-4 lg:col-span-2">
-            <MudText Typo="Typo.subtitle1">HUD</MudText>
+            <MudText Typo="@Typo.subtitle1">HUD</MudText>
             <div class="grid grid-cols-1 gap-3 md:grid-cols-3 mt-3">
                 <MudNumericField T="int"
-                                 @bind-Value="HeartContainers"
+                                 @bind-Value="@HeartContainers"
                                  Label="Heart Containers"
-                                 Variant="Variant.Outlined"
+                                 Variant="@Variant.Outlined"
                                  Min="8"
                                  Max="160"/>
                 <MudNumericField T="int"
-                                 @bind-Value="CurrentMagic"
+                                 @bind-Value="@CurrentMagic"
                                  Label="Magic"
-                                 Variant="Variant.Outlined"
+                                 Variant="@Variant.Outlined"
                                  Min="0"
                                  Max="128"/>
                 <MudNumericField T="int"
-                                 @bind-Value="Rupees"
+                                 @bind-Value="@Rupees"
                                  Label="Rupees"
-                                 Variant="Variant.Outlined"
+                                 Variant="@Variant.Outlined"
                                  Min="0"
                                  Max="999"/>
             </div>
@@ -181,52 +181,52 @@
             </div>
             <div class="grid grid-cols-1 gap-3 md:grid-cols-4 mt-3">
                 <MudNumericField T="int"
-                                 @bind-Value="ArrowUpgrades"
+                                 @bind-Value="@ArrowUpgrades"
                                  Label="Arrow Upgrades"
-                                 Variant="Variant.Outlined"
+                                 Variant="@Variant.Outlined"
                                  Min="0"
                                  Max="7"/>
                 <MudNumericField T="int"
-                                 @bind-Value="ArrowsHeld"
+                                 @bind-Value="@ArrowsHeld"
                                  Label="Arrows Held"
-                                 Variant="Variant.Outlined"
+                                 Variant="@Variant.Outlined"
                                  Min="0"
                                  Max="@MaxArrows"/>
                 <MudNumericField T="int"
-                                 @bind-Value="BombUpgrades"
+                                 @bind-Value="@BombUpgrades"
                                  Label="Bomb Upgrades"
-                                 Variant="Variant.Outlined"
+                                 Variant="@Variant.Outlined"
                                  Min="0"
                                  Max="7"/>
                 <MudNumericField T="int"
-                                 @bind-Value="BombsHeld"
+                                 @bind-Value="@BombsHeld"
                                  Label="Bombs Held"
-                                 Variant="Variant.Outlined"
+                                 Variant="@Variant.Outlined"
                                  Min="0"
                                  Max="@MaxBombs"/>
             </div>
             <MudStack Row="true"
                       Spacing="1"
                       Class="mt-4 flex-wrap">
-                <MudButton Variant="Variant.Filled"
-                           Color="Color.Primary"
-                           OnClick="ApplyPlayerChanges">Apply Changes
+                <MudButton Variant="@Variant.Filled"
+                           Color="@Color.Primary"
+                           OnClick="@ApplyPlayerChanges">Apply Changes
                 </MudButton>
-                <MudButton Variant="Variant.Outlined"
-                           OnClick="CycleMagicUpgrade">Cycle Magic Upgrade (@MagicUpgrade)
+                <MudButton Variant="@Variant.Outlined"
+                           OnClick="@CycleMagicUpgrade">Cycle Magic Upgrade (@MagicUpgrade)
                 </MudButton>
             </MudStack>
         </MudPaper>
 
         <MudPaper Class="p-4">
-            <MudText Typo="Typo.subtitle1">Pendants and Crystals</MudText>
+            <MudText Typo="@Typo.subtitle1">Pendants and Crystals</MudText>
             <div class="mt-3 grid gap-3">
                 <div class="grid grid-cols-3 gap-2 rounded bg-black p-3">
                     @foreach (var pendant in PendantSlots)
                     {
                         <button type="button"
                                 class="flex items-center justify-center rounded border border-transparent hover:border-slate-400"
-                                @onclick="() => TogglePendant(pendant)">
+                                @onclick="@(() => TogglePendant(pendant))">
                             <img class="pixelated h-10 w-10"
                                  src="@pendant.ImageSelector()"
                                  alt="@pendant.Name"/>
@@ -238,7 +238,7 @@
                     {
                         <button type="button"
                                 class="flex items-center justify-center rounded border border-transparent hover:border-slate-400"
-                                @onclick="() => ToggleCrystal(crystal)">
+                                @onclick="@(() => ToggleCrystal(crystal))">
                             <img class="pixelated h-8 w-8"
                                  src="@crystal.ImageSelector()"
                                  alt="@crystal.Name"/>
@@ -250,13 +250,13 @@
     </div>
 
     <MudPaper Class="p-4 mt-4 flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
-        <MudText Typo="Typo.subtitle2"
-                 Color="Color.Secondary">Ready to download updated SRAM.
+        <MudText Typo="@Typo.subtitle2"
+                 Color="@Color.Secondary">Ready to download updated SRAM.
         </MudText>
-        <MudButton Variant="Variant.Filled"
-                   Color="Color.Success"
+        <MudButton Variant="@Variant.Filled"
+                   Color="@Color.Success"
                    StartIcon="@Icons.Material.Filled.Download"
-                   OnClick="SaveFile">
+                   OnClick="@SaveFile">
             Download Updated SRAM
         </MudButton>
     </MudPaper>
