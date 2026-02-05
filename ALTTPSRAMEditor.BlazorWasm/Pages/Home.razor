@@ -119,6 +119,102 @@
         </MudPaper>
     </div>
 
+    <div class="grid grid-cols-1 gap-4 lg:grid-cols-2 mt-4">
+        <MudPaper Class="p-4">
+            <MudText Typo="@Typo.subtitle1">Inventory Item States</MudText>
+            <div class="mt-3 grid gap-3">
+                @foreach (var group in InventoryStateGroups)
+                {
+                    <div class="inventory-state-panel rounded border border-slate-600 bg-slate-900 p-3 text-slate-100">
+                        <MudText Typo="@Typo.subtitle2"
+                                 Color="@Color.Secondary">@group.Name</MudText>
+                        <MudRadioGroup T="int"
+                                       Value="@GetItemValue(group.Address)"
+                                       ValueChanged="value => SetItemValue(group.Address, value)"
+                                       Class="mt-2">
+                            @foreach (var option in group.Options)
+                            {
+                                <MudRadio T="int"
+                                          Value="@option.Value"
+                                          Color="@Color.Primary">@option.Label</MudRadio>
+                            }
+                        </MudRadioGroup>
+                    </div>
+                }
+            </div>
+        </MudPaper>
+
+        <MudPaper Class="p-4">
+            <MudText Typo="@Typo.subtitle1">Bottles</MudText>
+            <div class="mt-3 grid gap-3">
+                <div class="bottle-panel flex items-center gap-3 rounded border border-slate-600 bg-slate-900 p-3 text-slate-100">
+                    <img class="pixelated h-10 w-10"
+                         src="@GetBottleContentImage(Bottle1Value)"
+                         alt="Bottle 1 contents"/>
+                    <MudSelect T="int"
+                               @bind-Value="@Bottle1Value"
+                               Label="Bottle 1"
+                               Variant="@Variant.Outlined"
+                               Dense="true">
+                        @foreach (var option in BottleOptions)
+                        {
+                            <MudSelectItem T="int"
+                                           Value="@option.Value">@option.Label</MudSelectItem>
+                        }
+                    </MudSelect>
+                </div>
+                <div class="bottle-panel flex items-center gap-3 rounded border border-slate-600 bg-slate-900 p-3 text-slate-100">
+                    <img class="pixelated h-10 w-10"
+                         src="@GetBottleContentImage(Bottle2Value)"
+                         alt="Bottle 2 contents"/>
+                    <MudSelect T="int"
+                               @bind-Value="@Bottle2Value"
+                               Label="Bottle 2"
+                               Variant="@Variant.Outlined"
+                               Dense="true">
+                        @foreach (var option in BottleOptions)
+                        {
+                            <MudSelectItem T="int"
+                                           Value="@option.Value">@option.Label</MudSelectItem>
+                        }
+                    </MudSelect>
+                </div>
+                <div class="bottle-panel flex items-center gap-3 rounded border border-slate-600 bg-slate-900 p-3 text-slate-100">
+                    <img class="pixelated h-10 w-10"
+                         src="@GetBottleContentImage(Bottle3Value)"
+                         alt="Bottle 3 contents"/>
+                    <MudSelect T="int"
+                               @bind-Value="@Bottle3Value"
+                               Label="Bottle 3"
+                               Variant="@Variant.Outlined"
+                               Dense="true">
+                        @foreach (var option in BottleOptions)
+                        {
+                            <MudSelectItem T="int"
+                                           Value="@option.Value">@option.Label</MudSelectItem>
+                        }
+                    </MudSelect>
+                </div>
+                <div class="bottle-panel flex items-center gap-3 rounded border border-slate-600 bg-slate-900 p-3 text-slate-100">
+                    <img class="pixelated h-10 w-10"
+                         src="@GetBottleContentImage(Bottle4Value)"
+                         alt="Bottle 4 contents"/>
+                    <MudSelect T="int"
+                               @bind-Value="@Bottle4Value"
+                               Label="Bottle 4"
+                               Variant="@Variant.Outlined"
+                               Dense="true">
+                        @foreach (var option in BottleOptions)
+                        {
+                            <MudSelectItem T="int"
+                                           Value="@option.Value">@option.Label</MudSelectItem>
+                        }
+                    </MudSelect>
+                </div>
+            </div>
+        </MudPaper>
+    </div>
+
     <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 mt-4">
         <MudPaper Class="p-4 lg:col-span-2">
             <MudText Typo="@Typo.subtitle1">HUD</MudText>

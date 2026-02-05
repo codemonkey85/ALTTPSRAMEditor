@@ -57,6 +57,8 @@ public partial class Home
 
     private List<InventorySlot> InventorySlots { get; set; } = [];
 
+    private List<InventoryStateGroup> InventoryStateGroups { get; set; } = [];
+
     private List<CollectibleSlot> PendantSlots { get; set; } = [];
 
     private List<CollectibleSlot> CrystalSlots { get; set; } = [];
@@ -66,6 +68,25 @@ public partial class Home
     private int MaxBombs => ItemManagementService.GetMaxBombs(BombUpgrades);
 
     private int DisplayHearts => Math.Clamp(HeartContainers / 8, 0, 20);
+
+    private static readonly IReadOnlyList<BottleOption> BottleOptions =
+    [
+        new BottleOption("None", (int)Enums.BottleContents.NONE),
+        new BottleOption("Empty", (int)Enums.BottleContents.EMPTY),
+        new BottleOption("Red Potion", (int)Enums.BottleContents.RED_POTION),
+        new BottleOption("Green Potion", (int)Enums.BottleContents.GREEN_POTION),
+        new BottleOption("Blue Potion", (int)Enums.BottleContents.BLUE_POTION),
+        new BottleOption("Fairy", (int)Enums.BottleContents.FAERIE),
+        new BottleOption("Bee", (int)Enums.BottleContents.BEE),
+        new BottleOption("Good Bee", (int)Enums.BottleContents.GOOD_BEE),
+        new BottleOption("Mushroom", (int)Enums.BottleContents.MUSHROOM)
+    ];
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        BuildInventoryStateGroups();
+    }
 
     private async Task HandleFileSelected(InputFileChangeEventArgs args)
     {
@@ -113,6 +134,65 @@ public partial class Home
         BuildInventorySlots();
         BuildCollectibleSlots();
     }
+
+    private void BuildInventoryStateGroups() =>
+        InventoryStateGroups =
+        [
+            new InventoryStateGroup("Bow", Constants.BowAddress,
+            [
+                new InventoryStateOption("None", 0x0),
+                new InventoryStateOption("Bow", 0x1),
+                new InventoryStateOption("Bow & Arrows", 0x2),
+                new InventoryStateOption("Silver Bow", 0x3),
+                new InventoryStateOption("Bow & Silver Arrows", 0x4)
+            ]),
+            new InventoryStateGroup("Boomerang", Constants.BoomerangAddress,
+            [
+                new InventoryStateOption("None", 0x0),
+                new InventoryStateOption("Boomerang", 0x1),
+                new InventoryStateOption("Magical Boomerang", 0x2)
+            ]),
+            new InventoryStateGroup("Mushroom/Powder", Constants.MushroomPowderAddress,
+            [
+                new InventoryStateOption("None", 0x0),
+                new InventoryStateOption("Mushroom", 0x1),
+                new InventoryStateOption("Magic Powder", 0x2)
+            ]),
+            new InventoryStateGroup("Shovel/Flute", Constants.ShovelFluteAddress,
+            [
+                new InventoryStateOption("None", 0x0),
+                new InventoryStateOption("Shovel", 0x1),
+                new InventoryStateOption("Flute (Inactive)", 0x2),
+                new InventoryStateOption("Flute (Activated)", 0x3)
+            ]),
+            new InventoryStateGroup("Gloves", Constants.GlovesAddress,
+            [
+                new InventoryStateOption("None", 0x0),
+                new InventoryStateOption("Power Glove", 0x1),
+                new InventoryStateOption("Titan's Mitt", 0x2)
+            ]),
+            new InventoryStateGroup("Sword", Constants.SwordAddress,
+            [
+                new InventoryStateOption("None", 0x0),
+                new InventoryStateOption("Fighter's Sword", 0x1),
+                new InventoryStateOption("Master Sword", 0x2),
+                new InventoryStateOption("Tempered Sword", 0x3),
+                new InventoryStateOption("Golden Sword", 0x4)
+            ]),
+            new InventoryStateGroup("Shield", Constants.ShieldAddress,
+            [
+                new InventoryStateOption("None", 0x0),
+                new InventoryStateOption("Fighter's Shield", 0x1),
+                new InventoryStateOption("Red Shield", 0x2),
+                new InventoryStateOption("Mirror Shield", 0x3)
+            ]),
+            new InventoryStateGroup("Armor", Constants.ArmorAddress,
+            [
+                new InventoryStateOption("Green Tunic", 0x0),
+                new InventoryStateOption("Blue Tunic", 0x1),
+                new InventoryStateOption("Red Tunic", 0x2)
+            ])
+        ];
 
     private void ApplyPlayerName()
     {
@@ -377,15 +457,73 @@ public partial class Home
     private string GetBottleImage()
     {
         var bottleContents = Bottles?.InventoryBottleDisplay ?? 0;
-        return bottleContents > 0
-            ? GetResourceUrl("Bottle.png")
-            : GetResourceUrl("D Bottle.png");
+        return GetBottleContentImage(bottleContents);
     }
+
+    private string GetBottleContentImage(int contents) => contents switch
+    {
+        (int)Enums.BottleContents.EMPTY => GetResourceUrl("Bottle.png"),
+        (int)Enums.BottleContents.RED_POTION => GetResourceUrl("Red Potion.png"),
+        (int)Enums.BottleContents.GREEN_POTION => GetResourceUrl("Green Potion.png"),
+        (int)Enums.BottleContents.BLUE_POTION => GetResourceUrl("Blue Potion.png"),
+        (int)Enums.BottleContents.FAERIE => GetResourceUrl("Fairy.png"),
+        (int)Enums.BottleContents.BEE => GetResourceUrl("Bee.png"),
+        (int)Enums.BottleContents.GOOD_BEE => GetResourceUrl("Bee.png"),
+        (int)Enums.BottleContents.MUSHROOM => GetResourceUrl("Mushroom.png"),
+        _ => GetResourceUrl("D Bottle.png")
+    };
 
     private void ToggleInventoryItem(InventorySlot slot)
     {
         slot.ToggleAction?.Invoke();
         RefreshUiState();
+    }
+
+    private int GetItemValue(int address) => GameService.GetItem(address);
+
+    private void SetItemValue(int address, int value)
+    {
+        GameService.SetItem(address, (byte)value);
+        RefreshUiState();
+    }
+
+    private int GetBottleContents(int bottleNumber) => bottleNumber switch
+    {
+        1 => Bottles?.Bottle1Contents ?? 0,
+        2 => Bottles?.Bottle2Contents ?? 0,
+        3 => Bottles?.Bottle3Contents ?? 0,
+        4 => Bottles?.Bottle4Contents ?? 0,
+        _ => 0
+    };
+
+    private void SetBottleContentsValue(int bottleNumber, int value)
+    {
+        GameService.SetBottleContents(bottleNumber, (byte)value);
+        RefreshUiState();
+    }
+
+    private int Bottle1Value
+    {
+        get => GetBottleContents(1);
+        set => SetBottleContentsValue(1, value);
+    }
+
+    private int Bottle2Value
+    {
+        get => GetBottleContents(2);
+        set => SetBottleContentsValue(2, value);
+    }
+
+    private int Bottle3Value
+    {
+        get => GetBottleContents(3);
+        set => SetBottleContentsValue(3, value);
+    }
+
+    private int Bottle4Value
+    {
+        get => GetBottleContents(4);
+        set => SetBottleContentsValue(4, value);
     }
 
     private void TogglePendant(CollectibleSlot slot)
@@ -512,6 +650,12 @@ public partial class Home
     }
 
     private record InventorySlot(string Name, Func<string> ImageSelector, Action? ToggleAction = null);
+
+    private record InventoryStateGroup(string Name, int Address, IReadOnlyList<InventoryStateOption> Options);
+
+    private record InventoryStateOption(string Label, int Value);
+
+    private record BottleOption(string Label, int Value);
 
     private record CollectibleSlot(string Name, int BitValue, Func<string> ImageSelector);
 }
