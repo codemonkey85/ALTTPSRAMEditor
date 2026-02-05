@@ -7,3 +7,35 @@ body {
 .pixelated {
     image-rendering: pixelated;
 }
+
+.inventory-state-panel .mud-typography,
+.inventory-state-panel .mud-radio-content,
+.bottle-panel .mud-input,
+.bottle-panel .mud-input-label,
+.bottle-panel .mud-select,
+.bottle-panel .mud-select-input,
+.bottle-panel .mud-select-input svg,
+.bottle-panel .mud-input-adornment,
+.bottle-panel .mud-input-root,
+.bottle-panel .mud-typography {
+    color: #f8fafc;
+}
+
+.inventory-state-panel .mud-radio,
+.inventory-state-panel .mud-radio-content,
+.inventory-state-panel .mud-typography,
+.bottle-panel .mud-input-label {
+    opacity: 1;
+}
+
+.bottle-panel .mud-input-root,
+.bottle-panel .mud-select-input,
+.bottle-panel .mud-input-outlined {
+    border-color: #94a3b8;
+}
+
+.bottle-panel .mud-input-root:hover,
+.bottle-panel .mud-select-input:hover,
+.inventory-state-panel .mud-radio:hover {
+    color: #ffffff;
+}
